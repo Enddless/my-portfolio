@@ -1,12 +1,16 @@
 const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.jsx', // Точка входа для сборки проекта
+  entry: {
+    main: path.resolve(__dirname, './src/index.jsx')
+  },
 
   output: {
-    filename: 'bundle.js', // Имя выходного файла сборки
-    path: path.resolve(__dirname, 'dist') // Путь для выходного файла сборки
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].bundle.js'
   },
 
   module: {
@@ -24,20 +28,34 @@ module.exports = {
       {
         test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
         use: ['style-loader', 'css-loader'] // Загрузчики, используемые для обработки CSS-файлов
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
       }
     ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      title: 'My portfolio',
+      template: path.resolve(__dirname, './src/index.html'), // шаблон
+      filename: 'index.html' // название выходного файла
+    }),
+
+    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin()
   ],
 
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist') // Каталог для статики
     },
+    hot: false,
     open: true // Автоматически открывать браузер
   },
 
