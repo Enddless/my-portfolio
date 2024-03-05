@@ -10,7 +10,7 @@
 }
 .slick-dots {
   z-index: 20;
-  bottom: 35px;
+  bottom: 10px;
 }
 .slick-dots li {
   margin: 0 5px;

@@ -14,9 +14,9 @@ function Lead() {
       <Title text='diana ivashchenko' />
       <Title text='junior frontend developer' />
       <Skills />
-      <p onClick={scrollTo} className='scroll__button'>
-        Scroll down
-      </p>
+      <button onClick={scrollTo} className='flowtext scroll__button'>
+        <p>Scroll down</p>
+      </button>
     </section>
   );
 }
