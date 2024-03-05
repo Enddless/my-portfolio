@@ -4,7 +4,7 @@ import './styles.css';
 function Contacts() {
   return (
     <section className='contacts__container'>
-      <a href='https://t.me/endless_moonlight_on_monday' className='contacts__icon'>
+      <a href='mailto:ivdiana14500@gmail.com' className='contacts__icon'>
         <svg
           width='40'
           height='40'
@@ -34,7 +34,7 @@ function Contacts() {
           />
         </svg>
       </a>
-      <a href='mailto:ivdiana14500@gmail.com' className='contacts__icon'>
+      <a href='https://t.me/endless_moonlight_on_monday' className='contacts__icon'>
         <svg
           width='40'
           height='40'
