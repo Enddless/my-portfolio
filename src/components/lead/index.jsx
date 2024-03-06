@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles.css';
-import Title from '../title/index.jsx';
 import Skills from '../skills/index.jsx';
 
 function Lead() {
@@ -11,15 +10,12 @@ function Lead() {
 
   return (
     <section className='lead'>
-      {/* <Title text='diana ivashchenko' />
-      <Title text='junior frontend developer' /> */}
-      <div className='container__glitch'>
+      <div className='container__glitch '>
         frontend
-        <div className='stack' style={{ '--stacks': 3 }}>
-          <span style={{ '--index': 0 }}>diana ivashchenko</span>
-          <span style={{ '--index': 1 }}>diana ivashchenko</span>
-          <span style={{ '--index': 2 }}>diana ivashchenko</span>
-        </div>
+        <div className='environment'></div>
+        <h2 className='hero glitch layers' data-text='diana ivashchenko'>
+          <span>diana ivashchenko</span>
+        </h2>
         <span className='right'>developer</span>
       </div>
 
