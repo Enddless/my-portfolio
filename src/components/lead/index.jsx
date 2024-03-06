@@ -11,8 +11,18 @@ function Lead() {
 
   return (
     <section className='lead'>
-      <Title text='diana ivashchenko' />
-      <Title text='junior frontend developer' />
+      {/* <Title text='diana ivashchenko' />
+      <Title text='junior frontend developer' /> */}
+      <div className='container__glitch'>
+        frontend
+        <div className='stack' style={{ '--stacks': 3 }}>
+          <span style={{ '--index': 0 }}>diana ivashchenko</span>
+          <span style={{ '--index': 1 }}>diana ivashchenko</span>
+          <span style={{ '--index': 2 }}>diana ivashchenko</span>
+        </div>
+        <span className='right'>developer</span>
+      </div>
+
       <Skills />
       <button onClick={scrollTo} className='flowtext scroll__button'>
         <p>Scroll down</p>
