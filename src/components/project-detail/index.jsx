@@ -15,7 +15,7 @@ function Detail() {
         <Layout data={foundProject} />
         <SwiperComponent images={foundProject.images} />
       </div>
-      <Link to='/'>Назад</Link>
+      <Link to='/'>Назад </Link>
     </>
   );
 }

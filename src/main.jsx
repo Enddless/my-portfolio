@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './styles.css';
-import App from './components/app/App.jsx';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import './styles.css'
+import App from './components/app/App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/my-portfolio'>
@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <App />
     </React.StrictMode>
   </BrowserRouter>
-);
+)
 
