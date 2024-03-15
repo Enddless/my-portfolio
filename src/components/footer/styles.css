@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 160px;
+  padding-right: 100px;
+  background: #b9ff47;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 60px;
+}
+.footer .title__container {
+  margin-bottom: 0;
+  color: #232323;
+}

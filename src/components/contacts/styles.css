@@ -1,0 +1,23 @@
+.contacts__container {
+  display: flex;
+  column-gap: 15px;
+}
+.contacts__icon {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 4px 4px rgba(8, 8, 8, 0.2);
+  border-radius: 50%;
+}
+
+.contacts__icon svg {
+  fill: #b9ff47;
+}
+.contacts__icon:hover {
+  transform: scale(1.2);
+  transition: transform 750ms ease;
+}
+.contacts__icon:hover svg {
+  fill: #fff;
+  transition: fill 750ms ease;
+}
