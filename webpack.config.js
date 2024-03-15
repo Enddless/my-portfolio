@@ -10,7 +10,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    publicPath: '/'
   },
 
   module: {
@@ -26,8 +27,12 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
-        use: ['style-loader', 'css-loader'] // Загрузчики, используемые для обработки CSS-файлов
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -55,6 +60,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist') // Каталог для статики
     },
+    historyApiFallback: true,
     hot: false,
     open: true // Автоматически открывать браузер
   },

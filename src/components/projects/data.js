@@ -46,6 +46,11 @@ import p43 from '../../assets/images/p4_3.png';
 import p44 from '../../assets/images/p4_4.png';
 import p45 from '../../assets/images/p4_5.png';
 
+import main1 from '../../assets/images/main_photo1.png';
+import main2 from '../../assets/images/main_photo2.png';
+import main3 from '../../assets/images/main_photo3.png';
+import main4 from '../../assets/images/main_photo4.png';
+
 export const projectsData = [
   {
     id: 0,
@@ -57,6 +62,8 @@ export const projectsData = [
       '#html, #scss, #react, #typescript, #redux toolkit, #middleware, #token, #axios interceptors, #cookie httpOnly, #cors settings, #leaflet, #slick-carousel',
     organizationName: 'Pineapple Practice',
     organizationLink: 'https://pnpl.site/',
+    mainPhoto: `${main1}`,
+    path: 'studia',
     images: [
       { idImage: 1.1, url: `${p11}` },
       { idImage: 1.2, url: `${p12}` },
@@ -93,6 +100,8 @@ export const projectsData = [
     stack: '#html, #css, #react, #firebase firestore',
     organizationName: 'Pineapple Practice',
     organizationLink: 'https://pnpl.site/',
+    mainPhoto: `${main2}`,
+    path: 'kitchen',
     images: [
       { idImage: 1.1, url: `${p21}` },
       { idImage: 1.2, url: `${p22}` },
@@ -115,6 +124,8 @@ export const projectsData = [
     stack: '#html, #scss, #react, #slick-carousel',
     organizationName: 'freelance',
     organizationLink: '',
+    mainPhoto: `${main3}`,
+    path: 'house',
     images: [
       { idImage: 2.1, url: `${p31}` },
       { idImage: 2.2, url: `${p32}` },
@@ -132,6 +143,8 @@ export const projectsData = [
     stack: '#html, #scss, #react, #gsap',
     organizationName: 'freelance',
     organizationLink: '',
+    mainPhoto: `${main4}`,
+    path: 'tourist',
     images: [
       { idImage: 3.1, url: `${p41}` },
       { idImage: 3.2, url: `${p42}` },

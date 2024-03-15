@@ -1,13 +1,8 @@
-.skills__container {
+#skills .title__container {
+  margin-bottom: 40px;
+}
+.icon__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 15px;
-  position: relative;
-}
-.skills__container svg {
-  /*filter: grayscale(0.99);
-  */ /*filter: opacity(30%);
-  */
-  filter: brightness(30%);
 }

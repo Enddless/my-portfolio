@@ -2,10 +2,11 @@ import React from 'react';
 import './styles.css';
 import { projectsData } from './data';
 import Title from '../title/index.jsx';
-import Galery from '../slick-slider/index.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import Layout from '../layout-data/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,36 +53,13 @@ function Projects() {
           return (
             <div className='project__item' key={project.id} ref={addtoRefs}>
               <div className='project__description'>
-                <div className='project__name'>
-                  &lt;Project&gt;: <span>{project.name}</span>
-                </div>
-                <div className='project__text'>
-                  &lt;About project&gt;: <span>{project.text}</span>
-                </div>
-                <div className='project__link'>
-                  &lt;Deploy&gt;:
-                  <span>
-                    <a href={project.deploy}> here</a>
-                  </span>
-                </div>
-                <div className='project__link'>
-                  &lt;Github&gt;:
-                  <span>
-                    <a href={project.github}> here</a>
-                  </span>
-                </div>
-                <div className='project__stack'>
-                  &lt;Stack&gt;: <span>{project.stack}</span>
-                </div>
-                <div className='project__organization'>
-                  &lt;Organization&gt;:
-                  <span>
-                    <a href={project.organizationLink}>{project.organizationName}</a>
-                  </span>
-                </div>
+                <Layout data={project} />
+                <Link to={`/project/${project.path}`}>
+                  <span className='project__details'>Подробнее</span>
+                </Link>
               </div>
               <div className='project__photo'>
-                <Galery images={project.images} />
+                <img src={project.mainPhoto} alt='photo project' height='550px' />
               </div>
             </div>
           );

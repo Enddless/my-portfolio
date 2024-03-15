@@ -13,23 +13,29 @@ import Githubcon from '../../assets/svg/github.svg';
 import MuiIcon from '../../assets/svg/materialui.svg';
 import FigmaIcon from '../../assets/svg/figma.svg';
 import FirebaseIcon from '../../assets/svg/firebase.svg';
+import Title from '../title/index.jsx';
 
 function Skills() {
   return (
-    <section className='skills__container' id='Skills'>
-      <HtmlIcon />
-      <CssIcon />
-      <JsIcon />
-      <SassIcon />
-      <ReactIcon />
-      <TsIcon />
-      <ReduxIcon />
-      <NpmIcon />
-      <GitlubIcon />
-      <Githubcon />
-      <MuiIcon />
-      <FigmaIcon />
-      <FirebaseIcon />
+    <section className='skills__container' id='skills'>
+      <div className='title__container'>
+        <Title text='Skills' />
+      </div>
+      <section className='icon__container'>
+        <HtmlIcon />
+        <CssIcon />
+        <JsIcon />
+        <SassIcon />
+        <ReactIcon />
+        <TsIcon />
+        <ReduxIcon />
+        <NpmIcon />
+        <GitlubIcon />
+        <Githubcon />
+        <MuiIcon />
+        <FigmaIcon />
+        <FirebaseIcon />
+      </section>
     </section>
   );
 }

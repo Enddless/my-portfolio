@@ -3,6 +3,6 @@
 .project__title {
   font-size: calc(var(--index) * 2.5);
   width: 100%;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }

@@ -8,6 +8,10 @@
   row-gap: 30px;
   height: 90%;
 }
+.lead h2 {
+  font-size: clamp(24px, 8vw, 120px);
+}
+
 .scroll__button {
   background: #9a8c98;
   width: 150px;
@@ -67,9 +71,6 @@
   font-weight: bold;
 
   z-index: 2;
-  /* letter-spacing: 10px; */
-
-  /* Bright things in dark environments usually cast that light, giving off a glow */
   filter: drop-shadow(0 1px 3px);
 }
 .layers {

@@ -24,7 +24,7 @@
   border: 0;
   width: 13px;
   height: 13px;
-  background-color: #c9ada7;
+  background-color: #dcf1b8;
   border-radius: 100%;
   padding: 0;
   cursor: pointer;
@@ -56,12 +56,12 @@
   background-color: #4a4e69;
 }
 .slick-dots li.slick-active button {
-  background-color: #c9ada7;
+  background-color: #b9ff47;
 }
 
 .slick-dots li.slick-active button:before {
   width: 200%;
   height: 200%;
-  border: 2px solid #c9ada7;
+  border: 2px solid #b9ff47;
   opacity: 1;
 }

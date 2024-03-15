@@ -11,7 +11,7 @@ function Lead() {
   return (
     <section className='lead'>
       <div className='container__glitch '>
-        frontend
+        junior frontend
         <div className='environment'></div>
         <h2 className='hero glitch layers' data-text='diana ivashchenko'>
           <span>diana ivashchenko</span>
@@ -19,7 +19,6 @@ function Lead() {
         <span className='right'>developer</span>
       </div>
 
-      <Skills />
       <button onClick={scrollTo} className='flowtext scroll__button'>
         <p>Scroll down</p>
       </button>

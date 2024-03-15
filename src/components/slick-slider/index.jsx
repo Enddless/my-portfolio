@@ -15,11 +15,16 @@ const settings = {
   autoplaySpeed: 4000
 };
 
-function Galery({ images }) {
+function Galery({ images, children }) {
   return (
     <Slider {...settings} className='slider'>
       {images.map((img) => {
-        return <img src={img.url} key={img.idImage} alt='Projects 1' />;
+        return (
+          <React.Fragment key={img.idImage}>
+            <img src={img.url} alt='Projects 1' />
+            {children}
+          </React.Fragment>
+        );
       })}
     </Slider>
   );
