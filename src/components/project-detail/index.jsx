@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { projectsData } from '../projects/data.js';
 import { Link } from 'react-router-dom';
-import Galery from '../slick-slider/index.jsx';
 import './styles.css';
 import Layout from '../layout-data/index.jsx';
+import SwiperComponent from '../swiper/index.jsx';
 
 function Detail() {
   const path = useParams().id;
@@ -13,7 +13,7 @@ function Detail() {
     <>
       <div className='detail__container'>
         <Layout data={foundProject} />
-        <Galery images={foundProject.images} />
+        <SwiperComponent images={foundProject.images} />
       </div>
       <Link to='/'>Назад</Link>
     </>

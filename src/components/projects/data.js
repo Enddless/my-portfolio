@@ -65,30 +65,30 @@ export const projectsData = [
     mainPhoto: `${main1}`,
     path: 'studia',
     images: [
-      { idImage: 1.1, url: `${p11}` },
-      { idImage: 1.2, url: `${p12}` },
-      { idImage: 1.3, url: `${p13}` },
-      { idImage: 1.4, url: `${p14}` },
-      { idImage: 1.5, url: `${p15}` },
-      { idImage: 1.6, url: `${p16}` },
-      { idImage: 1.7, url: `${p17}` },
-      { idImage: 1.8, url: `${p18}` },
-      { idImage: 1.9, url: `${p19}` },
-      { idImage: 1.1, url: `${p110}` },
-      { idImage: 1.11, url: `${p111}` },
-      { idImage: 1.12, url: `${p112}` },
-      { idImage: 1.13, url: `${p113}` },
-      { idImage: 1.14, url: `${p114}` },
-      { idImage: 1.15, url: `${p115}` },
-      { idImage: 1.16, url: `${p116}` },
-      { idImage: 1.17, url: `${p117}` },
-      { idImage: 1.18, url: `${p118}` },
-      { idImage: 1.19, url: `${p119}` },
-      { idImage: 1.2, url: `${p120}` },
-      { idImage: 1.21, url: `${p121}` },
-      { idImage: 1.22, url: `${p122}` },
-      { idImage: 1.23, url: `${p123}` },
-      { idImage: 1.24, url: `${p124}` }
+      { idImage: 0.11, url: `${p11}` },
+      { idImage: 0.12, url: `${p12}` },
+      { idImage: 0.13, url: `${p13}` },
+      { idImage: 0.14, url: `${p14}` },
+      { idImage: 0.15, url: `${p15}` },
+      { idImage: 0.16, url: `${p16}` },
+      { idImage: 0.17, url: `${p17}` },
+      { idImage: 0.18, url: `${p18}` },
+      { idImage: 0.19, url: `${p19}` },
+      { idImage: 0.1111, url: `${p110}` },
+      { idImage: 0.111, url: `${p111}` },
+      { idImage: 0.112, url: `${p112}` },
+      { idImage: 0.113, url: `${p113}` },
+      { idImage: 0.114, url: `${p114}` },
+      { idImage: 0.115, url: `${p115}` },
+      { idImage: 0.116, url: `${p116}` },
+      { idImage: 0.117, url: `${p117}` },
+      { idImage: 0.118, url: `${p118}` },
+      { idImage: 0.119, url: `${p119}` },
+      { idImage: 0.1211, url: `${p120}` },
+      { idImage: 0.121, url: `${p121}` },
+      { idImage: 0.122, url: `${p122}` },
+      { idImage: 0.123, url: `${p123}` },
+      { idImage: 0.124, url: `${p124}` }
     ]
   },
   {
@@ -103,16 +103,16 @@ export const projectsData = [
     mainPhoto: `${main2}`,
     path: 'kitchen',
     images: [
-      { idImage: 1.1, url: `${p21}` },
-      { idImage: 1.2, url: `${p22}` },
-      { idImage: 1.3, url: `${p23}` },
-      { idImage: 1.4, url: `${p24}` },
-      { idImage: 1.5, url: `${p25}` },
-      { idImage: 1.6, url: `${p26}` },
-      { idImage: 1.7, url: `${p27}` },
-      { idImage: 1.8, url: `${p28}` },
-      { idImage: 1.9, url: `${p29}` },
-      { idImage: 1.1, url: `${p210}` }
+      { idImage: 1.21, url: `${p21}` },
+      { idImage: 1.22, url: `${p22}` },
+      { idImage: 1.23, url: `${p23}` },
+      { idImage: 1.24, url: `${p24}` },
+      { idImage: 1.25, url: `${p25}` },
+      { idImage: 1.26, url: `${p26}` },
+      { idImage: 1.27, url: `${p27}` },
+      { idImage: 1.28, url: `${p28}` },
+      { idImage: 1.29, url: `${p29}` },
+      { idImage: 1.2111, url: `${p210}` }
     ]
   },
   {
@@ -127,11 +127,11 @@ export const projectsData = [
     mainPhoto: `${main3}`,
     path: 'house',
     images: [
-      { idImage: 2.1, url: `${p31}` },
-      { idImage: 2.2, url: `${p32}` },
-      { idImage: 2.3, url: `${p33}` },
-      { idImage: 2.4, url: `${p34}` },
-      { idImage: 2.5, url: `${p35}` }
+      { idImage: 2.31, url: `${p31}` },
+      { idImage: 2.32, url: `${p32}` },
+      { idImage: 2.33, url: `${p33}` },
+      { idImage: 2.34, url: `${p34}` },
+      { idImage: 2.35, url: `${p35}` }
     ]
   },
   {
@@ -146,11 +146,11 @@ export const projectsData = [
     mainPhoto: `${main4}`,
     path: 'tourist',
     images: [
-      { idImage: 3.1, url: `${p41}` },
-      { idImage: 3.2, url: `${p42}` },
-      { idImage: 3.3, url: `${p43}` },
-      { idImage: 3.4, url: `${p44}` },
-      { idImage: 3.5, url: `${p45}` }
+      { idImage: 3.41, url: `${p41}` },
+      { idImage: 3.42, url: `${p42}` },
+      { idImage: 3.43, url: `${p43}` },
+      { idImage: 3.44, url: `${p44}` },
+      { idImage: 3.45, url: `${p45}` }
     ]
   }
 ];
