@@ -7,26 +7,16 @@ import Footer from '../../components/footer/index.jsx';
 import './styles.css';
 import Info from '../../components/info/index.jsx';
 import { useRef } from 'react';
-import { useEffect } from 'react';
+import useDecoration from '../../hooks/useDecoration.jsx';
 
 function MainPage() {
   const refFullContent = useRef(null);
   const refSkills = useRef(null);
   const refProjects = useRef(null);
   const refComponents = useRef(null);
-  useEffect(() => {
-    const createLineToSection = (section) => {
-      const line = document.createElement('div');
-      line.classList.add('line-to-section');
-      const lineHeight = section.current.offsetTop;
-      line.style.height = `${lineHeight}px`;
-      section.current.appendChild(line);
-    };
 
-    createLineToSection(refSkills);
-    createLineToSection(refProjects);
-    createLineToSection(refComponents);
-  }, []);
+  useDecoration({ refSkills, refProjects, refComponents });
+
   return (
     <>
       <div className='lead__overlay'>
