@@ -40,6 +40,16 @@
   display: flex;
   flex-direction: column;
 }
+.project__photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 35, 0.2);
+  z-index: 1;
+}
 
 .project__photo img {
   width: 100%;
@@ -56,17 +66,12 @@
   margin-top: 20px;
   display: inline-block;
   text-align: center;
+  border: 1px solid transparent;
+  padding: 10px 0;
 }
 .project__details:hover {
   color: white;
-}
-.project__details:hover::after {
-  color: white;
-  content: '';
-  position: absolute;
-  top: 25px;
-  width: 100%;
-  height: 2px;
-  display: block;
-  background: linear-gradient(90deg, rgb(35, 35, 35), rgb(185, 255, 71), rgb(35, 35, 35));
+  border-bottom: 1px solid #b9ff47;
+  border-top: 1px solid #b9ff47;
+  transition: all 750ms ease;
 }
