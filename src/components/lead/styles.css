@@ -9,47 +9,7 @@
   height: 90%;
 }
 .lead h2 {
-  font-size: clamp(24px, 8vw, 120px);
-}
-
-.scroll__button {
-  background: #9a8c98;
-  width: 150px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
-}
-
-.flowtext {
-  box-shadow: 0px 0px 7px 7px rgba(255, 255, 255, 0.2);
-  background: linear-gradient(
-    90deg,
-    rgb(142, 142, 163) 8%,
-    rgb(200, 155, 197) 48%,
-    rgb(142, 142, 163) 93%
-  );
-  background-size: 200% auto;
-  /* background-clip: text;
-  -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  animation: textflow 5s linear infinite;
-}
-@keyframes textflow {
-  from {
-    background-position: 0% center;
-  }
-  to {
-    background-position: 200% center;
-  }
-}
-
-.scroll__button p {
-  color: #f2e9e4;
+  font-size: clamp(1.5rem, 0.613rem + 4.44vw, 5.938rem);
 }
 
 /* glitch */
@@ -81,7 +41,7 @@
 .layers::after {
   content: attr(data-text);
   position: absolute;
-  width: 110%;
+  width: 100%;
   z-index: -1;
 }
 

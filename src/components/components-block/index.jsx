@@ -2,23 +2,23 @@ import './styles.css';
 import Title from '../title/index.jsx';
 import { componentsData } from './data.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Layout from '../layout-data/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Components() {
-  const ref = useRef([]);
-  ref.current = [];
+const ComponentsBlock = forwardRef((props, ref) => {
+  const refs = useRef([]);
+  refs.current = [];
 
   useEffect(() => {
-    ref.current.forEach((el) => {
+    refs.current.forEach((el) => {
       gsap.fromTo(
         el,
         {
           autoAlpha: 0,
-          y: '90'
+          y: '120'
         },
         {
           autoAlpha: 1,
@@ -26,22 +26,25 @@ function Components() {
           duration: 1,
           scrollTrigger: {
             trigger: el,
-            start: 'top bottom-=50',
+            // start: 'top bottom-=50',
+            start: 'top bottom', // when the top of the trigger hits the top of the viewport
+            end: '-=250', // end after scrolling 500px beyond the start
             toggleActions: 'play none none reverse',
             scrub: 0.2
+            // markers: true
           }
         }
       );
     });
   }, []);
   const addtoRefs = (el) => {
-    if (el && !ref.current.includes(el)) {
-      ref.current.push(el);
+    if (el && !refs.current.includes(el)) {
+      refs.current.push(el);
     }
   };
   return (
     <section className='wrapper' id='components'>
-      <div className='title__container'>
+      <div className='title__container' ref={ref}>
         <Title text='Components' />
       </div>
       <section className='components__container'>
@@ -59,6 +62,6 @@ function Components() {
       </section>
     </section>
   );
-}
-
-export default Components;
+});
+ComponentsBlock.displayName = 'ComponentsBlock';
+export default ComponentsBlock;
