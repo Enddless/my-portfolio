@@ -54,7 +54,7 @@
 .layers::after {
   top: 5px;
   left: -10px;
-  color: #1bc7fb;
+  color: #b9ff47;
 }
 .glitch span {
   animation: paths 5s step-end infinite;
@@ -476,7 +476,7 @@
 
   50% {
     font-weight: 300;
-    color: #1bc7fb;
+    color: #b9ff47;
     filter: blur(2px);
   }
 
@@ -492,8 +492,3 @@
     filter: blur(6px);
   }
 }
-/* hero-container {
-  position: relative;
-  padding: 200px 0;
-  text-align: center;
-} */
