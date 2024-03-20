@@ -16,6 +16,7 @@
   background: #181717;
   padding: 50px;
   position: relative;
+  text-align: justify;
 }
 .component__description img {
   margin-bottom: 60px;

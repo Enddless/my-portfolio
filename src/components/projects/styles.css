@@ -53,25 +53,24 @@
 
 .project__photo img {
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
 }
 .project__photo:hover {
   cursor: pointer;
 }
 .project__details {
-  color: #b9ff47;
+  color: #929292;
   cursor: pointer;
-  position: relative;
-  margin-top: 20px;
-  display: inline-block;
-  text-align: center;
+  display: flex;
   border: 1px solid transparent;
   padding: 10px 0;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
 }
 .project__details:hover {
   color: white;
-  border-bottom: 1px solid #b9ff47;
-  border-top: 1px solid #b9ff47;
+  /* border-bottom: 1px solid #b9ff47;
+  border-top: 1px solid #b9ff47; */
   transition: all 750ms ease;
 }

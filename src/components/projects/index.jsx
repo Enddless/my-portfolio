@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { forwardRef, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../layout-data/index.jsx';
+import ArrowIcon from '../arrow-icon-circle/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,7 +58,10 @@ const Projects = forwardRef((props, ref) => {
               <div className='project__description'>
                 <Layout data={project} />
                 <Link to={`/project/${project.path}`}>
-                  <span className='project__details'>Подробнее</span>
+                  <div className='project__details'>
+                    <ArrowIcon />
+                    Посмотреть детали
+                  </div>
                 </Link>
               </div>
               <div className='project__photo'>

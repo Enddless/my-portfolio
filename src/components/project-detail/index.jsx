@@ -10,13 +10,15 @@ function Detail() {
   const foundProject = projectsData.find((project) => project.path === path);
 
   return (
-    <>
+    <div className='detail'>
       <div className='detail__container'>
-        <Layout data={foundProject} />
+        <Layout data={foundProject} page='details' />
         <SwiperComponent images={foundProject.images} />
+        <div className='project__details'>
+          <Link to='/'>Назад </Link>
+        </div>
       </div>
-      <Link to='/'>Назад </Link>
-    </>
+    </div>
   );
 }
 

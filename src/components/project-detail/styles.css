@@ -1,6 +1,28 @@
-.detail__container {
+.detail {
   margin: 50px 60px;
+  display: flex;
+  flex-direction: column;
+}
+.detail__container {
   box-shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.25);
   background: #181717;
   padding: 50px;
+  padding-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: justify;
+}
+.detail .project__details {
+  margin-inline: auto;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.detail .project__details:hover {
+  border-bottom: 1px solid #b9ff47;
+  border-top: 1px solid #b9ff47;
 }

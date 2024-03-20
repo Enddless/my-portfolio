@@ -1,1 +1,12 @@
+.project__name span,
+.project__text span,
+.project__link span,
+.project__stack span,
+.project__organization span {
+  color: #b9ff47;
+}
 
+.project__link:hover,
+.project__organization:hover {
+  color: #929292;
+}

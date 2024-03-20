@@ -1,33 +1,43 @@
-function Layout({ data }) {
+import './styles.css';
+
+function Layout({ data, page }) {
+  const contentComments = page === 'details';
   return (
     <>
       <div className='project__name'>
-        &lt;Project&gt;: <span>{data.name}</span>
+        <span>Project</span>: {data.name}
       </div>
       <div className='project__text'>
-        &lt;About project&gt;: <span>{data.text}</span>
+        <span>About project:</span> {data.text}
       </div>
-      <div className='project__link'>
-        &lt;Deploy&gt;:
-        <span>
-          <a href={data.deploy}> here</a>
-        </span>
-      </div>
-      <div className='project__link'>
-        &lt;Github&gt;:
-        <span>
-          <a href={data.github}> here</a>
-        </span>
-      </div>
+      {data.deploy !== '' && (
+        <div className='project__link'>
+          <span>Deploy:</span>
+          <a href={data.deploy}> поюзать здесь</a>
+        </div>
+      )}
+      {data.github !== '' && (
+        <div className='project__link'>
+          <span>Github:</span>
+          <a href={data.github}> ознакомиться здесь </a>
+        </div>
+      )}
       <div className='project__stack'>
-        &lt;Stack&gt;: <span>{data.stack}</span>
+        <span>Stack:</span> {data.stack}
       </div>
-      <div className='project__organization'>
-        &lt;Organization&gt;:
-        <span>
+
+      {data.organizationLink !== '' && (
+        <div className='project__organization'>
+          <span>Organization:</span>
           <a href={data.organizationLink}>{data.organizationName}</a>
-        </span>
-      </div>
+        </div>
+      )}
+
+      {contentComments && data.comments !== '' && (
+        <div className='project__text'>
+          <span>Примечание</span>: {data.comments}
+        </div>
+      )}
     </>
   );
 }

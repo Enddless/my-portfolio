@@ -1,0 +1,10 @@
+.arrow-container {
+  width: 41px;
+  height: 41px;
+  display: flex;
+  background: transparent;
+  border: 1px solid #b9ff47;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
