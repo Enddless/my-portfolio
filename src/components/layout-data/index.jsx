@@ -1,43 +1,54 @@
+import ButtonDetails from '../button-details';
 import './styles.css';
 
 function Layout({ data, page }) {
   const contentComments = page === 'details';
   return (
     <>
-      <div className='project__name'>
-        <span>Project</span>: {data.name}
+      <div className='detail__item'>
+        Name project:
+        <p>{data.name}</p>
       </div>
-      <div className='project__text'>
-        <span>About project:</span> {data.text}
+      <div className='detail__item'>
+        About:
+        <p>{data.text}</p>
       </div>
-      {data.deploy !== '' && (
-        <div className='project__link'>
-          <span>Deploy:</span>
-          <a href={data.deploy}> поюзать здесь</a>
-        </div>
-      )}
-      {data.github !== '' && (
-        <div className='project__link'>
-          <span>Github:</span>
-          <a href={data.github}> ознакомиться здесь </a>
-        </div>
-      )}
-      <div className='project__stack'>
-        <span>Stack:</span> {data.stack}
+      <div className='detail__item'>
+        <p>Stack:</p>
+        {data.stack}
       </div>
 
       {data.organizationLink !== '' && (
-        <div className='project__organization'>
-          <span>Organization:</span>
-          <a href={data.organizationLink}>{data.organizationName}</a>
+        <div className='detail__item'>
+          Organization:
+          <p className='detail__link'>
+            <a href={data.organizationLink}>{data.organizationName}</a>
+          </p>
+        </div>
+      )}
+      {contentComments && data.comments !== '' && (
+        <div className='detail__item'>
+          Note:
+          <p>{data.comments}</p>
         </div>
       )}
 
-      {contentComments && data.comments !== '' && (
-        <div className='project__text'>
-          <span>Примечание</span>: {data.comments}
-        </div>
-      )}
+      <div className='detail__links'>
+        {data.deploy !== '' && (
+          <div className='project__link'>
+            <a href={data.deploy} target='_blank'>
+              <ButtonDetails text='Deploy' />
+            </a>
+          </div>
+        )}
+        {data.github !== '' && (
+          <div className='project__link'>
+            <a href={data.github} target='_blank'>
+              <ButtonDetails text='Github' />
+            </a>
+          </div>
+        )}
+      </div>
     </>
   );
 }

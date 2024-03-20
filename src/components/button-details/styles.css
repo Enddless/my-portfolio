@@ -1,0 +1,18 @@
+.button-container {
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  display: flex;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.button-container:hover {
+  color: #b2b2b2;
+  border: 1px solid #b2b2b2;
+  transition: all 750ms ease;
+}

@@ -1,12 +1,17 @@
-.project__name span,
-.project__text span,
-.project__link span,
-.project__stack span,
-.project__organization span {
-  color: #b9ff47;
-}
-
-.project__link:hover,
-.project__organization:hover {
+.detail__link:hover {
   color: #929292;
+}
+.detail__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.detail__item:nth-child(1) p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.detail__links {
+  display: flex;
+  column-gap: 20px;
 }

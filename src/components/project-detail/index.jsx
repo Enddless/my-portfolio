@@ -6,6 +6,7 @@ import Layout from '../layout-data/index.jsx';
 import SwiperComponent from '../swiper/index.jsx';
 
 function Detail() {
+  window.scrollTo(0, 0);
   const path = useParams().id;
   const foundProject = projectsData.find((project) => project.path === path);
 
