@@ -1,0 +1,20 @@
+.info {
+  background-color: var(--color-dark-alt);
+  box-shadow: var(--shadow);
+  width: 800px;
+  min-height: 256px;
+  padding: 40px;
+  margin: 0 auto;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  z-index: 10;
+  border-radius: var(--border-radius-small);
+
+  &__text {
+  }
+}

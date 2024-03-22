@@ -1,67 +1,82 @@
-import './styles.css';
+import '../../styles/styles.scss';
 import Title from '../title/index.jsx';
-import { componentsData } from './data.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { forwardRef, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import Layout from '../layout-data/index.jsx';
+import ComponentCard from '../component-card/index.jsx';
+import { useSelector } from 'react-redux';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ComponentsBlock = forwardRef((props, ref) => {
+const ComponentsBlock = () => {
+  const componentsData = useSelector((state) => state.portfolioData.components);
+  const [components, setComponents] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  useEffect(() => {
+    if (componentsData) {
+      setComponents(componentsData);
+      setDataLoaded(true); // Устанавливаем флаг загрузки данных в true
+    }
+  }, [componentsData]);
+
   const refs = useRef([]);
   refs.current = [];
 
   useEffect(() => {
-    refs.current.forEach((el) => {
-      gsap.fromTo(
-        el,
-        {
-          autoAlpha: 0,
-          y: '120'
-        },
-        {
-          autoAlpha: 1,
-          y: '0',
-          duration: 1,
-          scrollTrigger: {
-            trigger: el,
-            // start: 'top bottom-=50',
-            start: 'top bottom', // when the top of the trigger hits the top of the viewport
-            end: '-=250', // end after scrolling 500px beyond the start
-            toggleActions: 'play none none reverse',
-            scrub: 0.2
-            // markers: true
+    if (dataLoaded) {
+      refs.current.forEach((el) => {
+        gsap.fromTo(
+          el,
+          {
+            autoAlpha: 0,
+            y: '120'
+          },
+          {
+            autoAlpha: 1,
+            y: '0',
+            duration: 1,
+            scrollTrigger: {
+              trigger: el,
+              start: 'top bottom',
+              end: '-=250',
+              toggleActions: 'play none none reverse',
+              scrub: 0.2
+            }
           }
-        }
-      );
-    });
-  }, []);
+        );
+      });
+    }
+  }, [dataLoaded]);
+
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
       refs.current.push(el);
     }
   };
+
+  if (!components) {
+    return false;
+  }
+
   return (
-    <section className='wrapper' id='components'>
-      <div className='title__container' ref={ref}>
-        <Title text='Components' />
-      </div>
-      <section className='components__container'>
-        {componentsData.map((project) => {
-          return (
-            <div className='component__item' key={project.id} ref={addtoRefs}>
-              <div className='overlay'></div>
-              <div className='component__description'>
-                <img src={project.image} alt='photo project' height='550px' />
-                <Layout data={project} />
+    <section className='components' id='components'>
+      <div className='components__inner'>
+        <div className='components__title'>
+          <Title text='Components' />
+        </div>
+        <section className='components__list component'>
+          {components.map((project) => {
+            return (
+              <div className='component__item' key={project.id} ref={addtoRefs}>
+                <ComponentCard project={project} />
               </div>
-            </div>
-          );
-        })}
-      </section>
+            );
+          })}
+        </section>
+      </div>
     </section>
   );
-});
-ComponentsBlock.displayName = 'ComponentsBlock';
+};
+
 export default ComponentsBlock;

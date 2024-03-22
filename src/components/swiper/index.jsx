@@ -6,6 +6,9 @@ import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 function SwiperComponent({ images }) {
+  if (!images) {
+    return false;
+  }
   return (
     <Swiper
       spaceBetween={30}
@@ -20,10 +23,10 @@ function SwiperComponent({ images }) {
       navigation={false}
       modules={[Autoplay, Pagination, Navigation]}
       className='mySwiper'>
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
-          <SwiperSlide key={image.idImage}>
-            <img src={image.url} />
+          <SwiperSlide key={index}>
+            <img src={image} alt='photo project' />
           </SwiperSlide>
         );
       })}

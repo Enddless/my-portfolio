@@ -1,0 +1,29 @@
+.contacts {
+  display: flex;
+  column-gap: 15px;
+
+  &__icon {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 4px 4px rgba(8, 8, 8, 0.2);
+    border-radius: 50%;
+
+    @include hover {
+      transform: scale(1.2);
+      transition: transform 750ms ease;
+      & svg {
+        fill: var(--color-light);
+        transition: fill 750ms ease;
+      }
+    }
+
+    & svg *[fill] {
+      --currentColor: var(--color-dark);
+      fill: var(--currentColor);
+    }
+    & svg {
+      fill: var(--color-accent);
+    }
+  }
+}

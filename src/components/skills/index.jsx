@@ -1,4 +1,4 @@
-import './styles.css';
+import '../../styles/styles.scss';
 import HtmlIcon from '../../assets/svg/html5.svg';
 import CssIcon from '../../assets/svg/css3.svg';
 import JsIcon from '../../assets/svg/javascript.svg';
@@ -13,13 +13,13 @@ import MuiIcon from '../../assets/svg/materialui.svg';
 import FigmaIcon from '../../assets/svg/figma.svg';
 import FirebaseIcon from '../../assets/svg/firebase.svg';
 import Title from '../title/index.jsx';
-import { forwardRef, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Skills = forwardRef((props, ref) => {
+const Skills = () => {
   const arrayIcons = [
     `${HtmlIcon}`,
     `${CssIcon}`,
@@ -41,7 +41,7 @@ const Skills = forwardRef((props, ref) => {
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.icon__container',
+        trigger: '.skills__icons',
         start: 'top bottom', // when the top of the trigger hits the top of the viewport
         end: '-=250', // end after scrolling 500px beyond the start
         scrub: 0.2,
@@ -66,17 +66,19 @@ const Skills = forwardRef((props, ref) => {
     }
   };
   return (
-    <section className='skills__container' id='skills'>
-      <div className='title__container' ref={ref}>
-        <Title text='Skills' />
+    <section className='skills' id='skills'>
+      <div className='skills__inner container'>
+        <div className='skills__title'>
+          <Title text='Skills' />
+        </div>
+        <section className='skills__icons'>
+          {arrayIcons.map((item) => {
+            return <img src={item} alt='icon' key={item} ref={refIcons} />;
+          })}
+        </section>
       </div>
-      <section className='icon__container'>
-        {arrayIcons.map((item) => {
-          return <img src={item} alt='icon' key={item} ref={refIcons} />;
-        })}
-      </section>
     </section>
   );
-});
-Skills.displayName = 'Skills';
+};
+
 export default Skills;

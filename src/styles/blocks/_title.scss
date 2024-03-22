@@ -1,0 +1,8 @@
+.title {
+  @include fluid-text(40, 20);
+
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--font-family-secondary);
+}

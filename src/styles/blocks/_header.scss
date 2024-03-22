@@ -1,0 +1,35 @@
+.header {
+  @include fluid-text(24, 16);
+
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-family-secondary);
+
+  &__menu {
+    // padding: 0 100px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      column-gap: 35px;
+      cursor: pointer;
+    }
+
+    &-item {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid transparent;
+      color: var(--color-light);
+      text-transform: uppercase;
+    }
+
+    &-item:hover {
+      color: var(--color-light-alt);
+      transition: all 750ms ease;
+      border-top: 1px solid var(--color-accent);
+      border-bottom: 1px solid var(--color-accent);
+    }
+  }
+}

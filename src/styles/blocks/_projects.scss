@@ -1,0 +1,17 @@
+.projects {
+  margin-bottom: 140px;
+
+  &__title {
+    margin-bottom: 40px;
+
+    & .line-to-section {
+      left: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  margin-top: 160px;
+  padding-right: 100px;
+  background: var(--color-accent);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 60px;
+    height: 130px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    color: var(--color-dark);
+  }
+
+  .title {
+    text-align: right;
+  }
+}
