@@ -1,6 +1,5 @@
 .info {
   background-color: var(--color-dark-alt);
-  box-shadow: var(--shadow);
   width: 800px;
   min-height: 256px;
   padding: 40px;
@@ -10,11 +9,16 @@
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: justify;
   z-index: 10;
   border-radius: var(--border-radius-small);
+  flex-direction: column;
+  row-gap: 20px;
+  box-shadow: var(--shadow);
 
   &__text {
+    @include fluid-text(16, 14);
+    line-height: 150%;
   }
 }

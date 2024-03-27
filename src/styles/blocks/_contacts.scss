@@ -11,10 +11,10 @@
 
     @include hover {
       transform: scale(1.2);
-      transition: transform 750ms ease;
+      transition: transform var(--transition-duration) ease;
       & svg {
         fill: var(--color-light);
-        transition: fill 750ms ease;
+        transition: fill var(--transition-duration) ease;
       }
     }
 

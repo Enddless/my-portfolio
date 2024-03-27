@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
 import ProjectCard from '../project-card/index.jsx';
 import { useSelector } from 'react-redux';
+import Spinner from '../spinner/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,9 +15,9 @@ const Projects = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    if (projectsData) {
+    if (projectsData.length) {
       setProjects(projectsData);
-      setDataLoaded(true); // Устанавливаем флаг загрузки данных в true
+      setDataLoaded(true);
     }
   }, [projectsData]);
 
@@ -24,7 +25,7 @@ const Projects = () => {
   refs.current = [];
 
   useEffect(() => {
-    if (dataLoaded) {
+    if (dataLoaded && projects.length) {
       refs.current.forEach((el) => {
         gsap.fromTo(
           el,
@@ -47,16 +48,12 @@ const Projects = () => {
         );
       });
     }
-  }, [dataLoaded]);
+  }, [dataLoaded, projects.length]);
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
       refs.current.push(el);
     }
   };
-
-  if (!projects) {
-    return false;
-  }
 
   return (
     <section className='projects' id='content'>
@@ -65,15 +62,19 @@ const Projects = () => {
           <Title text='Projects' />
         </div>
 
-        <ul className='projects__list project'>
-          {projects.map((project) => {
-            return (
-              <li className='project__item' key={project.id} ref={addtoRefs}>
-                <ProjectCard project={project} />
-              </li>
-            );
-          })}
-        </ul>
+        {!dataLoaded && !projects.length ? (
+          <Spinner />
+        ) : (
+          <ul className='projects__list project'>
+            {projects.map((project) => {
+              return (
+                <li className='project__item' key={project.id} ref={addtoRefs}>
+                  <ProjectCard project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </div>
     </section>
   );

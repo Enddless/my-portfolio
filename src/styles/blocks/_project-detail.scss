@@ -29,7 +29,7 @@
 
     @include hover {
       background: var(--color-gray-alt);
-      transition: all 750ms ease;
+      transition: all var(--transition-duration) ease;
     }
   }
 }
