@@ -1,18 +1,15 @@
 .project {
   &__item {
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
     position: relative;
     overflow: hidden;
     display: flex;
+    align-items: center;
 
     &-description {
       padding: 20px 0;
-      // grid-column: 1 / 6;
-      // grid-row: 1;
       order: 1;
-      width: 48%;
+      width: 45%;
       display: flex;
       flex-direction: column;
       row-gap: 20px;
@@ -21,11 +18,9 @@
     }
 
     &-photo {
-      // grid-column: 6 / 13;
-      // grid-row: 1;
       order: 2;
       position: relative;
-      width: 52%;
+      width: 55%;
       display: flex;
       flex-direction: column;
       & img {
@@ -70,13 +65,9 @@
     }
 
     &:nth-child(even) .project__item-description {
-      // grid-column: 8 / 13;
-      // grid-row: 1;
       order: 2;
     }
     &:nth-child(even) .project__item-photo {
-      // grid-column: 1 / 8;
-      // grid-row: 1;
       order: 1;
     }
   }

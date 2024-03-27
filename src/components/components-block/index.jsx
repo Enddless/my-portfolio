@@ -60,7 +60,7 @@ const ComponentsBlock = () => {
   }
 
   return (
-    <section className='components' id='components'>
+    <section className='components container' id='components'>
       <div className='components__inner'>
         <div className='components__title'>
           <Title text='Components' />

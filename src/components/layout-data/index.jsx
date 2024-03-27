@@ -14,15 +14,16 @@ function Layout({ data, page }) {
         <p>{data.text}</p>
       </div>
       <div className='detail__item'>
-        <p>Stack:</p>
-        {data.stack}
+        <p>Stack: {data.stack}</p>
       </div>
 
       {data.organizationLink !== '' && (
         <div className='detail__item'>
-          Organization:
-          <p className='detail__link'>
-            <a href={data.organizationLink}>{data.organizationName}</a>
+          <p>
+            Organization:{' '}
+            <a href={data.organizationLink} className='detail__link'>
+              {data.organizationName}
+            </a>
           </p>
         </div>
       )}

@@ -11,7 +11,7 @@ function ProjectCard({ project }) {
 
       <Link to={`/project/${project.path}`} className='project__item-photo'>
         <div className='project__item-details'>
-          <img src={project.mainPhoto} alt='photo project' height='550px' />
+          <img src={project.mainPhoto} alt='photo project' height='450px' />
           <ButtonDetails text='Посмотреть детали' />
         </div>
       </Link>
