@@ -1,0 +1,35 @@
+:root {
+  --color-dark: #232323;
+  --color-dark-alt: #181717;
+  --color-dark-full: #000000;
+
+  --color-light: #fff;
+  --color-light-alt: #f2e9e4;
+
+  --color-accent: #b9ff47;
+
+  --color-glitch-accent-base: #b9ff47;
+  --color-glitch-accent-primary: #fff;
+  --color-glitch-accent-secondary: #e0287d;
+
+  --color-gray: #b2b2b2;
+  --color-gray-alt: #898989;
+
+  --color-overlay: (35, 35, 35);
+
+  --border: 1px solid var(--color-dark);
+  --border-radius-small: 5px;
+  --border-radius-large: 30px;
+
+  --shadow: 10px 11px 20px 0 rgba(var(--color-dark-full), 0.25);
+  --font-family-base: 'Open Sans', sans-serif;
+  --font-family-secondary: 'Dela Gothic One', sans-serif;
+
+  --container-width: 1400px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 20px;
+  --button-height: 68px;
+
+  --transition-duretion: 1s;
+}

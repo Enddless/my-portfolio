@@ -1,9 +1,0 @@
-@import '../../styles.css';
-
-.project__title {
-  font-size: calc(var(--index) * 2.5);
-  width: 100%;
-  text-align: left;
-  text-transform: uppercase;
-  font-family: 'Dela Gothic One', sans-serif;
-}

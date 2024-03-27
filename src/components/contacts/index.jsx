@@ -1,8 +1,8 @@
-import './styles.css';
+import '../../styles/styles.scss';
 
 function Contacts() {
   return (
-    <section className='contacts__container'>
+    <section className='contacts'>
       <a href='mailto:ivdiana14500@gmail.com' className='contacts__icon'>
         <svg
           width='40'

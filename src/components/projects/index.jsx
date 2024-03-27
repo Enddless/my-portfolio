@@ -1,77 +1,82 @@
-import './styles.css';
-import { projectsData } from './data';
+import '../../styles/styles.scss';
 import Title from '../title/index.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { forwardRef, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import Layout from '../layout-data/index.jsx';
-import ButtonDetails from '../button-details/index.jsx';
+import { useEffect, useRef, useState } from 'react';
+import ProjectCard from '../project-card/index.jsx';
+import { useSelector } from 'react-redux';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = forwardRef((props, ref) => {
+const Projects = () => {
+  const projectsData = useSelector((state) => state.portfolioData.projects);
+  const [projects, setProjects] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  useEffect(() => {
+    if (projectsData) {
+      setProjects(projectsData);
+      setDataLoaded(true); // Устанавливаем флаг загрузки данных в true
+    }
+  }, [projectsData]);
+
   const refs = useRef([]);
   refs.current = [];
 
   useEffect(() => {
-    refs.current.forEach((el) => {
-      gsap.fromTo(
-        el,
-        {
-          autoAlpha: 0,
-          y: '120'
-        },
-        {
-          autoAlpha: 1,
-          y: '0',
-          duration: 1,
-          scrollTrigger: {
-            trigger: el,
-            // start: 'top bottom-=50',
-            start: 'top bottom', // when the top of the trigger hits the top of the viewport
-            end: '-=250', // end after scrolling 500px beyond the start
-            toggleActions: 'play none none reverse',
-            scrub: 0.2
-            // markers: true
+    if (dataLoaded) {
+      refs.current.forEach((el) => {
+        gsap.fromTo(
+          el,
+          {
+            autoAlpha: 0,
+            y: '120'
+          },
+          {
+            autoAlpha: 1,
+            y: '0',
+            duration: 1,
+            scrollTrigger: {
+              trigger: el,
+              start: 'top bottom',
+              end: '-=250',
+              toggleActions: 'play none none reverse',
+              scrub: 0.2
+            }
           }
-        }
-      );
-    });
-  }, []);
+        );
+      });
+    }
+  }, [dataLoaded]);
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
       refs.current.push(el);
     }
   };
 
-  return (
-    <section className='wrapper' id='content'>
-      <div className='title__container' ref={ref}>
-        <Title text='Projects' />
-      </div>
+  if (!projects) {
+    return false;
+  }
 
-      <section className='projects__container'>
-        {projectsData.map((project) => {
-          return (
-            <div className='project__item' key={project.id} ref={addtoRefs}>
-              <div className='project__description'>
-                <Layout data={project} />
-              </div>
-              <div className='project__photo'>
-                <Link to={`/project/${project.path}`}>
-                  <div className='project__details'>
-                    <img src={project.mainPhoto} alt='photo project' height='550px' />
-                    <ButtonDetails text='Посмотреть детали' />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          );
-        })}
-      </section>
+  return (
+    <section className='projects' id='content'>
+      <div className='projects__inner  container'>
+        <div className='projects__title'>
+          <Title text='Projects' />
+        </div>
+
+        <ul className='projects__list project'>
+          {projects.map((project) => {
+            return (
+              <li className='project__item' key={project.id} ref={addtoRefs}>
+                <ProjectCard project={project} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
-});
-Projects.displayName = 'Projects';
+};
+
 export default Projects;

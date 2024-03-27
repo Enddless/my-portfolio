@@ -1,0 +1,35 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: justify;
+    width: 90%;
+
+    & .mySwiper {
+      box-shadow: var(--shadow);
+      background: var(--color-dark-alt);
+    }
+  }
+  &__forward {
+    @include fluid-text(16, 14);
+    padding: 5px 10px;
+    margin-inline: auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: var(--color-dark-alt);
+    border: 1px solid var(--color-gray-alt);
+    border-radius: var(--border-radius-small);
+
+    @include hover {
+      background: var(--color-gray-alt);
+      transition: all 750ms ease;
+    }
+  }
+}
