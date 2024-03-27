@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ComponentCard from '../component-card/index.jsx';
 import { useSelector } from 'react-redux';
+import Spinner from '../spinner/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +15,7 @@ const ComponentsBlock = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    if (componentsData) {
+    if (componentsData.length) {
       setComponents(componentsData);
       setDataLoaded(true); // Устанавливаем флаг загрузки данных в true
     }
@@ -24,7 +25,7 @@ const ComponentsBlock = () => {
   refs.current = [];
 
   useEffect(() => {
-    if (dataLoaded) {
+    if (dataLoaded && components.length) {
       refs.current.forEach((el) => {
         gsap.fromTo(
           el,
@@ -47,7 +48,7 @@ const ComponentsBlock = () => {
         );
       });
     }
-  }, [dataLoaded]);
+  }, [dataLoaded, components.length]);
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -65,15 +66,19 @@ const ComponentsBlock = () => {
         <div className='components__title'>
           <Title text='Components' />
         </div>
-        <section className='components__list component'>
-          {components.map((project) => {
-            return (
-              <div className='component__item' key={project.id} ref={addtoRefs}>
-                <ComponentCard project={project} />
-              </div>
-            );
-          })}
-        </section>
+        {!dataLoaded && !components.length ? (
+          <Spinner />
+        ) : (
+          <section className='components__list component'>
+            {components.map((project) => {
+              return (
+                <div className='component__item' key={project.id} ref={addtoRefs}>
+                  <ComponentCard project={project} />
+                </div>
+              );
+            })}
+          </section>
+        )}
       </div>
     </section>
   );

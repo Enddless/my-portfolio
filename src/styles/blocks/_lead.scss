@@ -14,10 +14,10 @@
     flex-direction: column;
 
     &-text {
-      @include fluid-text(24, 20);
+      @include fluid-text(40, 22);
 
       &--hero {
-        @include fluid-text(80, 20);
+        @include fluid-text(95, 20);
 
         line-height: 1;
         display: inline-block;
