@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className='header'>
       <div className='header__inner container'>
-        <nav className='header__menu hidden-mobile'>
+        <nav className='header__menu'>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>
               <Link to='/'>Home</Link>

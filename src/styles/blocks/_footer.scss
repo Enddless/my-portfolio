@@ -3,20 +3,28 @@
   padding-right: 100px;
   background: var(--color-accent);
 
+  @include mobile {
+    margin-top: 40px;
+    padding-right: 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     column-gap: 60px;
     height: 130px;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 10px;
+    }
   }
 
-  &__title {
+  &__title .title {
     margin-bottom: 0;
     color: var(--color-dark);
-  }
-
-  .title {
-    text-align: right;
+    text-align: center;
   }
 }

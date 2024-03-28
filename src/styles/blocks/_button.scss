@@ -16,6 +16,10 @@
   column-gap: 10px;
   cursor: pointer;
 
+  @include mobile {
+    min-width: 110px;
+  }
+
   @include hover {
     background: var(--color-gray-alt);
     color: var(--color-light);
