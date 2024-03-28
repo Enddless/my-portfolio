@@ -22,7 +22,7 @@ function useGetAllComponents() {
             organizationName: doc.data().organizationName,
             stack: doc.data().stack,
             text: doc.data().text,
-            comment: doc.data().comment
+            comments: doc.data().comments
           }))
         )
       );

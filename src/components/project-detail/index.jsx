@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 import '../../styles/styles.scss';
 import Layout from '../layout-data/index.jsx';
@@ -15,27 +14,31 @@ function Detail() {
 
   const projectsData = useSelector((state) => state.portfolioData.projects);
   const [details, setDetails] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
     if (projectsData) {
       const foundProject = projectsData.find((project) => project.path === path);
-      setDetails(foundProject);
+      if (foundProject) {
+        setDetails(foundProject);
+        setDataLoaded(true);
+      }
     }
   }, [path, projectsData]);
 
   return (
     <div className='detail'>
       <div className='detail__inner container'>
-        {!details ? (
+        {!dataLoaded ? (
           <Spinner />
         ) : (
           <>
-            <SwiperComponent images={details.images} />
             <Layout data={details} page='details' />
+            <SwiperComponent images={details.images} />
 
-            <div className='detail__forward'>
-              <Link to='/'>Назад </Link>
-            </div>
+            <Link to='/' className='detail__forward'>
+              Назад
+            </Link>
           </>
         )}
       </div>

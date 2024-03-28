@@ -1,5 +1,5 @@
 import ButtonDetails from '../button-details';
-import './styles.css';
+import '../../styles/styles.scss';
 
 function Layout({ data, page }) {
   const contentComments = page === 'details';
@@ -7,7 +7,7 @@ function Layout({ data, page }) {
     <>
       <div className='detail__item'>
         Name project:
-        <p>{data.name}</p>
+        <p>&quot;{data.name}&quot;</p>
       </div>
       <div className='detail__item'>
         About:
@@ -20,7 +20,7 @@ function Layout({ data, page }) {
       {data.organizationLink !== '' && (
         <div className='detail__item'>
           <p>
-            Organization:{' '}
+            Organisation:{' '}
             <a href={data.organizationLink} className='detail__link'>
               {data.organizationName}
             </a>

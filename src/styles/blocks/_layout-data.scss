@@ -1,5 +1,5 @@
 .detail__link:hover {
-  color: #929292;
+  color: var(--color-gray-alt);
 }
 .detail__item {
   display: flex;
@@ -7,8 +7,8 @@
   row-gap: 10px;
 }
 .detail__item:nth-child(1) p {
-  color: white;
-  font-size: 20px;
+  @include fluid-text(22, 16);
+  color: var(--color-light);
   font-weight: 500;
 }
 .detail__links {
