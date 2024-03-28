@@ -1,9 +1,14 @@
 .lead__overlay {
   background: url('../assets/images/myphoto.jpg') no-repeat;
+  // background: url('../assets/images/main-photo.jpg') no-repeat;
   background-position: top center;
   background-size: cover;
   height: 100vh;
   position: relative;
+
+  // & .mask2 {
+  //   mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  // }
 }
 .lead__overlay::after {
   content: '';
@@ -22,6 +27,10 @@
   flex-direction: column;
   row-gap: 140px;
   position: relative;
+
+  @include mobile {
+    row-gap: 40px;
+  }
 }
 .content__wrapper {
   position: relative;

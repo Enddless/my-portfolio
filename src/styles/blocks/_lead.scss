@@ -13,6 +13,10 @@
     display: flex;
     flex-direction: column;
 
+    @include mobile {
+      align-items: center;
+    }
+
     &-text {
       @include fluid-text(40, 22);
 
@@ -24,6 +28,10 @@
         text-transform: uppercase;
         z-index: 2;
         filter: drop-shadow(0 1px 3px);
+
+        @include mobile {
+          text-align: center;
+        }
 
         & span {
           animation: paths 5s step-end infinite;

@@ -16,6 +16,12 @@
   --color-gray-alt: #898989;
 
   --overlay: rgba(49, 117, 52, 0.233);
+  --linear-gradient-decoration: linear-gradient(
+    90deg,
+    rgb(35, 35, 35),
+    rgb(185, 255, 71),
+    rgb(35, 35, 35)
+  );
 
   --border: 1px solid var(--color-dark);
   --border-radius-small: 5px;

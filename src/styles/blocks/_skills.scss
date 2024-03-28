@@ -7,6 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include mobile {
+      justify-content: flex-start;
+    }
   }
   & .line-to-section {
     left: 50px;

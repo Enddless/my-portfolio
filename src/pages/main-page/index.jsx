@@ -4,12 +4,12 @@ import Skills from '../../components/skills/index.jsx';
 import Projects from '../../components/projects/index.jsx';
 import ComponentsBlock from '../../components/components-block/index.jsx';
 import Footer from '../../components/footer/index.jsx';
-import Info from '../../components/info/index.jsx';
 import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
 import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 import '../../styles/styles.scss';
 
 function MainPage() {
+  window.scrollTo(0, 0);
   useGetAllProjects();
   useGetAllComponents();
   return (
@@ -20,7 +20,6 @@ function MainPage() {
       </div>
       <div className='content__wrapper'>
         <div className='main__content'>
-          <Info />
           <Skills />
           <Projects />
         </div>

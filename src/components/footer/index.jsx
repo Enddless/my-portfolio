@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className='footer'>
       <div className='footer__inner container'>
-        <div className='footer__title title'>
+        <div className='footer__title'>
           <Title text='Follow me' />
         </div>
         <Contacts />

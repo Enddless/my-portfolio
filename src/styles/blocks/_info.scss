@@ -1,10 +1,8 @@
 .info {
   background-color: var(--color-dark-alt);
-  width: 800px;
   min-height: 256px;
   padding: 40px;
-  margin: 0 auto;
-  position: absolute;
+  position: relative;
   top: -150px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -16,9 +14,19 @@
   flex-direction: column;
   row-gap: 20px;
   box-shadow: var(--shadow);
+  width: 800px;
+
+  @include tablet {
+    width: 600px;
+  }
+  @include mobile {
+    width: 350px;
+    padding: 15px;
+    min-height: 1px;
+  }
 
   &__text {
-    @include fluid-text(16, 14);
+    @include fluid-text(18, 10);
     line-height: 150%;
   }
 }
