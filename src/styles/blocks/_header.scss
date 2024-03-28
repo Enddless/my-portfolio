@@ -19,10 +19,16 @@
 
     &-item {
       display: inline-block;
-      padding: 10px;
+
       border: 1px solid transparent;
       color: var(--color-light);
       text-transform: uppercase;
+
+      & a {
+        padding: 10px;
+        display: inline-block;
+        width: 100%;
+      }
     }
 
     &-item:hover {

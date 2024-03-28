@@ -27,16 +27,16 @@
   cursor: pointer;
   appearance: none;
   border: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #74bd15;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
   border-radius: 100%;
   padding: 0;
   cursor: pointer;
   position: relative;
   transition: opacity 0.2s ease-in-out;
   outline: none;
-  border: 2px solid #00ff22;
+  border: 2px solid #b9ff47;
 }
 .swiper-pagination-bullet:hover {
   background-color: #d4d4d4;
@@ -64,13 +64,8 @@
     height 0.4s ease-in-out;
 }
 .swiper-pagination-bullet-active:before {
-  width: 200%;
-  height: 200%;
+  width: 250%;
+  height: 250%;
   border: 2px solid #b9ff47;
   opacity: 1;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: white;
 }
