@@ -6,8 +6,12 @@
   align-items: center;
   justify-content: center;
   row-gap: 30px;
-  height: 90%;
+  height: calc(100vh - 89px);
   font-family: var(--font-family-secondary);
+
+  @include mobile {
+    height: calc(100vh - 250px);
+  }
 
   &__glitch {
     display: flex;
