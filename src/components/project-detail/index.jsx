@@ -34,6 +34,11 @@ function Detail() {
         ) : (
           <>
             <Layout data={details} page='details' />
+            {details.video && (
+              <video src={details.video} autoPlay='false' type='video/mp4' controls muted>
+                Ваш браузер не поддерживает тег видео.
+              </video>
+            )}
             <SwiperComponent images={details.images} />
 
             <Link to='/' className='detail__forward'>

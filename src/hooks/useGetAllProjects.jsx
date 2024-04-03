@@ -24,7 +24,8 @@ function useGetAllProjects() {
             stack: doc.data().stack,
             text: doc.data().text,
             path: doc.data().path,
-            comments: doc.data().comments
+            comments: doc.data().comments,
+            video: doc.data().video
           }))
         )
       );
