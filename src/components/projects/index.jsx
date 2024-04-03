@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import ProjectCard from '../project-card/index.jsx';
 import { useSelector } from 'react-redux';
 import Spinner from '../spinner/index.jsx';
+import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,31 +25,8 @@ const Projects = () => {
   const refs = useRef([]);
   refs.current = [];
 
-  useEffect(() => {
-    if (dataLoaded && projects.length) {
-      refs.current.forEach((el) => {
-        gsap.fromTo(
-          el,
-          {
-            autoAlpha: 0,
-            y: '120'
-          },
-          {
-            autoAlpha: 1,
-            y: '0',
-            duration: 1,
-            scrollTrigger: {
-              trigger: el,
-              start: 'top bottom',
-              end: '-=250',
-              toggleActions: 'play none none reverse',
-              scrub: 0.2
-            }
-          }
-        );
-      });
-    }
-  }, [dataLoaded, projects.length]);
+  useGsapOptions({ refs, dataLoaded, options: projects.length });
+
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
       refs.current.push(el);

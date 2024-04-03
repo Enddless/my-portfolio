@@ -8,22 +8,8 @@
 
     @include mobile {
       flex-direction: column;
-      row-gap: 10px;
+      row-gap: 20px;
       padding: 25px 0;
-
-      &::after {
-        content: '';
-        width: 250px;
-        height: 1px;
-        border-radius: var(--border-radius-small);
-        background: (var(--linear-gradient-decoration));
-        position: absolute;
-        bottom: 5px;
-        -webkit-border-radius: var(--border-radius-small);
-        -moz-border-radius: var(--border-radius-small);
-        -ms-border-radius: var(--border-radius-small);
-        -o-border-radius: var(--border-radius-small);
-      }
     }
 
     &-description {
@@ -67,15 +53,20 @@
         }
       }
 
-      &-details {
-        position: relative;
-      }
-
       & .button {
         @include absolute-center;
         width: 250px;
         height: 60px;
         display: none;
+
+        @include mobile {
+          display: flex;
+          position: relative;
+          top: 0;
+          left: 0;
+          translate: none;
+          margin: 0 auto;
+        }
       }
       &:hover .button {
         display: flex;
@@ -96,11 +87,26 @@
       }
     }
 
+    &-details {
+      position: relative;
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+    }
+
     &:nth-child(even) .project__item-description {
       order: 2;
+      @include mobile {
+        order: 1;
+      }
     }
     &:nth-child(even) .project__item-photo {
       order: 1;
+      @include mobile {
+        order: 2;
+      }
     }
   }
 }
