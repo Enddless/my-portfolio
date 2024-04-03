@@ -1,13 +1,10 @@
 import '../../styles/styles.scss';
 import Title from '../title/index.jsx';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
 import ComponentCard from '../component-card/index.jsx';
 import { useSelector } from 'react-redux';
 import Spinner from '../spinner/index.jsx';
-
-gsap.registerPlugin(ScrollTrigger);
+import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 
 const ComponentsBlock = () => {
   const componentsData = useSelector((state) => state.portfolioData.components);
@@ -24,31 +21,7 @@ const ComponentsBlock = () => {
   const refs = useRef([]);
   refs.current = [];
 
-  useEffect(() => {
-    if (dataLoaded && components.length) {
-      refs.current.forEach((el) => {
-        gsap.fromTo(
-          el,
-          {
-            autoAlpha: 0,
-            y: '120'
-          },
-          {
-            autoAlpha: 1,
-            y: '0',
-            duration: 1,
-            scrollTrigger: {
-              trigger: el,
-              start: 'top bottom',
-              end: '-=250',
-              toggleActions: 'play none none reverse',
-              scrub: 0.2
-            }
-          }
-        );
-      });
-    }
-  }, [dataLoaded, components.length]);
+  useGsapOptions({ refs, dataLoaded, options: components.length });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
