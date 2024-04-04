@@ -29,10 +29,6 @@ const ComponentsBlock = () => {
     }
   };
 
-  if (!components) {
-    return false;
-  }
-
   return (
     <section className='components container' id='components'>
       <div className='components__inner'>
