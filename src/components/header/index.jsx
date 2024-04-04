@@ -15,22 +15,22 @@ function Header() {
         <nav className='header__menu hidden-mobile'>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>
-              <Link to='/' class='header__menu-link'>
+              <Link to='/' className='header__menu-link'>
                 Home
               </Link>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#skills' class='header__menu-link'>
+              <HashLink smooth to='/#skills' className='header__menu-link'>
                 Skills
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#content' class='header__menu-link'>
+              <HashLink smooth to='/#content' className='header__menu-link'>
                 Projects
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#components' class='header__menu-link'>
+              <HashLink smooth to='/#components' className='header__menu-link'>
                 Components
               </HashLink>
             </li>
