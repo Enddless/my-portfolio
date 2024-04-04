@@ -35,7 +35,7 @@ function Detail() {
           <>
             <Layout data={details} page='details' />
             {details.video && (
-              <video src={details.video} autoPlay='false' type='video/mp4' controls muted>
+              <video src={details.video} type='video/mp4' controls muted>
                 Ваш браузер не поддерживает тег видео.
               </video>
             )}
