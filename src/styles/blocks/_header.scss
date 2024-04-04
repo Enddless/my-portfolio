@@ -31,23 +31,31 @@
 
     &-item {
       display: inline-block;
-
       border: 1px solid transparent;
       color: var(--color-light);
       text-transform: uppercase;
-
-      & a {
-        padding: 10px;
-        display: inline-block;
-        width: 100%;
-      }
     }
 
-    &-item:hover {
-      color: var(--color-light-alt);
-      transition: all var(--transition-duration) ease;
-      border-top: 1px solid var(--color-accent);
-      border-bottom: 1px solid var(--color-accent);
+    &-link {
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--color-accent);
+        transition: all var(--transition-duration) ease;
+      }
     }
   }
 
