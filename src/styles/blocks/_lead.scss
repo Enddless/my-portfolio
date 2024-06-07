@@ -22,10 +22,10 @@
     }
 
     &-text {
-      @include fluid-text(40, 22);
+      @include fluid-text(26, 22);
 
       &--hero {
-        @include fluid-text(95, 20);
+        @include fluid-text(65, 30);
 
         line-height: 1;
         display: inline-block;
@@ -37,25 +37,25 @@
           text-align: center;
         }
 
-        & span {
-          animation: paths 5s step-end infinite;
-        }
+        // & span {
+        //   animation: paths 5s step-end infinite;
+        // }
 
-        &::before {
-          animation:
-            paths 5s step-end infinite,
-            opacity 5s step-end infinite,
-            font 8s step-end infinite,
-            movement 10s step-end infinite;
-        }
+        // &::before {
+        //   animation:
+        //     paths 5s step-end infinite,
+        //     opacity 5s step-end infinite,
+        //     font 8s step-end infinite,
+        //     movement 10s step-end infinite;
+        // }
 
-        &::after {
-          animation:
-            paths 5s step-end infinite,
-            opacity 5s step-end infinite,
-            font 7s step-end infinite,
-            movement 8s step-end infinite;
-        }
+        // &::after {
+        //   animation:
+        //     paths 5s step-end infinite,
+        //     opacity 5s step-end infinite,
+        //     font 7s step-end infinite,
+        //     movement 8s step-end infinite;
+        // }
 
         & .paths {
           animation: paths 5s step-end infinite;
@@ -429,27 +429,27 @@
       }
     }
 
-    &-layers {
-      position: relative;
+    // &-layers {
+    //   position: relative;
 
-      &::before,
-      &::after {
-        content: attr(data-text);
-        position: absolute;
-        width: 100%;
-        z-index: -1;
-      }
+    //   &::before,
+    //   &::after {
+    //     content: attr(data-text);
+    //     position: absolute;
+    //     width: 100%;
+    //     z-index: -1;
+    //   }
 
-      &::before {
-        top: 10px;
-        left: 15px;
-        color: var(--color-glitch-accent-secondary);
-      }
-      &::after {
-        top: 5px;
-        left: -10px;
-        color: var(--color-glitch-accent-base);
-      }
-    }
+    //   &::before {
+    //     top: 10px;
+    //     left: 15px;
+    //     color: var(--color-glitch-accent-secondary);
+    //   }
+    //   &::after {
+    //     top: 5px;
+    //     left: -10px;
+    //     color: var(--color-glitch-accent-base);
+    //   }
+    // }
   }
 }
