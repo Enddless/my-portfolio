@@ -39,51 +39,13 @@
         width: 100%;
       }
 
-      @include hover {
-        cursor: pointer;
-      }
-
       & img {
         width: 100%;
         object-fit: cover;
-        filter: grayscale(0.55);
 
         @include mobile {
           height: auto;
         }
-      }
-
-      & .button {
-        @include absolute-center;
-        width: 250px;
-        height: 60px;
-        display: none;
-
-        @include mobile {
-          display: flex;
-          position: relative;
-          top: 0;
-          left: 0;
-          translate: none;
-          margin: 0 auto;
-        }
-      }
-      &:hover .button {
-        display: flex;
-        transition: all var(--transition-duration) ease;
-        z-index: 100;
-      }
-      &:hover img {
-        filter: grayscale(0.45) blur(3px);
-        transition:
-          filter var(--transition-duration) ease,
-          blur var(--transition-duration) ease;
-      }
-      &:not(:hover) img {
-        filter: grayscale(0) blur(0);
-        transition:
-          filter var(--transition-duration) ease,
-          blur var(--transition-duration) ease;
       }
     }
 

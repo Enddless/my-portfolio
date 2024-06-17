@@ -38,15 +38,15 @@ const ComponentsBlock = () => {
         {!dataLoaded && !components.length ? (
           <Spinner />
         ) : (
-          <section className='components__list component'>
+          <ul className='components__list component'>
             {components.map((project) => {
               return (
-                <div className='component__item' key={project.id} ref={addtoRefs}>
+                <li className='component__item' key={project.id} ref={addtoRefs}>
                   <ComponentCard project={project} />
-                </div>
+                </li>
               );
             })}
-          </section>
+          </ul>
         )}
       </div>
     </section>
