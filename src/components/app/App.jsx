@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import MainPage from '../../pages/main-page/';
-import DetailPage from '../../pages/detail-page/';
+import DetailPage from '../../pages/detail-page';
 
 function App() {
   return (
@@ -12,4 +12,3 @@ function App() {
 }
 
 export default App;
-

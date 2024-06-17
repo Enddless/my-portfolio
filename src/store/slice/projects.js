@@ -1,14 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+  layouts: [],
   projects: [],
   components: []
 };
 
 export const projectsSlice = createSlice({
-  name: 'recipes',
+  name: 'data',
   initialState,
   reducers: {
+    getAllLayouts: (state, action) => {
+      state.layouts = action.payload;
+    },
     getAllProjects: (state, action) => {
       state.projects = action.payload;
     },
@@ -18,5 +22,5 @@ export const projectsSlice = createSlice({
   }
 });
 
-export const { getAllProjects, getAllComponents } = projectsSlice.actions;
+export const { getAllLayouts, getAllProjects, getAllComponents } = projectsSlice.actions;
 export default projectsSlice.reducer;

@@ -3,24 +3,23 @@ import Title from '../title/index.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
-import ProjectCard from '../project-card/index.jsx';
-import { useSelector } from 'react-redux';
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
+import Card from '../project-card/index.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Projects = () => {
-  const projectsData = useSelector((state) => state.portfolioData.projects);
+const ProjectsList = ({ projectsList, id }) => {
+  const isLayoutsList = id === 'layout';
   const [projects, setProjects] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    if (projectsData.length) {
-      setProjects(projectsData);
+    if (projectsList.length) {
+      setProjects(projectsList);
       setDataLoaded(true);
     }
-  }, [projectsData]);
+  }, [projectsList]);
 
   const refs = useRef([]);
   refs.current = [];
@@ -34,10 +33,10 @@ const Projects = () => {
   };
 
   return (
-    <section className='projects' id='content'>
-      <div className='projects__inner  container'>
-        <div className='projects__title'>
-          <Title text='Projects' />
+    <section className='projects' id={isLayoutsList ? 'layouts' : 'projects'}>
+      <div className='projects__inner'>
+        <div className='projects__title  container'>
+          <Title text={isLayoutsList ? 'Layouts' : 'Projects'} />
         </div>
 
         {!dataLoaded && !projects.length ? (
@@ -46,8 +45,11 @@ const Projects = () => {
           <ul className='projects__list project'>
             {projects.map((project) => {
               return (
-                <li className='project__item' key={project.id} ref={addtoRefs}>
-                  <ProjectCard project={project} />
+                <li
+                  className='project__item   container '
+                  key={project.id}
+                  ref={addtoRefs}>
+                  <Card project={project} />
                 </li>
               );
             })}
@@ -58,4 +60,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsList;

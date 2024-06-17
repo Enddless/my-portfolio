@@ -15,7 +15,8 @@
 }
 .detail__links {
   display: flex;
-  column-gap: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 
   @include mobile {
     justify-content: center;

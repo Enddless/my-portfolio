@@ -1,5 +1,5 @@
 .header {
-  @include fluid-text(24, 16);
+  @include fluid-text(18, 16);
 
   padding: 20px 0;
   position: relative;
@@ -14,6 +14,9 @@
 
   &__menu {
     // padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &-list {
       display: flex;
@@ -55,6 +58,30 @@
         height: 1px;
         background-color: var(--color-accent);
         transition: all var(--transition-duration) ease;
+      }
+    }
+
+    &-contacts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-link {
+        display: block;
+        width: 40px;
+        height: 40px;
+
+        @include hover {
+          & svg * {
+            --currentColor: var(--color-accent);
+            fill: var(--currentColor);
+          }
+        }
+
+        & svg * {
+          --currentColor: var(--color-light);
+          fill: var(--currentColor);
+        }
       }
     }
   }
