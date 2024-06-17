@@ -1,28 +1,16 @@
+// require('dotenv').config();
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-// import { getAnalytics, logEvent } from 'firebase/analytics';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAVUxXtZUb23FZmR1e6KqDt5PWTSNbIsCQ',
-  authDomain: 'portfolio-2d99f.firebaseapp.com',
-  projectId: 'portfolio-2d99f',
-  storageBucket: 'portfolio-2d99f.appspot.com',
-  messagingSenderId: '501578199573',
-  appId: '1:501578199573:web:b4eaa2d11a865095a5941c'
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_API_ID
 };
-
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyAVUxXtZUb23FZmR1e6KqDt5PWTSNbIsCQ',
-//   authDomain: 'portfolio-2d99f.firebaseapp.com',
-//   projectId: 'portfolio-2d99f',
-//   storageBucket: 'portfolio-2d99f.appspot.com',
-//   messagingSenderId: '501578199573',
-//   appId: '1:501578199573:web:b4eaa2d11a865095a5941c',
-//   measurementId: 'G-1QRX8QK905'
-// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-// const analytics = getAnalytics(app);
-// logEvent(analytics, 'notification_received');
