@@ -1,24 +1,11 @@
 .info {
-  // background-color: var(--color-dark-alt);
-  // // min-height: 256px;
-  // padding: 40px;
-  // position: relative;
-  // top: -200px;
-  // left: 50%;
-  // transform: translate(-50%, 0);
-  // display: flex;
-  // align-items: flex-start;
-  // text-align: justify;
-  // z-index: 10;
   border-radius: var(--border-radius-small);
 
-  // width: 800px;
-
   @include tablet {
-    width: 600px;
+    // width: 600px;
   }
   @include mobile {
-    width: 350px;
+    // width: 350px;
     padding: 15px;
     min-height: 1px;
   }

@@ -13,10 +13,13 @@
   }
 
   &__menu {
-    // padding: 0 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include tablet {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     &-list {
       display: flex;

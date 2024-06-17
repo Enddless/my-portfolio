@@ -2,23 +2,19 @@
   position: relative;
   z-index: 2;
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
   gap: 30px;
-  // justify-content: center;
   height: calc(100vh - 89px);
   font-family: var(--font-family-secondary);
-  // background: url('../assets/images/photo1.jpg') no-repeat;
-  // background-size: contain;
-  // background-position: top right;
-  // border-radius: 50%;
-
-  // box-shadow: 0px 29px 20px -15px rgba(0, 0, 0, 0.6);
   padding-block: 40px;
   align-items: center;
 
+  @include tablet {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+  }
+
   @include mobile {
-    height: calc(100vh - 250px);
   }
 
   &__photo {
@@ -38,6 +34,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+    @include mobile {
+      width: 100%;
+    }
   }
   &__glitch {
     display: flex;
@@ -51,7 +50,7 @@
       @include fluid-text(26, 22);
 
       &--hero {
-        @include fluid-text(65, 30);
+        @include fluid-text(65, 24);
 
         line-height: 1;
         display: inline-block;
@@ -449,9 +448,15 @@
 
       &--left {
         text-align: left;
+        @include mobile {
+          text-align: center;
+        }
       }
       &--right {
         text-align: right;
+        @include mobile {
+          text-align: center;
+        }
       }
     }
 
