@@ -30,11 +30,12 @@ const ComponentsBlock = () => {
   };
 
   return (
-    <section className='components container' id='components'>
-      <div className='components__inner'>
+    <section className='components' id='components'>
+      <div className='components__inner  container'>
         <div className='components__title'>
           <Title text='Components' />
         </div>
+
         {!dataLoaded && !components.length ? (
           <Spinner />
         ) : (

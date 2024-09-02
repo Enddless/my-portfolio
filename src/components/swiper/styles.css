@@ -39,11 +39,11 @@
   border: 2px solid #b9ff47;
 }
 .swiper-pagination-bullet:hover {
-  background-color: #d4d4d4;
+  background-color: #0de218;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #b9ff47;
+  background: linear-gradient(225deg, rgb(19, 22, 13) 49%, rgb(185, 255, 71) 23%);
 }
 .swiper-pagination-bullet:before {
   content: '';

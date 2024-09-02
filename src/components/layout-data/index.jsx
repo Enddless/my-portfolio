@@ -1,10 +1,6 @@
 import ButtonDetails from '../button-details';
-import '../../styles/styles.scss';
-import { Link } from 'react-router-dom';
-import usePath from '../../hooks/usePath';
 
 function Layout({ data, page }) {
-  const { setCurrentPath } = usePath();
   const contentComments = page === 'details';
   return (
     <>
@@ -39,25 +35,14 @@ function Layout({ data, page }) {
 
       <div className='detail__links'>
         {data.deploy !== '' && (
-          <span>
-            <a href={data.deploy} target='_blank'>
-              <ButtonDetails text='Deploy' />
-            </a>
-          </span>
+          <a href={data.deploy} target='_blank'>
+            <ButtonDetails text='Deploy' />
+          </a>
         )}
         {data.github !== '' && (
-          <span>
-            <a href={data.github} target='_blank'>
-              <ButtonDetails text='Github' />
-            </a>
-          </span>
-        )}
-        {!contentComments && (
-          <div>
-            <Link to={`/project/${data.path}`} onClick={() => setCurrentPath(data.path)}>
-              <ButtonDetails text='Подробнее' />
-            </Link>
-          </div>
+          <a href={data.github} target='_blank'>
+            <ButtonDetails text='Github' />
+          </a>
         )}
       </div>
     </>

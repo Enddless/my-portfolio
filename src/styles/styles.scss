@@ -1,7 +1,7 @@
 @import 'mixins', 'globals', 'normalize', 'media', 'variables', 'utils';
 
-@import 'blocks/spinner', 'blocks/layout-data', 'blocks/mainpage', 'blocks/button',
-  'blocks/header', 'blocks/title', 'blocks/lead', 'blocks/info', 'blocks/skills',
-  'blocks/projects', 'blocks/project-card', 'blocks/components', 'blocks/component-card',
-  'blocks/project-detail', 'blocks/footer', 'blocks/contacts', 'blocks/burger-button',
+@import 'blocks/spinner', 'blocks/grid', 'blocks/layout-data', 'blocks/mainpage',
+  'blocks/button', 'blocks/header', 'blocks/title', 'blocks/lead', 'blocks/info',
+  'blocks/skills', 'blocks/projects', 'blocks/project-card', 'blocks/components',
+  'blocks/component-card', 'blocks/footer', 'blocks/contacts', 'blocks/burger-button',
   'blocks/cross-button', 'blocks/mobile-overlay';

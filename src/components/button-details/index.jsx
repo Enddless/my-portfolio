@@ -1,10 +1,10 @@
 import '../../styles/styles.scss';
 
-function ButtonDetails({ text, id }) {
+function ButtonDetails({ text, id, onClick }) {
   const isLoupeIconButton = id === 'loupe';
 
   return (
-    <button className='button' type='button'>
+    <button className='button' type='button' onClick={onClick}>
       {text}
       {isLoupeIconButton ? (
         <svg

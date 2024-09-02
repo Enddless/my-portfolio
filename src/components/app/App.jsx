@@ -1,14 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
 import MainPage from '../../pages/main-page/';
-import DetailPage from '../../pages/detail-page';
 
 function App() {
-  return (
-    <Routes>
-      <Route path='/' element={<MainPage />} />
-      <Route path='/project/:id' element={<DetailPage />} />
-    </Routes>
-  );
+  return <MainPage />;
 }
 
 export default App;

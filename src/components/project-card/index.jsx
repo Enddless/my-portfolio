@@ -1,8 +1,7 @@
 import Layout from '../layout-data/index.jsx';
+import SwiperComponent from '../swiper/index.jsx';
 
 function Card({ project }) {
-  // const isPortfolioProject = project.path === 'portfolio';
-
   return (
     <>
       <div className='project__item-description'>
@@ -10,7 +9,7 @@ function Card({ project }) {
       </div>
 
       <div className='project__item-photo'>
-        <img src={project.mainPhoto} alt='photo project' height='450px' />
+        <SwiperComponent images={project.images} />
       </div>
     </>
   );

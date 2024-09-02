@@ -34,8 +34,8 @@ const ProjectsList = ({ projectsList, id }) => {
 
   return (
     <section className='projects' id={isLayoutsList ? 'layouts' : 'projects'}>
-      <div className='projects__inner'>
-        <div className='projects__title  container'>
+      <div className='projects__inner  container'>
+        <div className='projects__title '>
           <Title text={isLayoutsList ? 'Layouts' : 'Projects'} />
         </div>
 
@@ -46,7 +46,7 @@ const ProjectsList = ({ projectsList, id }) => {
             {projects.map((project) => {
               return (
                 <li
-                  className='project__item   container '
+                  className='project__item grid grid--12'
                   key={project.id}
                   ref={addtoRefs}>
                   <Card project={project} />
