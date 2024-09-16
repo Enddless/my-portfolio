@@ -20,5 +20,5 @@ Prettier, Eslint – для форматирования и анализа на�
 ## Контакты
 Если у вас есть вопросы или предложения, вы можете связаться со мной:
 
-Email: [iv_diana@bk.ru](https://mailto:iv_diana@bk.ru)
+Email: [iv_diana@bk.ru](mailto:iv_diana@bk.ru)
 Telegram: [@endless_moonlight_on_monday](https://t.me/endless_moonlight_on_monday)
