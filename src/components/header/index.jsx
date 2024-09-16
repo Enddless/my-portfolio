@@ -2,6 +2,7 @@ import '../../styles/styles.scss';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
+import logo from 'public/logo.svg';
 
 function Header() {
   const refModal = useRef();
@@ -13,6 +14,9 @@ function Header() {
     <header className='header'>
       <div className='header__inner container'>
         <nav className='header__menu hidden-mobile'>
+          <div className='header__logo'>
+            <img src={logo} alt='' width={50} height={60} />
+          </div>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>
               <Link to='/' className='header__menu-link'>

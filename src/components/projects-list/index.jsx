@@ -46,6 +46,7 @@ const ProjectsList = ({ projectsList, id }) => {
             {projects.map((project) => {
               return (
                 <li
+                  id={project.path}
                   className='project__item grid grid--12'
                   key={project.id}
                   ref={addtoRefs}>

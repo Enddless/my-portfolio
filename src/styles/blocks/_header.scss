@@ -48,6 +48,8 @@
       width: 100%;
       position: relative;
       @include hover {
+        color: var(--color-accent);
+
         &::after {
           width: 100%;
         }
