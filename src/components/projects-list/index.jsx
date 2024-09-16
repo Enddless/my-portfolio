@@ -38,22 +38,22 @@ const ProjectsList = ({ projectsList, id }) => {
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          // Используем setTimeout для отложенного скролла
           setTimeout(() => {
             element.scrollIntoView({ behavior: 'smooth' });
-          }, 0);
+          }, 100); // Задержка 100 мс
         }
       }
     };
 
     // Вызываем функцию при загрузке страницы
-    window.onload = scrollToHash;
+    window.addEventListener('load', scrollToHash);
 
     // Добавляем обработчик события для изменения хэша
     window.addEventListener('hashchange', scrollToHash);
 
-    // Убираем обработчик при размонтировании компонента
+    // Убираем обработчики при размонтировании компонента
     return () => {
+      window.removeEventListener('load', scrollToHash);
       window.removeEventListener('hashchange', scrollToHash);
     };
   }, []);
