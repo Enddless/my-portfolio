@@ -33,16 +33,29 @@ const ProjectsList = ({ projectsList, id }) => {
   };
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        // Используем setTimeout для отложенного скролла
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 0);
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          // Используем setTimeout для отложенного скролла
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 0);
+        }
       }
-    }
+    };
+
+    // Вызываем функцию при загрузке страницы
+    window.onload = scrollToHash;
+
+    // Добавляем обработчик события для изменения хэша
+    window.addEventListener('hashchange', scrollToHash);
+
+    // Убираем обработчик при размонтировании компонента
+    return () => {
+      window.removeEventListener('hashchange', scrollToHash);
+    };
   }, []);
 
   return (
