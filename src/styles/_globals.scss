@@ -31,3 +31,17 @@ li {
 h1 {
   font-weight: 600;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #575757;
+  cursor: grab;
+}

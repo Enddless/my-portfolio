@@ -9,7 +9,10 @@ function Card({ project }) {
       </div>
 
       <div className='project__item-photo'>
-        <SwiperComponent images={project.images} />
+        <SwiperComponent
+          images={project.images}
+          videoSrc={project.video !== '' ? project.video : ''}
+        />
       </div>
     </>
   );

@@ -32,32 +32,6 @@ const ProjectsList = ({ projectsList, id }) => {
     }
   };
 
-  useEffect(() => {
-    const hashName = window.location.hash;
-    window.location.hash = '';
-
-    const scrollToHash = () => {
-      if (hashName) {
-        const element = document.querySelector(hashName);
-        if (element) {
-          // Прокручиваем к элементу с плавной анимацией
-          window.scrollTo({
-            top: element.offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      }
-    };
-
-    // Вызываем функцию после полной загрузки страницы
-    window.addEventListener('load', scrollToHash);
-
-    // Убираем обработчик при размонтировании компонента
-    return () => {
-      window.removeEventListener('load', scrollToHash);
-    };
-  }, []);
-
   return (
     <section className='projects' id={isLayoutsList ? 'layouts' : 'projects'}>
       <div className='projects__inner  container'>
@@ -77,6 +51,20 @@ const ProjectsList = ({ projectsList, id }) => {
                   key={project.id}
                   ref={addtoRefs}>
                   <Card project={project} />
+                  {project.video && (
+                    <div className='project__item-video'>
+                      <video width='100%' controls>
+                        <source src={project.video} type='video/mp4' />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
+                  {project.comments !== '' && (
+                    <div className='project__item-note'>
+                      Comment:
+                      <p>{project.comments}</p>
+                    </div>
+                  )}
                 </li>
               );
             })}

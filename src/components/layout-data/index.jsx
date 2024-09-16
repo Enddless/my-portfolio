@@ -1,7 +1,6 @@
 import ButtonDetails from '../button-details';
 
-function Layout({ data, page }) {
-  const contentComments = page === 'details';
+function Layout({ data }) {
   return (
     <>
       <div className='detail__item'>
@@ -24,12 +23,6 @@ function Layout({ data, page }) {
               {data.organizationName}
             </a>
           </p>
-        </div>
-      )}
-      {contentComments && data.comments !== '' && (
-        <div className='detail__item'>
-          Note:
-          <p>{data.comments}</p>
         </div>
       )}
 

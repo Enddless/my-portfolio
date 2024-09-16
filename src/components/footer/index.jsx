@@ -8,7 +8,7 @@ function Footer() {
     <footer className='footer'>
       <div className='footer__inner container'>
         <div className='footer__title'>
-          <Title text='Follow me' />
+          <Title text='Contacts  me' />
         </div>
         <Contacts />
       </div>
