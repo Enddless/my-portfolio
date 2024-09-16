@@ -33,28 +33,28 @@ const ProjectsList = ({ projectsList, id }) => {
   };
 
   useEffect(() => {
+    const hashName = window.location.hash;
+    window.location.hash = '';
+
     const scrollToHash = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const element = document.getElementById(hash.substring(1));
+      if (hashName) {
+        const element = document.querySelector(hashName);
         if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }, 100); // Задержка 100 мс
+          // Прокручиваем к элементу с плавной анимацией
+          window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth'
+          });
         }
       }
     };
 
-    // Вызываем функцию при загрузке страницы
+    // Вызываем функцию после полной загрузки страницы
     window.addEventListener('load', scrollToHash);
 
-    // Добавляем обработчик события для изменения хэша
-    window.addEventListener('hashchange', scrollToHash);
-
-    // Убираем обработчики при размонтировании компонента
+    // Убираем обработчик при размонтировании компонента
     return () => {
       window.removeEventListener('load', scrollToHash);
-      window.removeEventListener('hashchange', scrollToHash);
     };
   }, []);
 
