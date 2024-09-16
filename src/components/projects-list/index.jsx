@@ -32,13 +32,15 @@ const ProjectsList = ({ projectsList, id }) => {
     }
   };
 
-  // прокрутка до элемента, если переход сразу на хэшссылку
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
-      const element = document.getElementById(hash.substring(1)); // Убираем '#'
+      const element = document.getElementById(hash.substring(1));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        // Используем setTimeout для отложенного скролла
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 0);
       }
     }
   }, []);
