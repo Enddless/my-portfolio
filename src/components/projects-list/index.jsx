@@ -32,6 +32,17 @@ const ProjectsList = ({ projectsList, id }) => {
     }
   };
 
+  // прокрутка до элемента, если переход сразу на хэшссылку
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1)); // Убираем '#'
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <section className='projects' id={isLayoutsList ? 'layouts' : 'projects'}>
       <div className='projects__inner  container'>
