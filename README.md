@@ -1,4 +1,4 @@
-# Мое Портфолио
+# Мое портфолио
 ![Моя фотография](public/main_photo8.jpg)
 
 ## Содержание
@@ -20,5 +20,5 @@
 ## Контакты
 Если у вас есть вопросы или предложения, вы можете связаться со мной:
 
-Email: [iv_diana@bk.ru](mailto:iv_diana@bk.ru)
-Telegram: [@endless_moonlight_on_monday](https://t.me/endless_moonlight_on_monday)
+- email: [iv_diana@bk.ru](mailto:iv_diana@bk.ru)
+- telegram: [@endless_moonlight_on_monday](https://t.me/endless_moonlight_on_monday)
