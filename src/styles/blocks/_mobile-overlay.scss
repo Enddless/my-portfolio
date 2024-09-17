@@ -1,6 +1,7 @@
 .mobile-overlay {
   width: 100%;
-  height: 350px;
+  // height: 350px;
+  height: 100vh;
   margin: 0;
   border: none;
   padding: 14px 20px;
@@ -24,6 +25,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 20px;
+    row-gap: 30px;
+    height: 100%;
+  }
+  &__item {
+    font-size: 24px;
+  }
+
+  &__body {
+    height: calc(90vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -10,6 +10,10 @@ function Header() {
     refModal.current.showModal();
   };
 
+  const closeModal = () => {
+    refModal.current.close();
+  };
+
   return (
     <header className='header'>
       <div className='header__inner container'>
@@ -65,28 +69,43 @@ function Header() {
           <div className='mobile-overlay__body'>
             <ul className='mobile-overlay__list'>
               <li className='mobile-overlay__item'>
-                <Link to='/' className='mobile-overlay__link'>
+                <Link to='/' className='mobile-overlay__link' onClick={closeModal}>
                   Home
                 </Link>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink smooth to='/#skills' className='mobile-overlay__link'>
+                <HashLink
+                  smooth
+                  to='/#skills'
+                  className='mobile-overlay__link'
+                  onClick={closeModal}>
                   Skills
                 </HashLink>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink smooth to='/#layouts' className='header__menu-link'>
+                <HashLink
+                  smooth
+                  to='/#layouts'
+                  className='mobile-overlay__link'
+                  onClick={closeModal}>
                   Layouts
                 </HashLink>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink smooth to='/#projects' className='mobile-overlay__link'>
+                <HashLink
+                  smooth
+                  to='/#projects'
+                  className='mobile-overlay__link'
+                  onClick={closeModal}>
                   Projects
                 </HashLink>
               </li>
-
               <li className='mobile-overlay__item'>
-                <HashLink smooth to='/#components' className='mobile-overlay__link'>
+                <HashLink
+                  smooth
+                  to='/#components'
+                  className='mobile-overlay__link'
+                  onClick={closeModal}>
                   Components
                 </HashLink>
               </li>

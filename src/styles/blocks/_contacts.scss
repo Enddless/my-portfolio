@@ -1,19 +1,21 @@
 .contacts {
   display: flex;
-  column-gap: 15px;
+  column-gap: 5px;
 
   &__icon {
     background: transparent;
+    transform: scale(0.9);
     width: 40px;
     height: 40px;
-    box-shadow: 0px 0px 4px 4px rgba(8, 8, 8, 0.2);
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
       transition: transform var(--transition-duration) ease;
       & svg {
-        fill: var(--color-light);
+        fill: var(--color-accent);
         transition: fill var(--transition-duration) ease;
       }
     }
@@ -23,7 +25,7 @@
       fill: var(--currentColor);
     }
     & svg {
-      fill: var(--color-accent);
+      fill: var(--color-light);
     }
   }
 }
