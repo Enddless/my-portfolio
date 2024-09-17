@@ -1,46 +1,20 @@
 .lead__overlay {
-  // background: url('../assets/images/myphoto.jpg') no-repeat;
-  // background-position: top center;
-  // background-size: cover;
-  // height: 100vh;
-  // position: relative;
-
-  // & .mask2 {
-  //   mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
-  // }
   background: linear-gradient(180deg, rgb(39, 39, 39) 8%, rgb(24, 23, 23) 54%);
-  // background: linear-gradient(180deg, rgb(0, 0, 0) 27%, rgb(35, 35, 35) 83%);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgb(39, 39, 39) 17%,
+  //   rgb(24, 23, 23) 69%,
+  //   rgb(35, 35, 35) 77%
+  // );
 }
-.lead__overlay::after {
-  // content: '';
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  // background-color: rgba(35, 35, 35, 0.9);
-  // z-index: 1;
-}
+
 .main__content {
-  /* margin: 0 100px 100px; */
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
-  row-gap: 140px;
   position: relative;
 
   @include mobile {
     row-gap: 40px;
     padding-top: 40px;
-  }
-}
-.content__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 140px;
-
-  @include mobile {
-    row-gap: 40px;
   }
 }

@@ -65,8 +65,9 @@ const Skills = () => {
       refs.current.push(el);
     }
   };
+
   return (
-    <section className='skills' id='skills'>
+    <section className='section skills' id='skills'>
       <div className='skills__inner container'>
         <div className='skills__title'>
           <Title text='Skills' />

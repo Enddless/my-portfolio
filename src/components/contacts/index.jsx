@@ -1,5 +1,3 @@
-import '../../styles/styles.scss';
-
 function Contacts() {
   return (
     <section className='contacts'>

@@ -1,5 +1,3 @@
-import '../../styles/styles.scss';
-
 import Title from '../title/index.jsx';
 import Contacts from '../contacts/index.jsx';
 

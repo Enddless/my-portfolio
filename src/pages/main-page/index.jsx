@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import ProjectsList from '../../components/projects-list/index.jsx';
 
 function MainPage() {
+  // eslint-disable-next-line no-undef
   window.scrollTo(0, 0);
   useGetAllLayouts();
   useGetAllProjects();
@@ -24,14 +25,14 @@ function MainPage() {
         <Header />
         <Lead />
       </div>
-      <div className='content__wrapper'>
-        <div className='main__content '>
-          <Skills />
-          <ProjectsList projectsList={layoutsData} id='layout' />
-          <ProjectsList projectsList={projectsData} />
-        </div>
+
+      <div className='main__content '>
+        <Skills />
+        <ProjectsList projectsList={layoutsData} id='layout' />
+        <ProjectsList projectsList={projectsData} />
         <ComponentsBlock />
       </div>
+
       <Footer />
     </>
   );

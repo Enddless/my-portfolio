@@ -1,8 +1,20 @@
 .components {
   &__title {
     margin: 0 0 40px;
-    & .line-to-section {
-      left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+
+    @include hover {
+      & .line {
+        background-color: var(--color-accent);
+      }
+
+      & .title {
+        color: var(--color-accent);
+      }
     }
   }
   &__list {

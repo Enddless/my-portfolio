@@ -1,4 +1,3 @@
-import '../../styles/styles.scss';
 import Layout from '../layout-data';
 
 function ComponentCard({ project }) {

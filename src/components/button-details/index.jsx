@@ -1,5 +1,3 @@
-import '../../styles/styles.scss';
-
 function ButtonDetails({ text, id, onClick }) {
   const isLoupeIconButton = id === 'loupe';
 

@@ -1,4 +1,3 @@
-import '../../styles/styles.scss';
 import Info from '../info';
 import photo from '../../assets/images/photo1.jpg';
 

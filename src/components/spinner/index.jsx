@@ -1,5 +1,3 @@
-import '../../styles/styles.scss';
-
 function Spinner() {
   return (
     <div className='loader'>

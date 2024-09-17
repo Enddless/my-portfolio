@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 160px;
+  // margin-top: 160px;
   background: var(--color-accent);
 
   @include mobile {
@@ -10,7 +10,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     column-gap: 60px;
     height: 100px;
 

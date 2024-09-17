@@ -3,11 +3,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
-function useGsapOptions({ refs, dataLoaded, options }) {
+
+function useGsapOptions({ refs, dataLoaded, options, isOpen }) {
   const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
-    if (dataLoaded && options) {
+    if (isOpen && dataLoaded && options) {
       refs.current.forEach((el) => {
         if (!isMobile) {
           gsap.fromTo(
@@ -52,7 +53,7 @@ function useGsapOptions({ refs, dataLoaded, options }) {
         }
       });
     }
-  }, [refs, dataLoaded, options, isMobile]);
+  }, [refs, dataLoaded, options, isOpen, isMobile]); // Добавлено isOpen
 }
 
 export default useGsapOptions;

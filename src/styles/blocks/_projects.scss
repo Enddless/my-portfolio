@@ -1,9 +1,20 @@
 .projects {
   &__title {
     margin-bottom: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 
-    & .line-to-section {
-      left: 30px;
+    @include hover {
+      & .line {
+        background-color: var(--color-accent);
+      }
+
+      & .title {
+        color: var(--color-accent);
+      }
     }
   }
 
@@ -14,6 +25,19 @@
 
     @include mobile {
       row-gap: 0;
+    }
+  }
+
+  &__template {
+    @include fluid-text(16, 14);
+    display: block;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: var(--color-gray-alt);
+
+    &--disabled {
+      display: none;
     }
   }
 }
