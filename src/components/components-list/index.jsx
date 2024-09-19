@@ -52,7 +52,7 @@ const ComponentsBlock = ({ componentsData }) => {
 
         {isOpen && (
           <>
-            {isLoading ? (
+            {isLoading && !components.length ? (
               <Spinner />
             ) : (
               <ul className='components__list component'>
