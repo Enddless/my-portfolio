@@ -15,7 +15,7 @@ function Lead() {
               html-верстальщик
             </span>
             <h1
-              className='lead__glitch-text lead__glitch-text--hero lead__glitch-layers'
+              className='lead__glitch-text lead__glitch-text--hero '
               data-text='diana ivashchenko'>
               <span>diana ivashchenko</span>
             </h1>

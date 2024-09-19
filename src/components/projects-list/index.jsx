@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
-import gsap from 'gsap';
 
 const ProjectsList = ({ projectsList, id }) => {
   const isLayoutsList = id === 'layout';
