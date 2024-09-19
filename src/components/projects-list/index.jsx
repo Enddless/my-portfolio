@@ -3,26 +3,25 @@ import { useEffect, useRef, useState } from 'react';
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
+import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
-  // Установите isOpen в true для 'Layouts' и 'Projects'
+  const { isLoading } = useGetAllProjects();
   const isLayoutsList = id === 'Layouts';
   const isProjectsList = id === 'Projects';
   const [projects, setProjects] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
-  const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList); // Изменено на true для 'Layouts' и 'Projects'
+  const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
 
   useEffect(() => {
-    if (projectsList.length) {
+    if (projectsList) {
       setProjects(projectsList);
-      setDataLoaded(true);
     }
   }, [projectsList]);
 
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
+  useGsapOptions({ refs, dataLoaded: !isLoading, options: projects.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -47,6 +46,7 @@ const ProjectsList = ({ projectsList, id }) => {
             <div className='line line2'></div>
           </div>
         </div>
+
         <div
           className={`projects__template ${isOpen ? 'projects__template--disabled' : ''}`}>
           <p>
@@ -58,33 +58,37 @@ const ProjectsList = ({ projectsList, id }) => {
 
         {isOpen && (
           <>
-            {!dataLoaded && !projects.length ? (
+            {isLoading ? (
               <Spinner />
             ) : (
               <ul className='projects__list project'>
-                {projects.map((project) => (
-                  <li
-                    id={project.path}
-                    className='project__item grid grid--12'
-                    key={project.id}
-                    ref={addtoRefs}>
-                    <Card project={project} />
-                    {project.video && (
-                      <div className='project__item-video'>
-                        <video width='100%' controls>
-                          <source src={project.video} type='video/mp4' />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    )}
-                    {project.comments && (
-                      <div className='project__item-note'>
-                        Comment:
-                        <p>{project.comments}</p>
-                      </div>
-                    )}
-                  </li>
-                ))}
+                {projects && projects.length > 0 ? (
+                  projects.map((project) => (
+                    <li
+                      id={project.path}
+                      className='project__item grid grid--12'
+                      key={project.id}
+                      ref={addtoRefs}>
+                      <Card project={project} />
+                      {project.video && (
+                        <div className='project__item-video'>
+                          <video width='100%' controls>
+                            <source src={project.video} type='video/mp4' />
+                            Ваш браузер не поддерживает видео.
+                          </video>
+                        </div>
+                      )}
+                      {project.comments && (
+                        <div className='project__item-note'>
+                          Комментарий:
+                          <p>{project.comments}</p>
+                        </div>
+                      )}
+                    </li>
+                  ))
+                ) : (
+                  <p>Нет доступных проектов.</p>
+                )}
               </ul>
             )}
           </>

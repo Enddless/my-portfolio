@@ -6,7 +6,7 @@ function Lead() {
     <>
       <section className='lead container'>
         <div className='lead__photo'>
-          <img src={photo} alt='' width={452} />
+          <img src={photo} alt='' width={452} loading='lazy' />
         </div>
 
         <div className='lead__body'>

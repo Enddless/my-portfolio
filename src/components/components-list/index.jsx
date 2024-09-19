@@ -1,27 +1,26 @@
 import Title from '../title/index.jsx';
 import { useEffect, useRef, useState } from 'react';
 import ComponentCard from '../component-card/index.jsx';
-import { useSelector } from 'react-redux';
+
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
+import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 
-const ComponentsBlock = () => {
-  const componentsData = useSelector((state) => state.portfolioData.components);
+const ComponentsBlock = ({ componentsData }) => {
+  const { isLoading } = useGetAllComponents();
   const [components, setComponents] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (componentsData.length) {
+    if (componentsData) {
       setComponents(componentsData);
-      setDataLoaded(true); // Устанавливаем флаг загрузки данных в true
     }
   }, [componentsData]);
 
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded, options: components.length, isOpen });
+  useGsapOptions({ refs, dataLoaded: !isLoading, options: components.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -53,7 +52,7 @@ const ComponentsBlock = () => {
 
         {isOpen && (
           <>
-            {!dataLoaded && !components.length ? (
+            {isLoading ? (
               <Spinner />
             ) : (
               <ul className='components__list component'>

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
+    "@tanstack/react-query": "^5.56.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "firebase": "^10.9.0",
@@ -34,6 +35,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "react-query-rewind": "^2.1.13",
     "vite": "^5.1.6"
   }
 }

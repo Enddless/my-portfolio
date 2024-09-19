@@ -27,7 +27,7 @@ function SwiperComponent({ images }) {
       {images.map((image, index) => {
         return (
           <SwiperSlide key={index}>
-            <img src={image} alt='photo project' />
+            <img src={image} alt='photo project' loading='lazy' />
           </SwiperSlide>
         );
       })}
