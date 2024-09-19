@@ -1,8 +1,28 @@
+import photo from '../../assets/images/photo1.jpg';
+
 function Info() {
   return (
-    <section className='info'>
-      <div className='info__inner'>
-        <div className='info__text'>
+    <section className='info' id='About'>
+      <div className='info__inner grid grid--2'>
+        <div className='info__photo'>
+          <img src={photo} alt='' width={200} height={200} loading='lazy' />
+        </div>
+        <div className='info__body'>
+          <div className='info__text'>
+            <span className='info__text-item info__text-item--left'>
+              html-верстальщик
+            </span>
+            <h2
+              className='info__text-item info__text-item--hero'
+              data-text='diana ivashchenko'>
+              <span>diana ivashchenko</span>
+            </h2>
+            <span className='info__text-item info__text-item--right'>
+              junior frontend-developer
+            </span>
+          </div>
+        </div>
+        <div className='info__motivation-text'>
           <p>
             Стремлюсь к&nbsp;освоению мира веб-разработки. Меня увлекает создание красивых
             и&nbsp;интерактивных пользовательских интерфейсов,&nbsp;а&nbsp;также изучение

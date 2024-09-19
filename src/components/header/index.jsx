@@ -26,7 +26,18 @@ function Header() {
             <li className='header__menu-item'>
               <HashLink
                 smooth
+                to='/#About'
+                data-hover='About me'
+                className='header__menu-link'
+                onClick={() => handleScroll('About')}>
+                About me
+              </HashLink>
+            </li>
+            <li className='header__menu-item'>
+              <HashLink
+                smooth
                 to='/#Skills'
+                data-hover='Skills'
                 className='header__menu-link'
                 onClick={() => handleScroll('Skills')}>
                 Skills
@@ -36,6 +47,7 @@ function Header() {
               <HashLink
                 smooth
                 to='/#Layouts'
+                data-hover='Layouts'
                 className='header__menu-link'
                 onClick={() => handleScroll('Layouts')}>
                 Layouts
@@ -45,6 +57,7 @@ function Header() {
               <HashLink
                 smooth
                 to='/#Projects'
+                data-hover='Projects'
                 className='header__menu-link'
                 onClick={() => handleScroll('Projects')}>
                 Projects
@@ -54,6 +67,7 @@ function Header() {
               <HashLink
                 smooth
                 to='/#Components'
+                data-hover='Components'
                 className='header__menu-link'
                 onClick={() => handleScroll('Components')}>
                 Components
@@ -83,6 +97,16 @@ function Header() {
           </form>
           <div className='mobile-overlay__body'>
             <ul className='mobile-overlay__list'>
+              <li className='mobile-overlay__item'>
+                <HashLink
+                  smooth
+                  to='/#About'
+                  className='mobile-overlay__link'
+                  onClick={closeModal}>
+                  About me
+                </HashLink>
+              </li>
+
               <li className='mobile-overlay__item'>
                 <HashLink
                   smooth

@@ -1,25 +1,79 @@
 .info {
-  border-radius: var(--border-radius-small);
-
-  @include tablet {
-    // width: 600px;
-  }
-  @include mobile {
-    // width: 350px;
-    padding: 15px;
-    min-height: 1px;
-  }
   &__inner {
-    display: flex;
-    column-gap: 20px;
+    // display: flex;
+    // gap: 20px;
+    justify-items: center;
     align-items: center;
+    position: relative;
+
+    @include mobile {
+      --gridColumns: 1;
+    }
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+  }
   &__text {
-    @include fluid-text(16, 12);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-item {
+      @include fluid-text(30, 20);
+
+      &--hero {
+        @include fluid-text(55, 28);
+
+        line-height: 1;
+        display: inline-block;
+        text-transform: uppercase;
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__motivation-text {
+    @include fluid-text(14, 12);
+
     font-family: var(--font-family-base);
     text-align: justify;
     line-height: 1.6;
-    color: var(--color-gray);
+  }
+  &__photo {
+    grid-column: span 2;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: brightness(50%);
+
+    @include mobile {
+      grid-column: span 1;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
   }
 }

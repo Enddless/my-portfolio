@@ -14,19 +14,4 @@
       --gridColumns: #{$i};
     }
   }
-
-  &--2 {
-    @include tablet {
-      --gridColumns: 1;
-    }
-  }
-
-  &--3 {
-    @include desktop {
-      --gridColumns: 2;
-    }
-    @include mobile {
-      --gridColumns: 1;
-    }
-  }
 }

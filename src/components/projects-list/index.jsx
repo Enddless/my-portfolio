@@ -80,7 +80,7 @@ const ProjectsList = ({ projectsList, id }) => {
                       )}
                       {project.comments && (
                         <div className='project__item-note'>
-                          Комментарий:
+                          Comment:
                           <p>{project.comments}</p>
                         </div>
                       )}
