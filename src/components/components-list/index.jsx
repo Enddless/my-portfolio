@@ -4,23 +4,27 @@ import ComponentCard from '../component-card/index.jsx';
 
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
-import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
+// import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
+import { useSelector } from 'react-redux';
 
-const ComponentsBlock = ({ componentsData }) => {
-  const { isLoading } = useGetAllComponents();
+const ComponentsBlock = () => {
+  const componentsData = useSelector((state) => state.portfolioData.components);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  // const { isLoading } = useGetAllComponents();
   const [components, setComponents] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (componentsData) {
+    if (componentsData.length) {
       setComponents(componentsData);
+      setDataLoaded(true);
     }
   }, [componentsData]);
 
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded: !isLoading, options: components.length, isOpen });
+  useGsapOptions({ refs, dataLoaded, options: components.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -52,7 +56,7 @@ const ComponentsBlock = ({ componentsData }) => {
 
         {isOpen && (
           <>
-            {isLoading && !components.length ? (
+            {!dataLoaded && !components.length ? (
               <Spinner />
             ) : (
               <ul className='components__list component'>

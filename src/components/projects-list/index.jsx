@@ -3,25 +3,27 @@ import { useEffect, useRef, useState } from 'react';
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
-import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
+// import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
-  const { isLoading } = useGetAllProjects();
+  // const { isLoading } = useGetAllProjects();
   const isLayoutsList = id === 'Layouts';
   const isProjectsList = id === 'Projects';
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    if (projectsList) {
+    if (projectsList.length) {
       setProjects(projectsList);
+      setDataLoaded(true);
     }
   }, [projectsList]);
 
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded: !isLoading, options: projects.length, isOpen });
+  useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -58,7 +60,7 @@ const ProjectsList = ({ projectsList, id }) => {
 
         {isOpen && (
           <>
-            {isLoading && !projects.length ? (
+            {!dataLoaded && !projects.length ? (
               <Spinner />
             ) : (
               <ul className='projects__list project'>
