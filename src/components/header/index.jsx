@@ -24,22 +24,22 @@ function Header() {
               </Link>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#skills' className='header__menu-link'>
+              <HashLink to='/#skills' className='header__menu-link'>
                 Skills
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#layouts' className='header__menu-link'>
+              <HashLink to='/#layouts' className='header__menu-link'>
                 Layouts
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#projects' className='header__menu-link'>
+              <HashLink to='/#projects' className='header__menu-link'>
                 Projects
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink smooth to='/#components' className='header__menu-link'>
+              <HashLink to='/#components' className='header__menu-link'>
                 Components
               </HashLink>
             </li>
