@@ -1,5 +1,4 @@
 import { HashLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import Contacts from '../contacts';
 
@@ -13,33 +12,50 @@ function Header() {
     refModal.current.close();
   };
 
+  const handleScroll = (id) => {
+    setTimeout(() => {
+      window.history.pushState(null, '', window.location.pathname);
+    }, 500);
+  };
+
   return (
     <header className='header'>
       <div className='header__inner container'>
         <nav className='header__menu hidden-mobile'>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>
-              <Link to='/' className='header__menu-link'>
-                Home
-              </Link>
-            </li>
-            <li className='header__menu-item'>
-              <HashLink to='/#skills' className='header__menu-link'>
+              <HashLink
+                smooth
+                to='/#Skills'
+                className='header__menu-link'
+                onClick={() => handleScroll('Skills')}>
                 Skills
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink to='/#layouts' className='header__menu-link'>
+              <HashLink
+                smooth
+                to='/#Layouts'
+                className='header__menu-link'
+                onClick={() => handleScroll('Layouts')}>
                 Layouts
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink to='/#projects' className='header__menu-link'>
+              <HashLink
+                smooth
+                to='/#Projects'
+                className='header__menu-link'
+                onClick={() => handleScroll('Projects')}>
                 Projects
               </HashLink>
             </li>
             <li className='header__menu-item'>
-              <HashLink to='/#components' className='header__menu-link'>
+              <HashLink
+                smooth
+                to='/#Components'
+                className='header__menu-link'
+                onClick={() => handleScroll('Components')}>
                 Components
               </HashLink>
             </li>
@@ -68,14 +84,9 @@ function Header() {
           <div className='mobile-overlay__body'>
             <ul className='mobile-overlay__list'>
               <li className='mobile-overlay__item'>
-                <Link to='/' className='mobile-overlay__link' onClick={closeModal}>
-                  Home
-                </Link>
-              </li>
-              <li className='mobile-overlay__item'>
                 <HashLink
                   smooth
-                  to='/#skills'
+                  to='/#Skills'
                   className='mobile-overlay__link'
                   onClick={closeModal}>
                   Skills
@@ -84,7 +95,7 @@ function Header() {
               <li className='mobile-overlay__item'>
                 <HashLink
                   smooth
-                  to='/#layouts'
+                  to='/#Layouts'
                   className='mobile-overlay__link'
                   onClick={closeModal}>
                   Layouts
@@ -93,7 +104,7 @@ function Header() {
               <li className='mobile-overlay__item'>
                 <HashLink
                   smooth
-                  to='/#projects'
+                  to='/#Projects'
                   className='mobile-overlay__link'
                   onClick={closeModal}>
                   Projects
@@ -102,7 +113,7 @@ function Header() {
               <li className='mobile-overlay__item'>
                 <HashLink
                   smooth
-                  to='/#components'
+                  to='/#Components'
                   className='mobile-overlay__link'
                   onClick={closeModal}>
                   Components

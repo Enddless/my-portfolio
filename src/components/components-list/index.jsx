@@ -37,7 +37,7 @@ const ComponentsBlock = () => {
   };
 
   return (
-    <section className='section components' id='components'>
+    <section className='section components' id='Components'>
       <div className='components__inner  container'>
         <div className='components__title' onClick={toggleList}>
           <Title text='Components' />

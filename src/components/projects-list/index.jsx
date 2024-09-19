@@ -5,10 +5,12 @@ import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
-  const isLayoutsList = id === 'layout';
+  // Установите isOpen в true для 'Layouts' и 'Projects'
+  const isLayoutsList = id === 'Layouts';
+  const isProjectsList = id === 'Projects';
   const [projects, setProjects] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [isOpen, setIsOpen] = useState(isLayoutsList);
+  const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList); // Изменено на true для 'Layouts' и 'Projects'
 
   useEffect(() => {
     if (projectsList.length) {
@@ -36,17 +38,17 @@ const ProjectsList = ({ projectsList, id }) => {
   };
 
   return (
-    <section className='section projects' id={isLayoutsList ? 'layouts' : 'projects'}>
+    <section className='section projects' id={id}>
       <div className='projects__inner container'>
         <div className='projects__title' onClick={toggleList}>
-          <Title text={isLayoutsList ? 'Layouts' : 'Projects'} />
+          <Title text={id} />
           <div className={`toggle-icon ${isOpen ? 'open' : ''}`}>
             <div className='line line1'></div>
             <div className='line line2'></div>
           </div>
         </div>
         <div
-          className={`projects__template ${isOpen ? 'projects__template--disabled' : ''} `}>
+          className={`projects__template ${isOpen ? 'projects__template--disabled' : ''}`}>
           <p>
             {isLayoutsList
               ? 'Здесь можно посмотреть свёрстанные проекты'

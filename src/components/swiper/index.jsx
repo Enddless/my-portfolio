@@ -4,10 +4,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Spinner from '../spinner';
 
 function SwiperComponent({ images }) {
   if (!images) {
-    return false;
+    return <Spinner />;
   }
   return (
     <Swiper
