@@ -3,17 +3,18 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  // gap: 30px;
-  // height: calc(100vh - 89px);
+  gap: 30px;
+  height: calc(100vh - 50px);
   font-family: var(--font-family-secondary);
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   align-items: center;
   justify-content: center;
 
   &__title {
-    @include fluid-text(90, 24);
+    @include fluid-text(50, 24);
 
-    height: calc(100vh - 50px);
+    // height: calc(100vh - 50px);
     line-height: 1;
     letter-spacing: 5px;
     display: flex;

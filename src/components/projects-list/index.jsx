@@ -71,20 +71,22 @@ const ProjectsList = ({ projectsList, id }) => {
                     key={project.id}
                     ref={addtoRefs}>
                     <Card project={project} />
-                    {project.video && (
-                      <div className='project__item-video'>
-                        <video width='100%' controls>
-                          <source src={project.video} type='video/mp4' />
-                          Ваш браузер не поддерживает видео.
-                        </video>
-                      </div>
-                    )}
-                    {project.comments && (
-                      <div className='project__item-note'>
-                        Comment:
-                        <p>{project.comments}</p>
-                      </div>
-                    )}
+                    <div className='project__item-comment grid grid--12'>
+                      {project.comments && (
+                        <div className='project__item-note'>
+                          Comment:
+                          <p>{project.comments}</p>
+                        </div>
+                      )}
+                      {project.video && (
+                        <div className='project__item-video'>
+                          <video width='100%' controls loading='lazy'>
+                            <source src={project.video} type='video/mp4' />
+                            Ваш браузер не поддерживает видео.
+                          </video>
+                        </div>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>

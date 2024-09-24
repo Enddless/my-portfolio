@@ -12,7 +12,7 @@ const ComponentsBlock = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
   // const { isLoading } = useGetAllComponents();
   const [components, setComponents] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
     if (componentsData.length) {
@@ -59,7 +59,7 @@ const ComponentsBlock = () => {
             {!dataLoaded && !components.length ? (
               <Spinner />
             ) : (
-              <ul className='components__list component'>
+              <ul className='components__list component grid grid--12'>
                 {components.map((project) => {
                   return (
                     <li className='component__item' key={project.id} ref={addtoRefs}>

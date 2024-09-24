@@ -8,11 +8,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      public: path.resolve(__dirname, 'public')
+      public: path.resolve(__dirname, 'public'),
+      '@': path.resolve(__dirname, 'src')
     }
   }
-  // ,
-  // build: {
-  //   sourcemap: false
-  // }
 });

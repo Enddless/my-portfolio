@@ -9,6 +9,12 @@ import { store } from './store/store.js';
 
 // const queryClient = new QueryClient();
 
+import { onLCP, onINP, onCLS } from 'web-vitals';
+
+onCLS(console.log);
+onINP(console.log);
+onLCP(console.log);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/my-portfolio'>
     <Provider store={store}>

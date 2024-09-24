@@ -1,6 +1,5 @@
 .project {
   &__item {
-    column-gap: 20px;
     position: relative;
     overflow: hidden;
 
@@ -24,7 +23,7 @@
       row-gap: 20px;
       text-align: justify;
       color: var(--color-gray);
-      grid-column: span 4;
+      grid-column: span 5;
       grid-row: 1;
 
       @include mobile {
@@ -40,7 +39,7 @@
 
       display: flex;
       flex-direction: column;
-      grid-column: span 8;
+      grid-column: span 7;
       grid-row: 1;
 
       @include mobile {
@@ -48,8 +47,8 @@
       }
 
       & img {
-        width: auto;
-        max-height: 450px;
+        width: 100%;
+        max-height: 350px;
         object-fit: cover;
 
         @include mobile {
@@ -69,12 +68,21 @@
       }
     }
 
+    &-comment {
+      grid-column: span 12;
+      order: 3;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     &-note {
       @include fluid-text(16, 14);
       color: var(--color-gray);
       // grid-row: 2;
-      grid-column: span 12;
-      order: 3;
+      grid-column: span 5;
+
       position: relative;
       text-align: justify;
 
@@ -84,8 +92,8 @@
       }
     }
     &-video {
-      grid-column: span 12;
-      order: 4;
+      grid-column: span 7;
+
       position: relative;
     }
 

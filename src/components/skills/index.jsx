@@ -74,7 +74,17 @@ const Skills = () => {
         </div>
         <section className='skills__icons'>
           {arrayIcons.map((item) => {
-            return <img src={item} alt='icon' key={item} ref={refIcons} loading='lazy' />;
+            return (
+              <img
+                src={item}
+                alt='icon'
+                key={item}
+                ref={refIcons}
+                loading='lazy'
+                width={40}
+                height={40}
+              />
+            );
           })}
         </section>
       </div>

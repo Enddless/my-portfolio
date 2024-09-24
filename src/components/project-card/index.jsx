@@ -10,8 +10,10 @@ function Card({ project }) {
 
       <div className='project__item-photo'>
         <SwiperComponent
+          project={project}
+          sources={project.sources}
           images={project.images}
-          videoSrc={project.video !== '' ? project.video : ''}
+          alt={project.alt}
         />
       </div>
     </>

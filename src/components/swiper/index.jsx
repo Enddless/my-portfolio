@@ -6,18 +6,18 @@ import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Spinner from '../spinner';
 
-function SwiperComponent({ images }) {
-  if (!images) {
+function SwiperComponent({ images, alt, sources }) {
+  if (!images || !sources) {
     return <Spinner />;
   }
   return (
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false
+      // }}
       pagination={{
         clickable: true
       }}
@@ -27,7 +27,17 @@ function SwiperComponent({ images }) {
       {images.map((image, index) => {
         return (
           <SwiperSlide key={index}>
-            <img src={image} alt='photo project' loading='lazy' />
+            <picture>
+              <source srcSet={sources[index]} type='image/webp' />
+              <img
+                src={image}
+                alt={alt}
+                width={927}
+                height={425}
+                loading='lazy'
+                // decoding='sync'
+              />
+            </picture>
           </SwiperSlide>
         );
       })}
