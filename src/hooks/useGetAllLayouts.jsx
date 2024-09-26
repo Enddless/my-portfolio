@@ -35,19 +35,15 @@ function useGetAllLayouts() {
         },
         (error) => {
           console.error('Ошибка при получении данных:', error.message);
-
-          if (error instanceof FirebaseError && error.code === 'unavailable') {
+          if (
+            error instanceof FirebaseError &&
+            error.code === 'unavailable' &&
+            retries > 0
+          ) {
             console.error('Нет соединения с Firestore. Повторная попытка подписки...');
-            if (retries > 0) {
-              setTimeout(() => {
-                console.log(`Повторная попытка подписки... Осталось попыток: ${retries}`);
-                subscribeToComponents(retries - 1);
-              }, 2000);
-            } else {
-              console.error('Не удалось получить данные после нескольких попыток.');
-            }
+            setTimeout(() => subscribeToComponents(retries - 1), 2000);
           } else {
-            console.error('Неизвестная ошибка:', error);
+            console.error('Не удалось получить данные после нескольких попыток.');
           }
         }
       );
