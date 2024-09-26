@@ -1,5 +1,5 @@
 function Title({ text }) {
-  return <div className='title'>{text}</div>;
+  return <h2 className='title'>{text}</h2>;
 }
 
 export default Title;

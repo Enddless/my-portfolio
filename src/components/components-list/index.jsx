@@ -7,10 +7,9 @@ import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 // import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 import { useSelector } from 'react-redux';
 
-const ComponentsBlock = () => {
+const ComponentsList = () => {
   const componentsData = useSelector((state) => state.portfolioData.components);
   const [dataLoaded, setDataLoaded] = useState(false);
-  // const { isLoading } = useGetAllComponents();
   const [components, setComponents] = useState([]);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -76,4 +75,4 @@ const ComponentsBlock = () => {
   );
 };
 
-export default ComponentsBlock;
+export default ComponentsList;

@@ -1,6 +1,7 @@
 function Contacts() {
   return (
     <section className='contacts'>
+      <h3 className='visually-hidden'>Contacts</h3>
       <a href='tel:+79852585524' className='contacts__icon'>
         <svg
           width='40'

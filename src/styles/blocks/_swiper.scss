@@ -1,0 +1,88 @@
+.swiper {
+  width: 100%;
+
+  &-container {
+    position: relative;
+  }
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: inherit;
+    cursor: grab;
+  }
+
+  &-wrapper {
+    height: auto;
+    max-height: 600px;
+  }
+
+  &-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  &-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;
+  }
+
+  &-pagination {
+    position: relative;
+
+    &-bullet {
+      margin: 0 10px;
+      cursor: pointer;
+      appearance: none;
+      border: 0;
+      width: 15px;
+      height: 15px;
+      background-color: var(--color-light);
+      border-radius: 100%;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      transition: opacity 0.2s ease-in-out;
+      outline: none;
+      border: 2px solid var(--color-accent);
+
+      @include hover {
+        background-color: var(--color-accent);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+
+        opacity: 0;
+        color: transparent;
+        transition:
+          opacity 0.4s ease-in-out,
+          width 0.4s ease-in-out,
+          height 0.4s ease-in-out;
+      }
+      &-active {
+        background: var(--color-accent);
+        &:before {
+          width: 230%;
+          height: 230%;
+          border: 2px solid var(--color-accent);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-pagination-fraction,
+  &-pagination-custom,
+  &-pagination-bullets,
+  &-pagination-horizontal {
+    height: 40px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

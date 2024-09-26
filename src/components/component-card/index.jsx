@@ -8,9 +8,9 @@ function ComponentCard({ project }) {
         <img
           src={project.mainPhoto}
           alt={project.alt}
-          style={{ height: '300px' }}
+          height={300}
           width={680}
-          loading='lazy'
+          // loading='lazy'
           // decoding='sync'
         />
       </picture>

@@ -1,4 +1,4 @@
-import ButtonDetails from '../button-details';
+import LinkButton from '../link-button';
 
 function Layout({ data }) {
   return (
@@ -27,16 +27,8 @@ function Layout({ data }) {
       )}
 
       <div className='detail__links'>
-        {data.deploy !== '' && (
-          <a href={data.deploy} target='_blank'>
-            <ButtonDetails text='Deploy' />
-          </a>
-        )}
-        {data.github !== '' && (
-          <a href={data.github} target='_blank'>
-            <ButtonDetails text='Github' />
-          </a>
-        )}
+        {data.deploy !== '' && <LinkButton text='Deploy' href={data.deploy} />}
+        {data.github !== '' && <LinkButton text='Github' href={data.github} />}
       </div>
     </>
   );

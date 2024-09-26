@@ -9,12 +9,7 @@ function Card({ project }) {
       </div>
 
       <div className='project__item-photo'>
-        <SwiperComponent
-          project={project}
-          sources={project.sources}
-          images={project.images}
-          alt={project.alt}
-        />
+        <SwiperComponent project={project} />
       </div>
     </>
   );

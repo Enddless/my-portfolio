@@ -18,9 +18,9 @@
   }
 
   &::before {
-    rotate: 45deg;
+    transform: rotate(45deg);
   }
   &::after {
-    rotate: -45deg;
+    transform: rotate(-45deg);
   }
 }

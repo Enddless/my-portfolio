@@ -1,8 +1,9 @@
-import photo from '../../assets/images/photo1.jpg';
+import photo from 'public/images/photo1.jpg';
 
 function Info() {
   return (
     <section className='info' id='About'>
+      <h2 className='visually-hidden'>About</h2>
       <div className='info__inner grid grid--2'>
         <div className='info__photo'>
           <img src={photo} alt='' width={200} height={200} loading='lazy' />

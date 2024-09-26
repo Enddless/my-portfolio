@@ -1,41 +1,57 @@
+import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import './styles.css';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import Spinner from '../spinner';
 
-function SwiperComponent({ images, alt, sources }) {
-  if (!images || !sources) {
+function SwiperComponent({ project }) {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const swiperRef = useRef(null); // Ссылка на Swiper
+
+  const handleImageLoad = () => {
+    setImagesLoaded(true);
+  };
+
+  useEffect(() => {
+    if (swiperRef.current && imagesLoaded) {
+      swiperRef.current.swiper.autoplay.start(); // Запускаем autoplay
+    }
+  }, [imagesLoaded]);
+
+  if (!project) {
     return <Spinner />;
   }
+
   return (
     <Swiper
+      ref={swiperRef}
       spaceBetween={30}
       centeredSlides={true}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false
-      // }}
+      autoplay={
+        imagesLoaded
+          ? {
+              delay: 2500,
+              disableOnInteraction: false
+            }
+          : false
+      }
       pagination={{
         clickable: true
       }}
       navigation={false}
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[Autoplay, Pagination]}
       className='mySwiper'>
-      {images.map((image, index) => {
+      {project.images.map((image, index) => {
         return (
           <SwiperSlide key={index}>
             <picture>
-              <source srcSet={sources[index]} type='image/webp' />
+              <source srcSet={project.sources[index]} type='image/webp' />
               <img
                 src={image}
-                alt={alt}
+                alt={project.alt}
                 width={927}
                 height={425}
-                loading='lazy'
-                // decoding='sync'
+                onLoad={handleImageLoad} // Обработчик загрузки
+                decoding='async'
               />
             </picture>
           </SwiperSlide>

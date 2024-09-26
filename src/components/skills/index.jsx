@@ -1,17 +1,16 @@
-import '../../styles/styles.scss';
-import HtmlIcon from '../../assets/svg/html5.svg';
-import CssIcon from '../../assets/svg/css3.svg';
-import JsIcon from '../../assets/svg/javascript.svg';
-import SassIcon from '../../assets/svg/sass.svg';
-import ReactIcon from '../../assets/svg/react.svg';
-import TsIcon from '../../assets/svg/typescript.svg';
-import ReduxIcon from '../../assets/svg/redux.svg';
-import NpmIcon from '../../assets/svg/npm.svg';
-import GitlubIcon from '../../assets/svg/gitlab.svg';
-import Githubcon from '../../assets/svg/github.svg';
-import MuiIcon from '../../assets/svg/materialui.svg';
-import FigmaIcon from '../../assets/svg/figma.svg';
-import FirebaseIcon from '../../assets/svg/firebase.svg';
+import HtmlIcon from 'public/icons/html5.svg';
+import CssIcon from 'public/icons/css3.svg';
+import JsIcon from 'public/icons/javascript.svg';
+import SassIcon from 'public/icons/sass.svg';
+import ReactIcon from 'public/icons/react.svg';
+import TsIcon from 'public/icons/typescript.svg';
+import ReduxIcon from 'public/icons/redux.svg';
+import NpmIcon from 'public/icons/npm.svg';
+import GitlubIcon from 'public/icons/gitlab.svg';
+import Githubcon from 'public/icons/github.svg';
+import MuiIcon from 'public/icons/materialui.svg';
+import FigmaIcon from 'public/icons/figma.svg';
+import FirebaseIcon from 'public/icons/firebase.svg';
 import Title from '../title/index.jsx';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -72,12 +71,14 @@ const Skills = () => {
         <div className='skills__title'>
           <Title text='Skills' />
         </div>
+
         <section className='skills__icons'>
+          <h3 className='visually-hidden'>Skills icons</h3>
           {arrayIcons.map((item) => {
             return (
               <img
                 src={item}
-                alt='icon'
+                alt='skill icon'
                 key={item}
                 ref={refIcons}
                 loading='lazy'

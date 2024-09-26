@@ -80,7 +80,7 @@ const ProjectsList = ({ projectsList, id }) => {
                       )}
                       {project.video && (
                         <div className='project__item-video'>
-                          <video width='100%' controls loading='lazy'>
+                          <video width='800' controls preload='none'>
                             <source src={project.video} type='video/mp4' />
                             Ваш браузер не поддерживает видео.
                           </video>

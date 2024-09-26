@@ -18,8 +18,9 @@
     }
   }
   &__list {
-    // display: flex;
-
-    // row-gap: 20px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
