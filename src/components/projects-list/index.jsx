@@ -68,7 +68,7 @@ const ProjectsList = ({ projectsList, id }) => {
                     className='project__item grid grid--12'
                     key={project.id}
                     ref={addtoRefs}>
-                    <Card project={project} />
+                    <Card project={project} isLazy={isProjectsList} />
                     <div className='project__item-comment grid grid--12'>
                       {project.comments && (
                         <div className='project__item-note'>

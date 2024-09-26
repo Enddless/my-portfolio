@@ -19,8 +19,8 @@ function Header() {
   };
 
   return (
-    <header className='header'>
-      <div className='header__inner container'>
+    <header className='header  container'>
+      <div className='header__inner'>
         <nav className='header__menu hidden-mobile'>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Spinner from '../spinner';
 
-function SwiperComponent({ project }) {
+function SwiperComponent({ project, isLazy }) {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const swiperRef = useRef(null);
 
@@ -44,14 +44,14 @@ function SwiperComponent({ project }) {
         return (
           <SwiperSlide key={index}>
             <picture>
+              <source srcSet={project.sources[index]} type='image/webp' />
               <img
                 src={image}
-                srcSet={project.sources[index]}
                 alt={project.alt}
                 width={927}
                 height={425}
                 onLoad={handleImageLoad}
-                loading='lazy'
+                loading={isLazy ? 'lazy' : ' '}
                 decoding='async'
               />
             </picture>
