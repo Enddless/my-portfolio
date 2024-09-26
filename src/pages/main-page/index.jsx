@@ -21,8 +21,6 @@ function MainPage() {
   const projectsData = useSelector((state) => state.portfolioData.projects);
   const layoutsData = useSelector((state) => state.portfolioData.layouts);
 
-  window.scrollTo(0, 0);
-
   return (
     <>
       <div className='lead__overlay'>
