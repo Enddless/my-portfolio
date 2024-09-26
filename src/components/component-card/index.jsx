@@ -4,14 +4,14 @@ function ComponentCard({ project }) {
   return (
     <>
       <picture className='component__item-photo'>
-        <source srcSet={project.sources} type='image/webp' />
         <img
           src={project.mainPhoto}
+          srcSet={project.sources}
           alt={project.alt}
           height={300}
           width={680}
           // loading='lazy'
-          // decoding='sync'
+          decoding='async'
         />
       </picture>
 
