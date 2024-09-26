@@ -1,4 +1,4 @@
-@import 'mixins', 'fonts', 'globals', 'normalize', 'media', 'variables', 'utils';
+@import 'mixins', 'globals', 'normalize', 'media', 'variables', 'utils';
 
 @import 'swiper/scss';
 @import 'swiper/scss/pagination';
@@ -7,5 +7,5 @@
   'blocks/mainpage', 'blocks/link-button', 'blocks/header', 'blocks/title', 'blocks/lead',
   'blocks/info', 'blocks/skills', 'blocks/projects', 'blocks/project-card',
   'blocks/components', 'blocks/component-card', 'blocks/footer', 'blocks/contacts',
-  'blocks/burger-button', 'blocks/cross-button', 'blocks/mobile-overlay', 'blocks/line',
+  'blocks/burger-button', 'blocks/cross-button', 'blocks/mobile-overlay',
   'blocks/toggle-block', 'blocks/section', 'blocks/toggle-icon';

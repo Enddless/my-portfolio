@@ -86,14 +86,12 @@
     &-note {
       @include fluid-text(16, 14);
       color: var(--color-gray);
-      // grid-row: 2;
       grid-column: span 5;
 
       position: relative;
       text-align: justify;
 
       @include mobile {
-        // display: flex;
         width: 100%;
       }
     }

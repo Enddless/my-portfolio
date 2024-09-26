@@ -55,7 +55,7 @@ function useGsapOptions({ refs, dataLoaded, options, isOpen }) {
     }
     // Обновляем триггеры после изменения состояния
     ScrollTrigger.refresh();
-  }, [refs, dataLoaded, options, isOpen, isMobile]); // Добавлено isOpen
+  }, [refs, dataLoaded, options, isOpen, isMobile]);
 }
 
 export default useGsapOptions;

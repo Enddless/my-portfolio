@@ -1,10 +1,8 @@
 import Title from '../title/index.jsx';
 import { useEffect, useRef, useState } from 'react';
 import ComponentCard from '../component-card/index.jsx';
-
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
-// import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 import { useSelector } from 'react-redux';
 
 const ComponentsList = () => {

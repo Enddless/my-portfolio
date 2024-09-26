@@ -14,7 +14,6 @@
   &__title {
     @include fluid-text(50, 24);
 
-    // height: calc(100vh - 50px);
     line-height: 1;
     letter-spacing: 5px;
     display: flex;

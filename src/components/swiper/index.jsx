@@ -5,7 +5,7 @@ import Spinner from '../spinner';
 
 function SwiperComponent({ project }) {
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const swiperRef = useRef(null); // Ссылка на Swiper
+  const swiperRef = useRef(null);
 
   const handleImageLoad = () => {
     setImagesLoaded(true);
@@ -13,7 +13,7 @@ function SwiperComponent({ project }) {
 
   useEffect(() => {
     if (swiperRef.current && imagesLoaded) {
-      swiperRef.current.swiper.autoplay.start(); // Запускаем autoplay
+      swiperRef.current.swiper.autoplay.start();
     }
   }, [imagesLoaded]);
 
@@ -50,7 +50,7 @@ function SwiperComponent({ project }) {
                 alt={project.alt}
                 width={927}
                 height={425}
-                onLoad={handleImageLoad} // Обработчик загрузки
+                onLoad={handleImageLoad}
                 decoding='async'
               />
             </picture>

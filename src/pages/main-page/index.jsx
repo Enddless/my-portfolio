@@ -2,15 +2,12 @@ import React from 'react';
 import Header from '../../components/header/index.jsx';
 import Lead from '../../components/lead/index.jsx';
 import Skills from '../../components/skills/index.jsx';
-// import ComponentsList from '../../components/components-list/index.jsx';
 import Footer from '../../components/footer/index.jsx';
 import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
 import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 import useGetAllLayouts from '../../hooks/useGetAllLayouts.jsx';
-// import ProjectsList from '../../components/projects-list/index.jsx';
 import { useSelector } from 'react-redux';
 
-// const Skills = React.lazy(() => import('../../components/skills/index.jsx'));
 const ProjectsList = React.lazy(() => import('../../components/projects-list/index.jsx'));
 const ComponentsList = React.lazy(
   () => import('../../components/components-list/index.jsx')

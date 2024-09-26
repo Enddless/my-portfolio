@@ -3,7 +3,7 @@ import { db } from '../store/firebase-config';
 import { useDispatch } from 'react-redux';
 import { getAllProjects } from '../store/slice/project';
 import { useEffect } from 'react';
-import { FirebaseError } from 'firebase/app'; // Импортируем FirebaseError
+import { FirebaseError } from 'firebase/app';
 
 function useGetAllProjects() {
   const dispatch = useDispatch();
@@ -37,14 +37,13 @@ function useGetAllProjects() {
         (error) => {
           console.error('Ошибка при получении данных:', error.message);
 
-          // Проверяем, является ли ошибка связанной с отсутствием соединения
           if (error instanceof FirebaseError && error.code === 'unavailable') {
             console.error('Нет соединения с Firestore. Повторная попытка подписки...');
             if (retries > 0) {
               setTimeout(() => {
                 console.log(`Повторная попытка подписки... Осталось попыток: ${retries}`);
-                subscribeToComponents(retries - 1); // Повторная подписка
-              }, 2000); // Задержка 2 секунды перед повторным запросом
+                subscribeToComponents(retries - 1);
+              }, 2000);
             } else {
               console.error('Не удалось получить данные после нескольких попыток.');
             }
@@ -57,13 +56,12 @@ function useGetAllProjects() {
       return unsubscribe;
     };
 
-    const unsubscribe = subscribeToComponents(); // Изначальный вызов функции подписки
+    const unsubscribe = subscribeToComponents();
 
-    // Чистим подписку при размонтировании компонента
     return () => unsubscribe();
   }, [dispatch]);
 
-  return null; // Возвращаем null, если ничего не нужно рендерить
+  return null;
 }
 
 export default useGetAllProjects;
