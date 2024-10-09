@@ -6,9 +6,9 @@
 
 body {
   @include fluid-text(18, 16);
-  background: var(--color-dark);
+  background: var(--cl-body);
   width: 100%;
-  color: var(--color-light);
+  color: var(--cl-body-text);
   font-family: var(--font-family-base);
   line-height: 1.28;
   font-weight: 400;
@@ -38,10 +38,10 @@ h1 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #181717;
+  background-color: var(--cl-body-scroll);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #575757;
+  background: var(--cl-body-scroll-thumb);
   cursor: grab;
 }

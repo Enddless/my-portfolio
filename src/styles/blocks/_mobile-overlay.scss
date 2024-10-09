@@ -4,8 +4,8 @@
   margin: 0;
   border: none;
   padding: 14px 20px;
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--cl-dialog-background);
+  color: var(--cl-burger-text);
   text-transform: uppercase;
   box-shadow: var(--shadow);
 
@@ -52,7 +52,7 @@
       height: 2px;
       width: 0%;
       content: '';
-      background-color: var(--color-accent);
+      background-color: var(--cl-accent);
     }
     &:after {
       left: 10px;
@@ -60,7 +60,7 @@
 
       position: absolute;
       content: attr(data-hover);
-      color: var(--color-accent);
+      color: var(--cl-accent);
       white-space: nowrap;
       max-width: 0%;
       overflow: hidden;

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import Contacts from '../contacts';
+import ThemeSwitcher from '../theme-switcher';
 
 function Header() {
   const refModal = useRef();
@@ -78,9 +78,8 @@ function Header() {
               </button>
             </li>
           </ul>
-          <div className='header__menu-contacts'>
-            <Contacts />
-          </div>
+
+          <ThemeSwitcher />
         </nav>
 
         <button

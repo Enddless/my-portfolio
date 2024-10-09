@@ -1,5 +1,5 @@
 .footer {
-  background: var(--color-accent);
+  background: var(--cl-accent);
 
   @include mobile {
     margin-top: 40px;
@@ -22,7 +22,7 @@
 
   &__title .title {
     margin-bottom: 0;
-    color: var(--color-dark);
+    color: var(--cl-footer-text);
     text-align: center;
   }
 }

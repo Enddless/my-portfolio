@@ -15,17 +15,17 @@
       transform: scale(1.1);
       transition: transform var(--transition-duration) ease;
       & svg {
-        fill: var(--color-accent);
+        fill: var(--cl-accent);
         transition: fill var(--transition-duration) ease;
       }
     }
 
     & svg *[fill] {
-      --currentColor: var(--color-dark);
+      --currentColor: var(--cl-svg-fill);
       fill: var(--currentColor);
     }
     & svg {
-      fill: var(--color-light);
+      fill: var(--cl-svg-fill-base);
     }
   }
 }

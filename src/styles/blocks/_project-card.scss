@@ -21,7 +21,7 @@
       flex-direction: column;
       row-gap: 20px;
       text-align: justify;
-      color: var(--color-gray);
+      color: var(--cl-card-text);
       grid-column: span 5;
       grid-row: 1;
 
@@ -84,7 +84,7 @@
     }
     &-note {
       @include fluid-text(16, 14);
-      color: var(--color-gray);
+      color: var(--cl-card-text);
       grid-column: span 5;
 
       position: relative;

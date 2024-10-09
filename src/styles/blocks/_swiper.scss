@@ -32,17 +32,17 @@
       border: 0;
       width: 15px;
       height: 15px;
-      background-color: var(--color-light);
+      background-color: var(--cl-bullet-background);
       border-radius: 100%;
       padding: 0;
       cursor: pointer;
       position: relative;
       transition: opacity 0.2s ease-in-out;
       outline: none;
-      border: 2px solid var(--color-accent);
+      border: 2px solid var(--cl-accent);
 
       @include hover {
-        background-color: var(--color-accent);
+        background-color: var(--cl-accent);
       }
 
       &:before {
@@ -64,11 +64,11 @@
           height 0.4s ease-in-out;
       }
       &-active {
-        background: var(--color-accent);
+        background: var(--cl-accent);
         &:before {
           width: 230%;
           height: 230%;
-          border: 2px solid var(--color-accent);
+          border: 2px solid var(--cl-accent);
           opacity: 1;
         }
       }

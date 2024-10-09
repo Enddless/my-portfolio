@@ -4,10 +4,10 @@
   width: 48px;
   position: relative;
   border-radius: var(--border-radius-small);
-  color: var(--color-light);
+  color: var(--cl-burger);
 
   @include hover {
-    background-color: var(--color-accent);
+    background-color: var(--cl-accent);
   }
   &::after {
     @include absolute-center;
@@ -15,7 +15,7 @@
     content: '';
     width: 50%;
     height: 2px;
-    background-color: var(--color-light);
+    background-color: var(--cl-burger);
     box-shadow:
       0 -8px,
       0 8px;

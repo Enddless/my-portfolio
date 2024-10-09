@@ -10,6 +10,7 @@ import { store } from './store/store.js';
 // const queryClient = new QueryClient();
 
 import { onLCP, onINP, onCLS } from 'web-vitals';
+import { ThemeContextProvider } from './context/index.jsx';
 
 onCLS(console.log);
 onINP(console.log);
@@ -19,9 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/my-portfolio'>
     <Provider store={store}>
       <React.StrictMode>
-        {/* <QueryClientProvider client={queryClient}> */}
-        <App />
-        {/* </QueryClientProvider> */}
+        <ThemeContextProvider>
+          <App />
+        </ThemeContextProvider>
       </React.StrictMode>
     </Provider>
   </BrowserRouter>

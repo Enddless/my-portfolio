@@ -9,11 +9,11 @@
 
     @include hover {
       & .line {
-        background-color: var(--color-accent);
+        background-color: var(--cl-accent);
       }
 
       & .title {
-        color: var(--color-accent);
+        color: var(--cl-accent);
       }
     }
   }

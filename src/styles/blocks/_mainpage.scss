@@ -1,5 +1,5 @@
 .lead__overlay {
-  background: linear-gradient(180deg, rgb(39, 39, 39) 8%, rgb(24, 23, 23) 54%);
+  background: var(--cl-lead-overlay-gradient);
 }
 
 .main__content {

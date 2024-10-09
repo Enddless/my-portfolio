@@ -9,11 +9,11 @@
 
     @include hover {
       & .line {
-        background-color: var(--color-accent);
+        background-color: var(--cl-accent);
       }
 
       & .title {
-        color: var(--color-accent);
+        color: var(--cl-accent);
       }
     }
   }
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    color: var(--color-gray-alt);
+    color: var(--cl-card-text-alt);
 
     &--disabled {
       display: none;

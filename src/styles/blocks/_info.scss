@@ -62,6 +62,7 @@
     border-radius: 50%;
     overflow: hidden;
     filter: brightness(50%);
+    box-shadow: var(--shadow);
 
     @include mobile {
       grid-column: span 1;

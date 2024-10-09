@@ -7,10 +7,11 @@
   height: var(--button-height);
   display: flex;
 
-  background: var(--color-dark);
-  border: 1px solid var(--color-gray-alt);
-  color: var(--color-light);
+  background: var(--cl-button-background);
+  border: 1px solid var(--cl-button-border);
+  color: var(--cl-button-text);
   border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
   align-items: center;
   justify-content: center;
   column-gap: 10px;
@@ -21,19 +22,17 @@
   }
 
   @include hover {
-    background: var(--color-accent);
-    color: var(--color-dark-alt);
+    background: var(--cl-accent);
+    color: var(--cl-button-text-alt);
     border: 1px solid transparent;
     transition: all var(--transition-duration) ease;
-    box-shadow: var(--shadow);
+    & svg {
+      transform: rotate(210deg);
+      transition: all var(--transition-duration) ease;
+    }
   }
   & svg {
     transform: rotate(0deg);
-    transition: all var(--transition-duration) ease;
-  }
-
-  &:hover svg {
-    transform: rotate(210deg);
     transition: all var(--transition-duration) ease;
   }
 }

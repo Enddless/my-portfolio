@@ -1,20 +1,4 @@
 :root {
-  --color-dark: #232323;
-  --color-dark-alt: #181717;
-
-  --color-light: #fff;
-  --color-light-alt: #f2e9e4;
-
-  --color-accent: #b9ff47;
-
-  --color-glitch-accent-base: #b9ff47;
-  --color-glitch-accent-primary: #fff;
-  --color-glitch-accent-secondary: #46f140;
-
-  --color-gray: #d3d3d3;
-  --color-gray-alt: #898989;
-
-  --border: 1px solid var(--color-dark);
   --border-radius-small: 5px;
   --border-radius-large: 30px;
 
@@ -28,4 +12,99 @@
   --button-height: 40px;
 
   --transition-duration: 0.4s;
+}
+:root[data-color-scheme='dark'] {
+  --cl-body: #232323;
+  --cl-body-text: #fff;
+
+  --cl-svg-fill: #232323;
+  --cl-svg-fill-base: #fff;
+
+  --cl-body-scroll: #181717;
+  --cl-body-scroll-thumb: #575757;
+
+  // header
+  --cl-header-text: #fff;
+
+  //dialog
+  --cl-burger: #fff;
+  --cl-burger-text: #fff;
+  --cl-dialog-background: #232323;
+
+  // footer
+  --cl-footer-text: #232323;
+
+  // buttons
+  --cl-button-text: #fff;
+  --cl-button-text-alt: #181717;
+  --cl-button-background: #232323;
+  --cl-button-border: #898989;
+
+  // cards
+  --cl-card-text: #d3d3d3;
+  --cl-card-text-alt: #898989;
+
+  // swiper
+  --cl-bullet-background: #fff;
+
+  // switcher
+  --cl-switcher-background: #232323;
+  --cl-switcher-icon-background: #fff;
+  --cl-switcher-icon-background-alt: #232323;
+
+  // toggle section
+  --cl-toggle-button-background: #898989;
+
+  --cl-accent: #b9ff47;
+  --cl-lead-overlay-gradient: linear-gradient(
+    180deg,
+    rgb(39, 39, 39) 8%,
+    rgb(24, 23, 23) 54%
+  );
+}
+:root[data-color-scheme='light'] {
+  --cl-body: #f8f9fa;
+  --cl-body-text: #181717;
+
+  --cl-svg-fill: #232323;
+  --cl-svg-fill-base: #fff;
+
+  --cl-body-scroll: #181717;
+  --cl-body-scroll-thumb: #575757;
+
+  --cl-accent: #006d77; //ff6700 #006d77 #ff7b00
+
+  --cl-lead-overlay-gradient: linear-gradient(180deg, #ffffff 8%, #e9ecef 54%);
+
+  // header
+  --cl-header-text: #232323;
+
+  //dialog
+  --cl-burger: #232323;
+  --cl-burger-text: #232323;
+  --cl-dialog-background: #fff;
+
+  // footer
+  --cl-footer-text: #181717;
+
+  // buttons
+  --cl-button-text: #fff;
+  --cl-button-text-alt: #181717;
+  --cl-button-background: #232323;
+  --cl-button-border: #898989;
+
+  // cards
+  --cl-card-text: #232323;
+  --cl-card-text-alt: #898989;
+
+  // swiper
+  --cl-bullet-background: #006d77;
+
+  // switcher
+  --cl-switcher-background: #f8f9fa;
+  --cl-switcher-icon-background: #fff;
+  --cl-switcher-icon-background-alt: #fff;
+
+  // toggle section
+  --cl-toggle-button-background: #898989;
 }

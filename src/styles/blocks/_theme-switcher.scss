@@ -1,0 +1,72 @@
+.theme-switcher {
+  --padding: 2px;
+  --iconWrapperWidth: 40px;
+  --iconWrapperHeight: 28px;
+  --iconSize: 20px;
+
+  display: flex;
+  background-color: var(--cl-switcher-background);
+  border: 1px solid transparent;
+  border-radius: 60px;
+  transition: var(--transition-duration);
+
+  cursor: pointer;
+
+  @include hover {
+    border-color: var(--cl-accent);
+    transition: var(--transition-duration);
+  }
+  &__body {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    padding: var(--padding);
+    position: relative;
+    & > :not(:last-child) {
+      margin-right: var(--padding);
+    }
+
+    &:after {
+      background-color: var(--c-white);
+      border-radius: inherit;
+      content: '';
+      height: var(--iconWrapperWidth);
+      left: 2px;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      width: var(--iconWrapperWidth);
+      will-change: transform;
+      transition: var(--transition-duration);
+    }
+  }
+  &__icon-wrapper {
+    align-items: center;
+    display: flex;
+    height: var(--iconWrapperWidth);
+    justify-content: center;
+    position: relative;
+    width: var(--iconWrapperWidth);
+    z-index: 1;
+
+    &.active {
+      background-color: var(--cl-accent);
+      border-radius: 50%;
+
+      &:after {
+        transition: var(--transition-duration);
+        rotate: 180deg;
+        transform: translate3d(calc(var(--iconWrapperWidth) + var(--padding)), -50%, 0);
+      }
+
+      & svg *[fill] {
+        --currentColor: var(--cl-switcher-icon-background-alt);
+        fill: var(--currentColor);
+      }
+    }
+    & svg *[fill] {
+      --currentColor: var(--cl-accent);
+      fill: var(--currentColor);
+    }
+  }
+}
