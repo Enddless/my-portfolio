@@ -22,8 +22,6 @@ function useGetAllComponents() {
             deploy: doc.data().deploy,
             github: doc.data().github,
             name: doc.data().name,
-            organizationLink: doc.data().organizationLink,
-            organizationName: doc.data().organizationName,
             stack: doc.data().stack,
             text: doc.data().text,
             comments: doc.data().comments,

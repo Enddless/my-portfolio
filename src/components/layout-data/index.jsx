@@ -1,32 +1,22 @@
 import LinkButton from '../link-button';
 
 function Layout({ data }) {
+  const stackArray = data.stack.split(', ').map((item) => item.trim());
   return (
     <>
-      <div className='detail__item'>
-        Name project:
-        <p>&quot;{data.name}&quot;</p>
+      <div className='layout__item'>
+        <p className='layout__item-name'>{data.name}</p>
       </div>
-      <div className='detail__item'>
-        About:
-        <p>{data.text}</p>
+      <div className='layout__item'>
+        <p className='layout__item-text'>{data.text}</p>
       </div>
-      <div className='detail__item'>
-        <p>Stack: {data.stack}</p>
+      <div className='layout__item layout__item-stack'>
+        {stackArray.map((item, index) => (
+          <span key={index}>{item}</span>
+        ))}
       </div>
 
-      {data.organizationLink !== '' && (
-        <div className='detail__item'>
-          <p>
-            Organisation:{' '}
-            <a href={data.organizationLink} className='detail__link'>
-              {data.organizationName}
-            </a>
-          </p>
-        </div>
-      )}
-
-      <div className='detail__links'>
+      <div className='layout__item layout__item-links'>
         {data.deploy !== '' && <LinkButton text='Deploy' href={data.deploy} />}
         {data.github !== '' && <LinkButton text='Github' href={data.github} />}
       </div>

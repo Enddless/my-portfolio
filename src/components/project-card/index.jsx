@@ -4,7 +4,7 @@ import SwiperComponent from '../swiper/index.jsx';
 function Card({ project, isLazy }) {
   return (
     <>
-      <div className='project__item-description'>
+      <div className='project__item-layout layout'>
         <Layout data={project} />
       </div>
 

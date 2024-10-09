@@ -13,6 +13,14 @@
     @include mobile {
       justify-content: flex-start;
     }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-name {
+      @include fluid-text(14, 12);
+    }
   }
   & .line-to-section {
     left: 50px;

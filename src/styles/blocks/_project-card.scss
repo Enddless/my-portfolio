@@ -14,8 +14,7 @@
       padding-bottom: 25px;
     }
 
-    &-description {
-      padding: 20px 0;
+    &-layout {
       order: 1;
 
       display: flex;
@@ -106,7 +105,7 @@
       }
     }
 
-    &:nth-child(even) .project__item-description {
+    &:nth-child(even) .project__item-layout {
       order: 2;
       @include tablet {
         order: 1;

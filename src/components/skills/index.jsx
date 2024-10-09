@@ -7,7 +7,7 @@ import TsIcon from 'public/icons/typescript.svg';
 import ReduxIcon from 'public/icons/redux.svg';
 import NpmIcon from 'public/icons/npm.svg';
 import GitlubIcon from 'public/icons/gitlab.svg';
-import Githubcon from 'public/icons/github.svg';
+import Githubicon from 'public/icons/github.svg';
 import MuiIcon from 'public/icons/materialui.svg';
 import FigmaIcon from 'public/icons/figma.svg';
 import FirebaseIcon from 'public/icons/firebase.svg';
@@ -19,20 +19,59 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-  const arrayIcons = [
-    `${HtmlIcon}`,
-    `${CssIcon}`,
-    `${JsIcon}`,
-    `${SassIcon}`,
-    `${ReactIcon}`,
-    `${TsIcon}`,
-    `${ReduxIcon}`,
-    `${NpmIcon}`,
-    `${GitlubIcon}`,
-    `${Githubcon}`,
-    `${MuiIcon}`,
-    `${FigmaIcon}`,
-    `${FirebaseIcon}`
+  const skillsData = [
+    {
+      icon: `${HtmlIcon}`,
+      name: ' Html'
+    },
+    {
+      icon: `${CssIcon}`,
+      name: ' Css'
+    },
+    {
+      icon: `${SassIcon}`,
+      name: ' Sass'
+    },
+    {
+      icon: `${JsIcon}`,
+      name: ' Javascript'
+    },
+    {
+      icon: `${ReactIcon}`,
+      name: ' React'
+    },
+    {
+      icon: `${TsIcon}`,
+      name: ' Typescript'
+    },
+    {
+      icon: `${ReduxIcon}`,
+      name: ' Redux'
+    },
+    {
+      icon: `${NpmIcon}`,
+      name: ' Npm'
+    },
+    {
+      icon: `${GitlubIcon}`,
+      name: ' Gitlub'
+    },
+    {
+      icon: `${Githubicon}`,
+      name: ' Github'
+    },
+    {
+      icon: `${MuiIcon}`,
+      name: 'Mui'
+    },
+    {
+      icon: `${FigmaIcon}`,
+      name: 'Figma'
+    },
+    {
+      icon: `${FirebaseIcon}`,
+      name: 'Firebase'
+    }
   ];
   const refs = useRef([]);
   refs.current = [];
@@ -74,17 +113,18 @@ const Skills = () => {
 
         <section className='skills__icons'>
           <h3 className='visually-hidden'>Skills icons</h3>
-          {arrayIcons.map((item) => {
+          {skillsData.map((item) => {
             return (
-              <img
-                src={item}
-                alt='skill icon'
-                key={item}
-                ref={refIcons}
-                loading='lazy'
-                width={40}
-                height={40}
-              />
+              <div ref={refIcons} key={item.name} className='skills__icons-wrapper'>
+                <img
+                  src={item.icon}
+                  alt={`${item.name} icon`}
+                  loading='lazy'
+                  width={40}
+                  height={40}
+                />
+                <span className='skills__icons-name'>{item.name}</span>
+              </div>
             );
           })}
         </section>
