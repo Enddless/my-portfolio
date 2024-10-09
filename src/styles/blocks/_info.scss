@@ -58,6 +58,10 @@
   }
   &__contacts {
     grid-column: span 2;
+
+    @include mobile {
+      grid-column: span 1;
+    }
   }
   &__photo {
     grid-column: span 2;

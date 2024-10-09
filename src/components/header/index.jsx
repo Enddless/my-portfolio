@@ -141,6 +141,8 @@ function Header() {
                 </button>
               </li>
             </ul>
+
+            <ThemeSwitcher />
           </div>
         </dialog>
       </div>
