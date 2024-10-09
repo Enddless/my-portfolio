@@ -47,6 +47,10 @@
     }
 
     &-link {
+      @include reset-button;
+      color: inherit;
+      text-transform: uppercase;
+      cursor: pointer;
       padding: 10px;
       display: inline-block;
       width: 100%;

@@ -30,6 +30,54 @@
   &__item {
     font-size: 24px;
   }
+  &__link {
+    @include reset-button;
+    color: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    &:before,
+    &:after {
+      position: absolute;
+      transition: all var(--transition-duration) ease;
+    }
+    &:before {
+      bottom: 0;
+      display: block;
+      height: 2px;
+      width: 0%;
+      content: '';
+      background-color: var(--color-accent);
+    }
+    &:after {
+      left: 10px;
+      top: 10px;
+
+      position: absolute;
+      content: attr(data-hover);
+      color: var(--color-accent);
+      white-space: nowrap;
+      max-width: 0%;
+      overflow: hidden;
+    }
+
+    @include hover {
+      color: transparent;
+
+      &:before {
+        opacity: 1;
+        width: 100%;
+      }
+      &:after {
+        max-width: 100%;
+      }
+    }
+  }
 
   &__body {
     height: calc(90vh - 60px);

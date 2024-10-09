@@ -1,9 +1,9 @@
-import { HashLink } from 'react-router-hash-link';
 import { useRef } from 'react';
 import Contacts from '../contacts';
 
 function Header() {
   const refModal = useRef();
+
   const openModal = () => {
     refModal.current.showModal();
   };
@@ -12,66 +12,70 @@ function Header() {
     refModal.current.close();
   };
 
-  const handleScroll = (id) => {
-    setTimeout(() => {
-      window.history.pushState(null, '', window.location.pathname);
-    }, 500);
+  const handleScroll = (event) => {
+    const targetId = JSON.parse(
+      event.currentTarget.getAttribute('data-js-scroll-to')
+    ).anchor;
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollAndClose = (event) => {
+    handleScroll(event); // Плавная прокрутка
+    closeModal(); // Закрытие диалога
   };
 
   return (
-    <header className='header  container'>
+    <header className='header container'>
       <div className='header__inner'>
         <nav className='header__menu hidden-mobile'>
           <ul className='header__menu-list'>
             <li className='header__menu-item'>
-              <HashLink
-                smooth
-                to='/#About'
+              <button
                 data-hover='About me'
                 className='header__menu-link'
-                onClick={() => handleScroll('About')}>
+                data-js-scroll-to='{"anchor": "#About"}'
+                onClick={handleScroll}>
                 About me
-              </HashLink>
+              </button>
             </li>
             <li className='header__menu-item'>
-              <HashLink
-                smooth
-                to='/#Skills'
+              <button
                 data-hover='Skills'
                 className='header__menu-link'
-                onClick={() => handleScroll('Skills')}>
+                data-js-scroll-to='{"anchor": "#Skills"}'
+                onClick={handleScroll}>
                 Skills
-              </HashLink>
+              </button>
             </li>
             <li className='header__menu-item'>
-              <HashLink
-                smooth
-                to='/#Layouts'
+              <button
                 data-hover='Layouts'
                 className='header__menu-link'
-                onClick={() => handleScroll('Layouts')}>
+                data-js-scroll-to='{"anchor": "#Layouts"}'
+                onClick={handleScroll}>
                 Layouts
-              </HashLink>
+              </button>
             </li>
             <li className='header__menu-item'>
-              <HashLink
-                smooth
-                to='/#Projects'
+              <button
                 data-hover='Projects'
                 className='header__menu-link'
-                onClick={() => handleScroll('Projects')}>
+                data-js-scroll-to='{"anchor": "#Projects"}'
+                onClick={handleScroll}>
                 Projects
-              </HashLink>
+              </button>
             </li>
             <li className='header__menu-item'>
-              <HashLink
-                smooth
-                to='/#Components'
+              <button
                 data-hover='Components'
                 className='header__menu-link'
-                onClick={() => handleScroll('Components')}>
+                data-js-scroll-to='{"anchor": "#Components"}'
+                onClick={handleScroll}>
                 Components
-              </HashLink>
+              </button>
             </li>
           </ul>
           <div className='header__menu-contacts'>
@@ -98,50 +102,44 @@ function Header() {
           <div className='mobile-overlay__body'>
             <ul className='mobile-overlay__list'>
               <li className='mobile-overlay__item'>
-                <HashLink
-                  smooth
-                  to='/#About'
+                <button
                   className='mobile-overlay__link'
-                  onClick={closeModal}>
+                  data-js-scroll-to='{"anchor": "#About"}'
+                  onClick={handleScrollAndClose}>
                   About me
-                </HashLink>
+                </button>
               </li>
-
               <li className='mobile-overlay__item'>
-                <HashLink
-                  smooth
-                  to='/#Skills'
+                <button
                   className='mobile-overlay__link'
-                  onClick={closeModal}>
+                  data-js-scroll-to='{"anchor": "#Skills"}'
+                  onClick={handleScrollAndClose}>
                   Skills
-                </HashLink>
+                </button>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink
-                  smooth
-                  to='/#Layouts'
+                <button
                   className='mobile-overlay__link'
-                  onClick={closeModal}>
+                  data-js-scroll-to='{"anchor": "#Layouts"}'
+                  onClick={handleScrollAndClose}>
                   Layouts
-                </HashLink>
+                </button>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink
-                  smooth
-                  to='/#Projects'
+                <button
                   className='mobile-overlay__link'
-                  onClick={closeModal}>
+                  data-js-scroll-to='{"anchor": "#Projects"}'
+                  onClick={handleScrollAndClose}>
                   Projects
-                </HashLink>
+                </button>
               </li>
               <li className='mobile-overlay__item'>
-                <HashLink
-                  smooth
-                  to='/#Components'
+                <button
                   className='mobile-overlay__link'
-                  onClick={closeModal}>
+                  data-js-scroll-to='{"anchor": "#Components"}'
+                  onClick={handleScrollAndClose}>
                   Components
-                </HashLink>
+                </button>
               </li>
             </ul>
           </div>
