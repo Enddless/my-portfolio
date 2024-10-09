@@ -1,4 +1,5 @@
 import photo from 'public/images/photo1.jpg';
+import Contacts from '../contacts';
 
 function Info() {
   return (
@@ -31,9 +32,11 @@ function Info() {
           <p>
             Обладаю базовыми знаниями HTML, CSS, SCSS, JavaScript&nbsp;/&nbsp;Typescript,
             React, React Router, React Hooks, Redux Toolkit, Redux Thunk, Gsap, Material
-            UI, Ant Design UI, Tailwind CSS, частично&nbsp;БЭМ и Pug. Верстаю из Figma,
-            немного Photoshop
+            UI, Tailwind CSS, частично&nbsp;БЭМ и Pug. Верстаю из Figma, немного Photoshop
           </p>
+        </div>
+        <div className='info__contacts'>
+          <Contacts />
         </div>
       </div>
     </section>

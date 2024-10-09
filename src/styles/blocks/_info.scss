@@ -3,6 +3,7 @@
     justify-items: center;
     align-items: center;
     position: relative;
+    gap: 20px;
 
     @include mobile {
       --gridColumns: 1;
@@ -54,6 +55,9 @@
     font-family: var(--font-family-base);
     text-align: justify;
     line-height: 1.6;
+  }
+  &__contacts {
+    grid-column: span 2;
   }
   &__photo {
     grid-column: span 2;
