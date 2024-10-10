@@ -1,12 +1,13 @@
 .info {
   &__inner {
-    justify-items: center;
     align-items: center;
     position: relative;
+    grid-template-columns: 1fr 200px 1fr;
     gap: 20px;
 
     @include mobile {
-      --gridColumns: 1;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -24,47 +25,34 @@
   &__text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
 
     @include mobile {
       align-items: center;
       text-align: center;
+      order: 3;
     }
 
     &-item {
-      @include fluid-text(30, 20);
+      @include fluid-text(34, 20);
+      text-align: left;
+      line-height: 1.25;
+      display: inline-block;
 
       &--hero {
-        @include fluid-text(55, 28);
-
-        line-height: 1;
-        display: inline-block;
+        @include fluid-text(40, 20);
+        text-align: right;
         text-transform: uppercase;
 
         @include mobile {
           text-align: center;
+          order: 2;
         }
       }
     }
   }
 
-  &__motivation-text {
-    @include fluid-text(14, 12);
-
-    font-family: var(--font-family-base);
-    text-align: justify;
-    line-height: 1.6;
-  }
-  &__contacts {
-    grid-column: span 2;
-
-    @include mobile {
-      grid-column: span 1;
-    }
-  }
   &__photo {
-    grid-column: span 2;
+    grid-column: 2;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -73,7 +61,7 @@
     box-shadow: var(--shadow);
 
     @include mobile {
-      grid-column: span 1;
+      order: 1;
     }
 
     & img {
@@ -81,6 +69,15 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+    }
+  }
+
+  & .contacts {
+    grid-column: 2;
+    justify-content: center;
+
+    @include mobile {
+      order: 4;
     }
   }
 }

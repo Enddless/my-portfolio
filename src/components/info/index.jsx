@@ -5,39 +5,25 @@ function Info() {
   return (
     <section className='info' id='About'>
       <h2 className='visually-hidden'>About</h2>
-      <div className='info__inner grid grid--2'>
+      <div className='info__inner grid grid--3'>
+        <div className='info__text'>
+          <h2 className='info__text-item info__text-item--hero'>
+            <p>
+              Diana <br /> Ivashchenko
+            </p>
+          </h2>
+        </div>
+
         <div className='info__photo'>
           <img src={photo} alt='' width={200} height={200} loading='lazy' />
         </div>
-        <div className='info__body'>
-          <div className='info__text'>
-            <span className='info__text-item info__text-item--left'>
-              html-верстальщик
-            </span>
-            <h2
-              className='info__text-item info__text-item--hero'
-              data-text='diana ivashchenko'>
-              <span>diana ivashchenko</span>
-            </h2>
-            <span className='info__text-item info__text-item--right'>
-              junior frontend-developer
-            </span>
-          </div>
+
+        <div className='info__text'>
+          <p className='info__text-item'>html - верстальщик</p>
+          <p className='info__text-item'>frontend - developer</p>
         </div>
-        <div className='info__motivation-text'>
-          <p>
-            Моя цель - стать опытным специалистом&nbsp;в&nbsp;области вёрстки и фронтенд
-            разработки и&nbsp;внести свой вклад в&nbsp;создание удобных веб-приложений
-          </p>
-          <p>
-            Обладаю базовыми знаниями HTML, CSS, SCSS, JavaScript&nbsp;/&nbsp;Typescript,
-            React, React Router, React Hooks, Redux Toolkit, Redux Thunk, Gsap, Material
-            UI, Tailwind CSS, частично&nbsp;БЭМ и Pug. Верстаю из Figma, немного Photoshop
-          </p>
-        </div>
-        <div className='info__contacts'>
-          <Contacts />
-        </div>
+
+        <Contacts />
       </div>
     </section>
   );

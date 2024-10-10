@@ -78,9 +78,8 @@ function Header() {
               </button>
             </li>
           </ul>
-
-          <ThemeSwitcher />
         </nav>
+        <ThemeSwitcher />
 
         <button
           className='button__burger-menu burger-button visible-mobile'
@@ -141,8 +140,6 @@ function Header() {
                 </button>
               </li>
             </ul>
-
-            <ThemeSwitcher />
           </div>
         </dialog>
       </div>

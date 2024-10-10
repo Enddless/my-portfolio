@@ -7,15 +7,19 @@
   font-family: var(--font-family-secondary);
 
   &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
     @include mobile {
       text-align: right;
+      justify-content: flex-end;
     }
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     @include tablet {
       justify-content: center;
       flex-wrap: wrap;
