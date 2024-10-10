@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 export const ThemeContext = React.createContext();
 
 export function ThemeContextProvider({ children }) {
-  const [isDarkTheme, setIsDarkTheme] = React.useState('dark');
+  const getInitialTheme = () => {
+    // Проверяем системные настройки
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
 
-  const providerInterface = React.useMemo(
+    // Если сохраненная тема есть, используем ее, иначе - системную
+    return savedTheme ? savedTheme : prefersDarkScheme ? 'dark' : 'light';
+  };
+
+  const [isDarkTheme, setIsDarkTheme] = React.useState(getInitialTheme);
+
+  useEffect(() => {
+    localStorage.setItem('theme', isDarkTheme); // Сохраняем тему в локальном хранилище
+    document.documentElement.setAttribute('data-color-scheme', isDarkTheme); // Устанавливаем атрибут на html
+  }, [isDarkTheme]);
+
+  const providerInterface = useMemo(
     () => ({
       isDarkTheme,
       setIsDarkTheme
     }),
     [isDarkTheme]
   );
-
-  React.useEffect(() => {
-    document.documentElement.setAttribute('data-color-scheme', isDarkTheme);
-  }, [isDarkTheme]);
 
   return (
     <ThemeContext.Provider value={providerInterface}>{children}</ThemeContext.Provider>
