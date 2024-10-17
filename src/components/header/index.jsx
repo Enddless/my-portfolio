@@ -52,11 +52,11 @@ function Header() {
             </li>
             <li className='header__menu-item'>
               <button
-                data-hover='Layouts'
+                data-hover='Landings'
                 className='header__menu-link'
-                data-js-scroll-to='{"anchor": "#Layouts"}'
+                data-js-scroll-to='{"anchor": "#Landings"}'
                 onClick={handleScroll}>
-                Layouts
+                Landings
               </button>
             </li>
             <li className='header__menu-item'>
@@ -118,9 +118,9 @@ function Header() {
               <li className='mobile-overlay__item'>
                 <button
                   className='mobile-overlay__link'
-                  data-js-scroll-to='{"anchor": "#Layouts"}'
+                  data-js-scroll-to='{"anchor": "#Landings"}'
                   onClick={handleScrollAndClose}>
-                  Layouts
+                  Landings
                 </button>
               </li>
               <li className='mobile-overlay__item'>

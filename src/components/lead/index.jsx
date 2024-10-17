@@ -5,7 +5,7 @@ function Lead() {
     <>
       <section className='lead container'>
         <div className='lead__title'>
-          <h1>portfolio</h1>
+          <h1>Portfolio</h1>
         </div>
 
         <Info />

@@ -30,7 +30,7 @@ function MainPage() {
 
       <div className='main__content '>
         <Skills />
-        <ProjectsList projectsList={layoutsData} id='Layouts' />
+        <ProjectsList projectsList={layoutsData} id='Landings' />
         <ProjectsList projectsList={projectsData} id='Projects' />
         <ComponentsList />
       </div>

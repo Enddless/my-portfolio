@@ -2,8 +2,6 @@
   @include fluid-text(18, 16);
 
   padding: 20px 0;
-  position: relative;
-  z-index: 2;
   font-family: var(--font-family-secondary);
 
   &__inner {
