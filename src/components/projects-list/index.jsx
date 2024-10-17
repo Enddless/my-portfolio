@@ -5,7 +5,7 @@ import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
-  const isLayoutsList = id === 'Layouts';
+  const isLayoutsList = id === 'Landings';
   const isProjectsList = id === 'Projects';
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
