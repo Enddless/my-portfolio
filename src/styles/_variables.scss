@@ -2,7 +2,6 @@
   --border-radius-small: 5px;
   --border-radius-large: 30px;
 
-  --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
   --font-family-base: 'Open Sans', sans-serif;
   --font-family-secondary: 'DelaGothicOne', system-ui;
   --container-width: 1400px;
@@ -14,6 +13,8 @@
   --transition-duration: 0.4s;
 }
 :root[data-color-scheme='dark'] {
+  --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
+
   --cl-body: #232323;
   --cl-body-text: #fff;
 
@@ -63,6 +64,8 @@
   );
 }
 :root[data-color-scheme='light'] {
+  --shadow: 10px 11px 20px 0 rgba(97, 97, 97, 0.45);
+
   --cl-body: #f8f9fa;
   --cl-body-text: #181717;
 
