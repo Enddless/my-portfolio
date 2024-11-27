@@ -3,6 +3,18 @@
     margin-bottom: 40px;
   }
 
+  &__list {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mobile {
+      justify-content: flex-start;
+    }
+  }
+
   &__icons {
     display: flex;
     align-items: center;

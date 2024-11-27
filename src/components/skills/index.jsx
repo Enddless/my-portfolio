@@ -113,20 +113,24 @@ const Skills = () => {
 
         <section className='skills__icons'>
           <h3 className='visually-hidden'>Skills icons</h3>
-          {skillsData.map((item) => {
-            return (
-              <div ref={refIcons} key={item.name} className='skills__icons-wrapper'>
-                <img
-                  src={item.icon}
-                  alt={`${item.name} icon`}
-                  loading='lazy'
-                  width={40}
-                  height={40}
-                />
-                <span className='skills__icons-name'>{item.name}</span>
-              </div>
-            );
-          })}
+          <ul className='skills__list'>
+            {skillsData.map((item) => {
+              return (
+                <li ref={refIcons} key={item.name}>
+                  <div className='skills__icons-wrapper'>
+                    <img
+                      src={item.icon}
+                      alt={`это иконка ${item.name}`}
+                      loading='lazy'
+                      width={40}
+                      height={40}
+                    />
+                    <span className='skills__icons-name'>{item.name}</span>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </section>
       </div>
     </section>

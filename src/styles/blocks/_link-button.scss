@@ -1,7 +1,6 @@
 .button {
   @include reset-button;
   font-family: var(--font-family-secondary);
-  width: 100%;
   min-width: 170px;
   padding: 10px 20px;
   height: var(--button-height);
