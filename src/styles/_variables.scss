@@ -64,7 +64,7 @@
   );
 }
 :root[data-color-scheme='light'] {
-  --shadow: 10px 11px 20px 0 rgba(97, 97, 97, 0.45);
+  --shadow: 10px 11px 20px 0 rgba(11, 87, 95, 0.3);
 
   --cl-body: #f8f9fa;
   --cl-body-text: #181717;
@@ -75,7 +75,7 @@
   --cl-body-scroll: #181717;
   --cl-body-scroll-thumb: #575757;
 
-  --cl-accent: #006d77; //ff6700 #006d77 #ff7b00
+  --cl-accent: rgb(0, 109, 119); //ff6700 #006d77 #ff7b00
 
   --cl-lead-overlay-gradient: linear-gradient(180deg, #ffffff 8%, #e9ecef 54%);
 

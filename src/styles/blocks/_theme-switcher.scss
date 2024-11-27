@@ -20,11 +20,9 @@
     align-items: center;
     border-radius: inherit;
     display: flex;
+    gap: 2px;
     padding: var(--padding);
     position: relative;
-    & > :not(:last-child) {
-      margin-right: var(--padding);
-    }
 
     &:after {
       background-color: var(--c-white);
@@ -52,7 +50,7 @@
     &.active {
       background-color: var(--cl-accent);
       border-radius: 50%;
-      transform: background-color 1s ease;
+      transition: background-color 1s ease;
       &:after {
         rotate: 180deg;
         transform: translate3d(calc(var(--iconWrapperWidth) + var(--padding)), -50%, 0);
