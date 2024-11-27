@@ -2,7 +2,7 @@
 ![Моя фотография](/main.jpg)
 
 ## Демо
-<a href="https://enddless.github.io/my-portfolio/" target="_blank">Кликни для просмотра</a>
+[Кликни для просмотра](https://enddless.github.io/my-portfolio/) (Shift + клик для открытия в новой вкладке)
 
 ## Содержание
 - [Общая информация](#общая-информация)
