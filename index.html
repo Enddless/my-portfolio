@@ -13,10 +13,21 @@
   <meta name="description" content="Портфолио Иващенко Дианы">
   <meta property="og:title" content="Портфолио Иващенко Дианы">
   <meta property="og:description" content="Портфолио Иващенко Дианы">
-  <meta property="og:image" content="https://enddless.github.io/my-portfolio/main.jpg">
+  <meta property="og:image" content="./main.jpg">
   <meta property="og:url" content="https://enddless.github.io/my-portfolio/">
   <title>Portfolio</title>
-
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
   <script type="module" crossorigin src="/my-portfolio/assets/index-BvVGL3Ty.js"></script>
   <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-CR1DJmsT.js">
   <link rel="modulepreload" crossorigin href="/my-portfolio/assets/scheduler-CzFDRTuY.js">
