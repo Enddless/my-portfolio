@@ -39,7 +39,7 @@ function useGetAllLayouts() {
             retries > 0
           ) {
             console.error('Нет соединения с Firestore. Повторная попытка подписки...');
-            setTimeout(() => subscribeToComponents(retries - 1), 2000);
+            setTimeout(() => subscribeToComponents(retries - 1), 200);
           } else {
             console.error('Не удалось получить данные после нескольких попыток.');
           }

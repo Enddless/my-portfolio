@@ -32,15 +32,25 @@ function useGetAllComponents() {
         },
         (error) => {
           console.error('Ошибка при получении данных:', error.message);
+          if (
+            error instanceof FirebaseError &&
+            error.code === 'unavailable' &&
+            retries > 0
+          ) {
+            console.error('Нет соединения с Firestore. Повторная попытка подписки...');
+            setTimeout(() => subscribeToComponents(retries - 1), 200);
+          } else {
+            console.error('Не удалось получить данные после нескольких попыток.');
+          }
+          console.error('Ошибка при получении данных:', error.message);
 
-          // Проверяем, является ли ошибка связанной с отсутствием соединения
           if (error instanceof FirebaseError && error.code === 'unavailable') {
             console.error('Нет соединения с Firestore. Повторная попытка подписки...');
             if (retries > 0) {
               setTimeout(() => {
                 console.log(`Повторная попытка подписки... Осталось попыток: ${retries}`);
-                subscribeToComponents(retries - 1); // Повторная подписка
-              }, 2000); // Задержка 2 секунды перед повторным запросом
+                subscribeToComponents(retries - 1);
+              }, 200);
             } else {
               console.error('Не удалось получить данные после нескольких попыток.');
             }
@@ -53,13 +63,11 @@ function useGetAllComponents() {
       return unsubscribe;
     };
 
-    const unsubscribe = subscribeToComponents(); // Изначальный вызов функции подписки
-
-    // Чистим подписку при размонтировании компонента
+    const unsubscribe = subscribeToComponents();
     return () => unsubscribe();
   }, [dispatch]);
 
-  return null; // Возвращаем null, если ничего не нужно рендерить
+  return null;
 }
 
 export default useGetAllComponents;
