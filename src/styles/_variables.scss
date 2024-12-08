@@ -26,6 +26,7 @@
 
   // header
   --cl-header-text: #fff;
+  --bg-header-scroll: rgba(21, 21, 21, 0.9);
 
   //dialog
   --cl-burger: #fff;
@@ -64,7 +65,7 @@
   );
 }
 :root[data-color-scheme='light'] {
-  --shadow: 10px 11px 20px 0 rgba(11, 87, 95, 0.3);
+  --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
 
   --cl-body: #f8f9fa;
   --cl-body-text: #181717;
@@ -81,6 +82,7 @@
 
   // header
   --cl-header-text: #232323;
+  --bg-header-scroll: rgba(224, 224, 224, 0.9);
 
   //dialog
   --cl-burger: #232323;

@@ -3,7 +3,7 @@ import Contacts from '../contacts';
 
 function Info() {
   return (
-    <section className='info' id='About'>
+    <div className='info'>
       <h2 className='visually-hidden'>About</h2>
       <div className='info__inner grid grid--3'>
         <div className='info__text'>
@@ -29,7 +29,7 @@ function Info() {
 
         <Contacts />
       </div>
-    </section>
+    </div>
   );
 }
 

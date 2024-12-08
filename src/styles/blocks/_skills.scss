@@ -33,9 +33,7 @@
     }
     &-name {
       @include fluid-text(14, 12);
+      color: var(--cl-accent);
     }
-  }
-  & .line-to-section {
-    left: 50px;
   }
 }

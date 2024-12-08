@@ -1,9 +1,36 @@
 .header {
+  position: absolute;
+  width: 100%;
+  min-height: 90px;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+
+  transition: opacity var(--transition-duration) ease;
+  opacity: 0;
+
   @include fluid-text(18, 16);
 
-  padding: 20px 0;
   font-family: var(--font-family-secondary);
 
+  &._active {
+    opacity: 1;
+  }
+  &.scroll .header__wrapper {
+    background: var(--bg-header-scroll);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &__wrapper {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: all var(--transition-duration) ease;
+    min-height: 49px;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -70,6 +97,7 @@
         display: block;
         height: 2px;
         width: 0%;
+        left: 0;
         content: '';
         background-color: var(--cl-accent);
       }
@@ -92,6 +120,18 @@
           opacity: 1;
           width: 100%;
         }
+        &:after {
+          max-width: 100%;
+        }
+      }
+      &.active {
+        color: transparent;
+
+        &:before {
+          opacity: 1;
+          width: 100%;
+        }
+
         &:after {
           max-width: 100%;
         }

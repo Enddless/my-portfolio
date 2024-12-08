@@ -1,6 +1,6 @@
 function Contacts() {
   return (
-    <section className='contacts'>
+    <div className='contacts'>
       <h3 className='visually-hidden'>Contacts</h3>
       <a href='tel:+79852585524' className='contacts__icon'>
         <svg
@@ -63,7 +63,7 @@ function Contacts() {
         </svg>
         <span className='visually-hidden'>Написать на почту ivdiana14500@gmail.com</span>
       </a>
-    </section>
+    </div>
   );
 }
 

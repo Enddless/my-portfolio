@@ -3,19 +3,11 @@ import React, { useEffect, useMemo } from 'react';
 export const ThemeContext = React.createContext();
 
 export function ThemeContextProvider({ children }) {
-  const getInitialTheme = () => {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme : prefersDarkScheme ? 'dark' : 'light';
-  };
-
-  const [isDarkTheme, setIsDarkTheme] = React.useState(getInitialTheme);
+  const [isDarkTheme, setIsDarkTheme] = React.useState('dark');
 
   useEffect(() => {
-    localStorage.setItem('theme', isDarkTheme);
     document.documentElement.setAttribute('data-color-scheme', isDarkTheme);
 
-    // Получаем цвет из CSS-переменной
     const accentColor = getComputedStyle(document.documentElement)
       .getPropertyValue('--cl-accent')
       .trim();

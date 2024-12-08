@@ -1,6 +1,6 @@
 .cross-button {
   @include reset-button;
-  @include square(48px);
+  @include square(24px);
 
   position: relative;
   border-radius: var(--border-radius-small);
@@ -9,9 +9,8 @@
   &::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 7px;
-    width: 70%;
+    left: 0;
+    width: 100%;
     height: 2px;
     background: var(--cl-burger);
     border-radius: 5px;
