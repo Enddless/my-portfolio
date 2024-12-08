@@ -4,26 +4,21 @@ import Lead from '../../components/lead/index.jsx';
 import Skills from '../../components/skills/index.jsx';
 import Footer from '../../components/footer/index.jsx';
 import useGetAllProjects from '../../hooks/useGetAllProjects.jsx';
-import useGetAllComponents from '../../hooks/useGetAllComponents.jsx';
 import useGetAllLayouts from '../../hooks/useGetAllLayouts.jsx';
 import { useSelector } from 'react-redux';
 
 const ProjectsList = React.lazy(() => import('../../components/projects-list/index.jsx'));
-const ComponentsList = React.lazy(
-  () => import('../../components/components-list/index.jsx')
-);
 
 function MainPage() {
   useGetAllLayouts();
   useGetAllProjects();
-  useGetAllComponents();
 
   const projectsData = useSelector((state) => state.portfolioData.projects);
   const layoutsData = useSelector((state) => state.portfolioData.layouts);
 
   return (
     <>
-      <div className='lead__overlay'>
+      <div className='lead__overlay' id='About'>
         <Header />
         <Lead />
       </div>
@@ -31,8 +26,7 @@ function MainPage() {
       <div className='main__content '>
         <Skills />
         <ProjectsList projectsList={layoutsData} id='Landings' />
-        <ProjectsList projectsList={projectsData} id='Projects' />
-        <ComponentsList />
+        <ProjectsList projectsList={projectsData} id='React_projects' />
       </div>
 
       <Footer />

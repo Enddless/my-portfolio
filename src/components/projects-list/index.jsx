@@ -6,7 +6,7 @@ import Card from '../project-card/index.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
   const isLayoutsList = id === 'Landings';
-  const isProjectsList = id === 'Projects';
+  const isProjectsList = id === 'React_projects';
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -40,7 +40,7 @@ const ProjectsList = ({ projectsList, id }) => {
     <section className='section projects' id={id}>
       <div className='projects__inner container'>
         <div className='projects__title' onClick={toggleList}>
-          <Title text={id} />
+          <Title text={isProjectsList ? 'React projects' : id} />
           <div className={`toggle-icon ${isOpen ? 'open' : ''}`}>
             <div className='line line1'></div>
             <div className='line line2'></div>
