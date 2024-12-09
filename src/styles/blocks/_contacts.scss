@@ -1,3 +1,21 @@
+@keyframes scale-up {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
 .contacts {
   display: flex;
   column-gap: 5px;
@@ -10,10 +28,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: scale-down var(--transition-duration) ease forwards;
+    box-shadow: var(--shadow);
+    border-radius: 50%;
 
     @include hover {
-      transform: scale(1.1);
-      transition: transform var(--transition-duration) ease;
+      animation: scale-up var(--transition-duration) ease forwards;
       & svg {
         fill: var(--cl-accent);
         transition: fill var(--transition-duration) ease;
@@ -21,11 +41,13 @@
     }
 
     & svg *[fill] {
-      --currentColor: var(--cl-svg-fill);
+      --currentColor: var(--cl-svg-fill-base);
       fill: var(--currentColor);
     }
+
     & svg {
-      fill: var(--cl-svg-fill-base);
+      fill: var(--cl-svg-fill);
+      transition: fill var(--transition-duration) ease;
     }
   }
 }

@@ -76,9 +76,14 @@
   --cl-body-scroll: #181717;
   --cl-body-scroll-thumb: #575757;
 
-  --cl-accent: rgb(0, 109, 119); //ff6700 #006d77 #ff7b00
+  --cl-accent: #006d77; //ff6700 #006d77 #ff7b00
 
-  --cl-lead-overlay-gradient: linear-gradient(180deg, #ffffff 8%, #e9ecef 54%);
+  --cl-lead-overlay-gradient: linear-gradient(
+    180deg,
+    rgb(239, 239, 239),
+    rgb(254, 254, 254),
+    rgb(252, 252, 252)
+  );
 
   // header
   --cl-header-text: #232323;

@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import ThemeSwitcher from '../theme-switcher';
+import Snow from '../snow';
 
 function Header() {
   const [activeItem, setActiveItem] = useState('About');
@@ -55,6 +56,7 @@ function Header() {
   return (
     <header className={`header _active ${isHeaderActive ? 'scroll' : ''}`}>
       <div className='header__wrapper'>
+        <Snow />
         <div className='header__inner container'>
           <nav className='header__menu hidden-mobile'>
             <ul className='header__menu-list'>
