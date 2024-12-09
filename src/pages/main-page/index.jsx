@@ -15,6 +15,7 @@ function MainPage() {
 
   const projectsData = useSelector((state) => state.portfolioData.projects);
   const layoutsData = useSelector((state) => state.portfolioData.layouts);
+  // const { projects } = useGetAllProjects();
 
   return (
     <>
