@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 // Получаем текущий путь к директории
 const __filename = fileURLToPath(import.meta.url);
@@ -11,10 +10,7 @@ const __dirname = dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/my-portfolio',
-  plugins: [
-    react(),
-    visualizer({ filename: 'dist/stats.html' }) // Генерирует файл stats.html
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       public: resolve(__dirname, 'public'),

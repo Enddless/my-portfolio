@@ -4,24 +4,22 @@ import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
 
-const ProjectsList = ({ projectsList, id }) => {
+const ProjectsList = ({ projectsList, id, isLoading }) => {
   const isLayoutsList = id === 'Landings';
   const isProjectsList = id === 'React_projects';
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
-  const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    if (projectsList.length) {
+    if (projectsList && projectsList.length) {
       setProjects(projectsList);
-      setDataLoaded(true);
     }
   }, [projectsList]);
 
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
+  useGsapOptions({ refs, dataLoaded: !isLoading, options: projects.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -58,7 +56,7 @@ const ProjectsList = ({ projectsList, id }) => {
 
         {isOpen && (
           <>
-            {!dataLoaded && !projects.length ? (
+            {isLoading && !projects.length ? (
               <Spinner />
             ) : (
               <ul className='projects__list project'>
