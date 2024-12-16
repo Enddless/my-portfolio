@@ -22,7 +22,7 @@
 
   @include hover {
     background: var(--cl-accent);
-    color: var(--cl-button-text-alt);
+    color: var(--cl-button-text);
     border: 1px solid transparent;
     transition: all var(--transition-duration) ease;
     & svg {
