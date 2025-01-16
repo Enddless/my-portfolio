@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+
 import './styles/styles.scss';
 import App from './components/app/App.jsx';
 import { Provider } from 'react-redux';
@@ -8,6 +8,7 @@ import { store } from './store/store.js';
 
 import { onLCP, onINP, onCLS } from 'web-vitals';
 import { ThemeContextProvider } from './context/index.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 onCLS(console.log);
 onINP(console.log);
