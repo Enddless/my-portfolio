@@ -1,6 +1,7 @@
 .lead__overlay {
-  background: var(--cl-lead-overlay-gradient);
-  box-shadow: var(--shadow);
+  // background: var(--cl-lead-overlay-gradient);
+  // box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .main__content {
