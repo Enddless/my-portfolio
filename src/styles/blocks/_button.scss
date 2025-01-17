@@ -11,6 +11,7 @@
   color: var(--cl-button-text);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
+  transition: all var(--transition-duration) ease;
   align-items: center;
   justify-content: center;
   column-gap: 10px;
@@ -20,18 +21,23 @@
     min-width: 110px;
   }
 
+  & svg {
+    transform: rotate(0deg);
+    transition: all var(--transition-duration) ease;
+  }
+
   @include hover {
     background: var(--cl-accent);
     color: var(--cl-button-text);
     border: 1px solid transparent;
+    -webkit-box-reflect: var(--reflect);
+    box-shadow: none;
+    will-change: transform;
     transition: all var(--transition-duration) ease;
+    transform: translate(10px, -10px);
+
     & svg {
-      transform: rotate(210deg);
-      transition: all var(--transition-duration) ease;
+      transform: rotate(210deg); /* Анимация стрелки при наведении */
     }
-  }
-  & svg {
-    transform: rotate(0deg);
-    transition: all var(--transition-duration) ease;
   }
 }

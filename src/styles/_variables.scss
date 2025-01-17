@@ -11,6 +11,7 @@
   --button-height: 40px;
 
   --transition-duration: 0.4s;
+  --reflect: below 1px linear-gradient(transparent, #0005);
 }
 :root[data-color-scheme='dark'] {
   --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
