@@ -69,6 +69,9 @@
   --cl-25: #4f51c0;
   --cl-65: #494cca;
   --cl-90: #6769ce;
+
+  //neon-cursor
+  --cl-neon-cursor: #a6a6da;
 }
 :root[data-color-scheme='light'] {
   --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
@@ -94,6 +97,9 @@
   --cl-25: #0a8dd3;
   --cl-65: #0e8fd4;
   --cl-90: #126d9e;
+
+  //neon-cursor
+  --cl-neon-cursor: #8dc9e9;
 
   // header
   --cl-header-text: #232323;
