@@ -40,9 +40,6 @@ const ProjectsList = ({ projectsList, id }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      // if (isProjectsList) {
-      //   setListCount(window.innerWidth < 767 ? 1 : 2);
-      // } else
       setListCount(window.innerWidth < 767 ? 2 : 3);
     };
 

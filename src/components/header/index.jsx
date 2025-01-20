@@ -6,7 +6,7 @@ function Header() {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
   const refModal = useRef();
 
-  const namesList = ['About', 'Skills', 'Landings', 'React_projects'];
+  const namesList = ['About', 'Landings', 'React_projects', 'Skills'];
   const openModal = () => {
     refModal.current.showModal();
   };
