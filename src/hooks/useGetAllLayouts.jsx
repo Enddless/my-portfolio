@@ -27,7 +27,8 @@ function useGetAllLayouts() {
             text: doc.data().text,
             path: doc.data().path,
             comments: doc.data().comments,
-            sources: doc.data().sources
+            sources: doc.data().sources,
+            preview: doc.data().preview
           }));
           dispatch(getAllLayouts(layouts));
         },

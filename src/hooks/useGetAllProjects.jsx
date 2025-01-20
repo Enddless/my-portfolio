@@ -28,7 +28,8 @@ function useGetAllProjects() {
             comments: doc.data().comments,
             video: doc.data().video,
             sources: doc.data().sources,
-            alt: doc.data().alt
+            alt: doc.data().alt,
+            preview: doc.data().preview
           }));
           dispatch(getAllProjects(projects));
         },

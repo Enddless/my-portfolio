@@ -1,4 +1,6 @@
 .info {
+  position: relative;
+  z-index: 1;
   &__inner {
     align-items: center;
     position: relative;
@@ -57,9 +59,8 @@
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    filter: brightness(50%);
+    filter: brightness(75%);
     box-shadow: var(--shadow);
-
     @include mobile {
       order: 1;
     }
@@ -79,5 +80,11 @@
     @include mobile {
       order: 4;
     }
+  }
+}
+[data-color-scheme='light'] {
+  .info__photo {
+    filter: none;
+    -webkit-filter: none;
   }
 }

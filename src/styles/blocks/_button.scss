@@ -1,5 +1,6 @@
 .button {
   @include reset-button;
+  @include fluid-text(16, 12);
   font-family: var(--font-family-secondary);
   min-width: 170px;
   padding: 10px 20px;
@@ -11,27 +12,38 @@
   color: var(--cl-button-text);
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
+  transition: all var(--transition-duration) ease;
   align-items: center;
   justify-content: center;
   column-gap: 10px;
   cursor: pointer;
 
-  @include mobile {
-    min-width: 110px;
-  }
-
   @include hover {
     background: var(--cl-accent);
     color: var(--cl-button-text);
     border: 1px solid transparent;
+    -webkit-box-reflect: var(--reflect);
+    box-shadow: none;
+    will-change: transform;
     transition: all var(--transition-duration) ease;
+    transform: translate(20px, -10px);
     & svg {
       transform: rotate(210deg);
-      transition: all var(--transition-duration) ease;
     }
   }
+
+  @include mobile {
+    min-width: 110px;
+  }
+
   & svg {
     transform: rotate(0deg);
     transition: all var(--transition-duration) ease;
+  }
+
+  &-link {
+    margin-bottom: 0px;
+    // padding: 0 15px;
+    min-width: auto;
   }
 }

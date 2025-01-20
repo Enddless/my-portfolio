@@ -7,6 +7,8 @@ $tablet: 1023px;
 $mobile-above: 768px;
 $mobile: 767px;
 
+$mobile-s: 380px;
+
 @mixin desktop-above {
   @media (min-width: $desktop-above) {
     @content;
@@ -40,6 +42,12 @@ $mobile: 767px;
   }
 }
 
+@mixin mobile-s {
+  @media (max-width: $mobile-s) {
+    @content;
+  }
+}
+
 @mixin hover {
   @media (hover: hover) {
     // сработает на экранах с классическим наведением
@@ -49,7 +57,8 @@ $mobile: 767px;
   }
   @media (hover: none) {
     // сработает на экранах-тачпадах
-    &:active {
+    &:active,
+    &:focus {
       @content;
     }
   }

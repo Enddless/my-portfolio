@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   @include fluid-text(18, 16);
@@ -14,6 +17,7 @@ body {
   font-weight: 400;
   user-select: none;
   // hyphens: auto;
+  overflow-x: hidden;
 }
 a,
 button,

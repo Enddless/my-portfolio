@@ -11,12 +11,12 @@
   --button-height: 40px;
 
   --transition-duration: 0.4s;
+  --reflect: below 1px linear-gradient(transparent, #0005);
 }
 :root[data-color-scheme='dark'] {
   --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
-
-  --cl-body: #232323;
   --cl-body-text: #fff;
+  --cl-body: #232323;
 
   --cl-svg-fill: #232323;
   --cl-svg-fill-base: #fff;
@@ -27,6 +27,9 @@
   // header
   --cl-header-text: #fff;
   --bg-header-scroll: rgba(21, 21, 21, 0.9);
+
+  //title
+  --cl-title: #fff;
 
   //dialog
   --cl-burger: #fff;
@@ -45,6 +48,7 @@
   // cards
   --cl-card-text: #d3d3d3;
   --cl-card-text-alt: #898989;
+  --cl-card-stack: #aeafe4;
 
   // swiper
   --cl-bullet-background: #fff;
@@ -54,20 +58,27 @@
   --cl-switcher-icon-background: #fff;
   --cl-switcher-icon-background-alt: #232323;
 
-  // toggle section
-  --cl-toggle-button-background: #898989;
-
   --cl-accent: #7678ed; // #6c38cc; // #ff9e00; // #7678ed; // #06d6a0; #b9ff47;
   --cl-lead-overlay-gradient: linear-gradient(
     180deg,
     rgb(39, 39, 39) 8%,
     rgb(24, 23, 23) 54%
   );
+
+  //blob
+  --cl-0: #4415b3;
+  --cl-25: #5633b8;
+  --cl-65: #494cca;
+  --cl-90: #5337b8;
+
+  //neon-cursor
+  --cl-neon-cursor: #a6a6da;
 }
 :root[data-color-scheme='light'] {
   --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
 
-  --cl-body: #ffffff --cl-body-text: #181717;
+  --cl-body: #ffffff;
+  --cl-body-text: #232323;
 
   --cl-svg-fill: #232323;
   --cl-svg-fill-base: #fff;
@@ -83,10 +94,21 @@
     rgb(254, 254, 254),
     rgb(252, 252, 252)
   );
+  //blot
+  --cl-0: #1994d6;
+  --cl-25: #0a8dd3;
+  --cl-65: #0e8fd4;
+  --cl-90: #2585d3;
+
+  //neon-cursor
+  --cl-neon-cursor: #8dc9e9;
 
   // header
   --cl-header-text: #232323;
   --bg-header-scroll: rgba(224, 224, 224, 0.9);
+
+  //title
+  --cl-title: #181717;
 
   //dialog
   --cl-burger: #232323;
@@ -105,6 +127,7 @@
   // cards
   --cl-card-text: #232323;
   --cl-card-text-alt: #898989;
+  --cl-card-stack: #428bb3;
 
   // swiper
   --cl-bullet-background: #006d77;
@@ -113,7 +136,4 @@
   --cl-switcher-background: #f8f9fa;
   --cl-switcher-icon-background: #fff;
   --cl-switcher-icon-background-alt: #fff;
-
-  // toggle section
-  --cl-toggle-button-background: #898989;
 }

@@ -1,14 +1,14 @@
 .lead__overlay {
-  background: var(--cl-lead-overlay-gradient);
-  box-shadow: var(--shadow);
+  // background: var(--cl-lead-overlay-gradient);
+  // box-shadow: var(--shadow);
+  position: relative;
+  overflow-x: hidden;
 }
 
 .main__content {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 40px 0;
-  // row-gap: 120px;
 }
 
 .page__overlay {
@@ -16,4 +16,6 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100svh;
+  position: relative;
+  overflow-x: hidden;
 }

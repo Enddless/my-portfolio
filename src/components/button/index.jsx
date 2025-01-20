@@ -1,6 +1,6 @@
-function LinkButton({ href, text }) {
+function Button({ text, onClick }) {
   return (
-    <a href={href} className='button  button-link' role='button' target='_blank'>
+    <button className='button' onClick={onClick}>
       <span>{text}</span>
       <svg
         width='21'
@@ -13,8 +13,8 @@ function LinkButton({ href, text }) {
           fill='white'
         />
       </svg>
-    </a>
+    </button>
   );
 }
 
-export default LinkButton;
+export default Button;
