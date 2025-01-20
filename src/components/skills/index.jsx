@@ -58,7 +58,7 @@ const Skills = () => {
 
         <div className='skills__vector'>
           <svg
-            style={{ width: '70%', height: 'auto' }}
+            style={{ width: '90%', height: 'auto' }}
             viewBox='0 0 1090 927'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'>

@@ -8,10 +8,6 @@
   width: 120%;
   z-index: -10;
   filter: blur(5em);
-
-  @include mobile-s {
-    display: none;
-  }
 }
 
 @keyframes ap {
