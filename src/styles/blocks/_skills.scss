@@ -3,37 +3,9 @@
     margin-bottom: 40px;
   }
 
-  &__list {
-    display: flex;
-    width: 100%;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @include mobile {
-      justify-content: flex-start;
-    }
-  }
-
-  &__icons {
+  &__vector {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    @include mobile {
-      justify-content: flex-start;
-    }
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    &-name {
-      @include fluid-text(14, 12);
-      color: var(--cl-accent);
-    }
+    justify-content: center;
   }
 }

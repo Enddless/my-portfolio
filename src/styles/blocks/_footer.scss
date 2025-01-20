@@ -1,6 +1,9 @@
 .footer {
   background: var(--cl-accent);
   position: relative;
+  // position: fixed;
+  // width: 100%;
+  // bottom: 0;
 
   @include mobile {
     margin-top: 40px;

@@ -46,10 +46,11 @@ function SwiperComponent({ project, isLazy }) {
             <picture>
               <source srcSet={project.sources[index]} type='image/webp' />
               <img
+                className='projects__item-photo'
                 src={image}
                 alt={`это ${project.alt}-${index}`}
-                width={927}
-                height={425}
+                width={535}
+                height={410}
                 onLoad={handleImageLoad}
                 loading={isLazy ? 'lazy' : ' '}
                 decoding='async'

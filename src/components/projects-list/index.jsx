@@ -10,6 +10,8 @@ const ProjectsList = ({ projectsList, id }) => {
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [listCount, setListCount] = useState(3); // По умолчанию 3 списка
+  const [expandedProjectId, setExpandedProjectId] = useState([]); // Для отслеживания развернутого проекта
 
   useEffect(() => {
     if (projectsList.length) {
@@ -21,7 +23,7 @@ const ProjectsList = ({ projectsList, id }) => {
   const refs = useRef([]);
   refs.current = [];
 
-  useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
+  // useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
 
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
@@ -35,6 +37,34 @@ const ProjectsList = ({ projectsList, id }) => {
       refs.current = [];
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      // if (isProjectsList) {
+      //   setListCount(window.innerWidth < 767 ? 1 : 2);
+      // } else
+      setListCount(window.innerWidth < 767 ? 2 : 3);
+    };
+
+    handleResize(); // Устанавливаем начальное значение
+    window.addEventListener('resize', handleResize); // Добавляем обработчик события
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Удаляем обработчик
+    };
+  }, []);
+
+  // Функция для разбивки массива на заданное количество групп
+  const distributeProjectsIntoLists = (array, count) => {
+    const result = Array.from({ length: count }, () => []);
+    array.forEach((project, index) => {
+      result[index % count].push(project);
+    });
+    return result;
+  };
+
+  // Разбиваем массив проектов на заданное количество групп
+  const projectGroups = distributeProjectsIntoLists(projects, listCount);
 
   return (
     <section className='section projects' id={id}>
@@ -60,31 +90,43 @@ const ProjectsList = ({ projectsList, id }) => {
           <>
             {!dataLoaded && !projects.length ? (
               <Spinner />
+            ) : !isProjectsList ? (
+              <div className='projects__wrapper'>
+                {projectGroups.map((group, index) => (
+                  <ul className='projects__list' key={index}>
+                    {group.map((project) => {
+                      return (
+                        <li
+                          id={project.id}
+                          className={`projects__item  ${expandedProjectId.includes(project.id) ? 'projects__item-expanded' : ''} `}
+                          key={project.id}
+                          ref={addtoRefs}>
+                          <Card
+                            project={project}
+                            expandedProjectId={expandedProjectId}
+                            setExpandedProjectId={setExpandedProjectId}
+                          />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ))}
+              </div>
             ) : (
-              <ul className='projects__list project'>
+              <ul
+                className={`projects__list ${isProjectsList && 'react__list grid grid--12'}`}>
                 {projects.map((project) => (
                   <li
-                    id={project.path}
-                    className='project__item grid grid--12'
+                    id={project.id}
+                    className={`projects__item  ${expandedProjectId.includes(project.id) ? 'projects__item-expanded' : ''} ${isProjectsList && 'react__item'}`}
                     key={project.id}
                     ref={addtoRefs}>
-                    <Card project={project} isLazy={isProjectsList} />
-                    <div className='project__item-comment grid grid--12'>
-                      {project.comments && (
-                        <div className='project__item-note'>
-                          Comment:
-                          <p>{project.comments}</p>
-                        </div>
-                      )}
-                      {project.video && (
-                        <div className='project__item-video'>
-                          <video width='800' controls preload='none'>
-                            <source src={project.video} type='video/mp4' />
-                            Ваш браузер не поддерживает видео.
-                          </video>
-                        </div>
-                      )}
-                    </div>
+                    <Card
+                      project={project}
+                      expandedProjectId={expandedProjectId}
+                      setExpandedProjectId={setExpandedProjectId}
+                      isProjectsList={isProjectsList}
+                    />
                   </li>
                 ))}
               </ul>

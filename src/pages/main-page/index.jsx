@@ -24,9 +24,9 @@ function MainPage() {
       </div>
 
       <div className='main__content '>
-        <Skills />
         <ProjectsList projectsList={layoutsData} id='Landings' />
         <ProjectsList projectsList={projectsData} id='React_projects' />
+        <Skills />
       </div>
 
       <Footer />

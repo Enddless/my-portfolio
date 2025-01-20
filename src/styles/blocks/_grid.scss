@@ -3,10 +3,10 @@
 
   display: grid;
   grid-template-columns: repeat(var(--gridColumns), 1fr);
-  gap: 40px;
+  gap: 30px;
 
   @include mobile {
-    gap: 30px;
+    gap: 20px;
   }
 
   @for $i from 2 through 12 {
