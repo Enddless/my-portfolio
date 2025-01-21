@@ -9,6 +9,7 @@ import { store } from './store/store.js';
 import { onLCP, onINP, onCLS } from 'web-vitals';
 import { ThemeContextProvider } from './context/index.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import { IdProjectContextProvider } from './context/id-project-click.jsx';
 
 onCLS(console.log);
 onINP(console.log);
@@ -16,12 +17,14 @@ onLCP(console.log);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/my-portfolio'>
-    <Provider store={store}>
-      <React.StrictMode>
-        <ThemeContextProvider>
-          <App />
-        </ThemeContextProvider>
-      </React.StrictMode>
-    </Provider>
+    <IdProjectContextProvider>
+      <Provider store={store}>
+        <React.StrictMode>
+          <ThemeContextProvider>
+            <App />
+          </ThemeContextProvider>
+        </React.StrictMode>
+      </Provider>
+    </IdProjectContextProvider>
   </BrowserRouter>
 );

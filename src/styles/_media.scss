@@ -57,8 +57,7 @@ $mobile-s: 380px;
   }
   @media (hover: none) {
     // сработает на экранах-тачпадах
-    &:active,
-    &:focus {
+    &:active {
       @content;
     }
   }

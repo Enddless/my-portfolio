@@ -4,6 +4,7 @@
 
   position: relative;
   border-radius: var(--border-radius-small);
+  cursor: pointer;
 
   &::before,
   &::after {

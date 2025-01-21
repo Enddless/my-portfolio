@@ -1,4 +1,7 @@
 .projects {
+  &__inner {
+    position: relative;
+  }
   &__title {
     margin-bottom: 40px;
     cursor: pointer;
@@ -59,8 +62,6 @@
   &__item {
     position: relative;
     overflow: hidden;
-    //height: 450px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,6 +85,7 @@
       &-name {
         @include fluid-text(30, 16);
 
+        cursor: pointer;
         font-family: var(--font-family-secondary);
         position: absolute;
         top: 0;
@@ -91,8 +93,30 @@
         color: white;
         width: 100%;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        z-index: 10;
+        & p {
+          margin-bottom: 0;
+        }
+
+        @include hover {
+          & svg {
+            transform: rotate(360deg) scale(1.1);
+          }
+        }
       }
 
+      &-view-image {
+        fill: white;
+        transition: transform var(--transition-duration) ease;
+      }
+
+      &-see-text {
+        display: none;
+      }
       &-links {
         display: flex;
         flex-direction: row;

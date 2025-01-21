@@ -1,8 +1,10 @@
 import Title from '../title/index.jsx';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../spinner/index.jsx';
 import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
+import Gallery from '../gallery/index.jsx';
+import { IdProjectContext } from '../../context/id-project-click.jsx';
 
 const ProjectsList = ({ projectsList, id }) => {
   const isLayoutsList = id === 'Landings';
@@ -12,6 +14,8 @@ const ProjectsList = ({ projectsList, id }) => {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [listCount, setListCount] = useState(3); // По умолчанию 3 списка
   const [expandedProjectId, setExpandedProjectId] = useState([]); // Для отслеживания развернутого проекта
+  const { setIdProject } = useContext(IdProjectContext);
+  const refModal = useRef();
 
   useEffect(() => {
     if (projectsList.length) {
@@ -63,6 +67,15 @@ const ProjectsList = ({ projectsList, id }) => {
   // Разбиваем массив проектов на заданное количество групп
   const projectGroups = distributeProjectsIntoLists(projects, listCount);
 
+  const openModal = () => {
+    refModal.current.showModal();
+  };
+
+  const closeModal = () => {
+    refModal.current.close();
+    setIdProject('');
+  };
+
   return (
     <section className='section projects' id={id}>
       <div className='projects__inner container'>
@@ -102,6 +115,7 @@ const ProjectsList = ({ projectsList, id }) => {
                             project={project}
                             expandedProjectId={expandedProjectId}
                             setExpandedProjectId={setExpandedProjectId}
+                            openModal={openModal}
                           />
                         </li>
                       );
@@ -123,6 +137,7 @@ const ProjectsList = ({ projectsList, id }) => {
                       expandedProjectId={expandedProjectId}
                       setExpandedProjectId={setExpandedProjectId}
                       isProjectsList={isProjectsList}
+                      openModal={openModal}
                     />
                   </li>
                 ))}
@@ -130,6 +145,9 @@ const ProjectsList = ({ projectsList, id }) => {
             )}
           </>
         )}
+        <dialog className='mobile-overlay gallery-page' ref={refModal}>
+          <Gallery projectsList={projectsList} closeModal={closeModal} />
+        </dialog>
       </div>
     </section>
   );
