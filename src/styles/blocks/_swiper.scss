@@ -1,6 +1,8 @@
 .swiper {
   width: 100%;
-
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
   &-container {
     position: relative;
   }
@@ -13,8 +15,7 @@
   }
 
   &-wrapper {
-    height: auto;
-    max-height: 800px;
+    width: 100%;
   }
 
   &-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -84,5 +85,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+  }
+
+  &-3d .swiper-slide-shadow {
+    background: transparent;
   }
 }

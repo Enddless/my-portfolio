@@ -12,6 +12,8 @@
 
   --transition-duration: 0.4s;
   --reflect: below 1px linear-gradient(transparent, #0005);
+
+  --cl-light-gray: #a8a8a8;
 }
 :root[data-color-scheme='dark'] {
   --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
@@ -113,7 +115,7 @@
   //dialog
   --cl-burger: #232323;
   --cl-burger-text: #232323;
-  --cl-dialog-background: #fff;
+  --cl-dialog-background: #cfcfcf;
 
   // footer
   --cl-footer-text: #fff;
