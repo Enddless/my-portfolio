@@ -80,8 +80,8 @@ function Card({
         <>
           <div
             className={`projects__item-content-links ${isProjectsList && 'react__item-content-links'}`}>
-            {project.deploy !== '' && <LinkButton text='Deploy' href={project.deploy} />}
-            {project.github !== '' && <LinkButton text='Github' href={project.github} />}
+            {project.deploy !== '' && <LinkButton id='Deploy' href={project.deploy} />}
+            {project.github !== '' && <LinkButton id='Github' href={project.github} />}
           </div>
           <div
             className={`projects__item-content-stack ${isProjectsList && 'react__item-content-stack'}`}>
@@ -93,6 +93,7 @@ function Card({
             <Button
               text={expandedProjectId.includes(project.id) ? 'Свернуть' : 'Развернуть'}
               onClick={() => toggleExpand(project.id)}
+              cls={expandedProjectId.includes(project.id) ? 'button-expanded' : ''}
             />
           )}
         </>

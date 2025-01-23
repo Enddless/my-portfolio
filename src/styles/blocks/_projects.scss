@@ -129,6 +129,13 @@
           flex-direction: column;
           gap: 10px;
         }
+
+        & .link {
+          transition: transform var(--transition-duration) ease;
+          @include hover {
+            transform: rotate(360deg);
+          }
+        }
       }
 
       &-stack {

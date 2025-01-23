@@ -1,6 +1,6 @@
-function Button({ text, onClick }) {
+function Button({ text, onClick, cls }) {
   return (
-    <button className='button' onClick={onClick}>
+    <button className={`button ${cls}`} onClick={onClick}>
       <span>{text}</span>
       <svg
         width='21'
