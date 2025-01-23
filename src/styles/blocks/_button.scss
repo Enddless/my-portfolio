@@ -30,6 +30,7 @@
 
     & svg {
       transform: rotate(210deg);
+      transition: all var(--transition-duration) ease;
     }
   }
 
@@ -39,6 +40,7 @@
 
   & svg {
     transform: rotate(120deg);
+    transition: all var(--transition-duration) ease;
   }
 
   &-link {

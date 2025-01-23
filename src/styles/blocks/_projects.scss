@@ -98,11 +98,14 @@
         justify-content: center;
         gap: 20px;
         z-index: 10;
+        transition: all var(--transition-duration) ease;
+
         & p {
           margin-bottom: 0;
         }
 
         @include hover {
+          color: var(--cl-accent);
           & svg {
             transform: rotate(360deg) scale(1.1);
           }
@@ -125,11 +128,6 @@
         width: 100%;
         padding: 0 5px;
 
-        @include tablet {
-          flex-direction: column;
-          gap: 10px;
-        }
-
         & .link {
           transition: transform var(--transition-duration) ease;
           @include hover {
@@ -148,6 +146,7 @@
         row-gap: 5px;
         flex-wrap: wrap;
         padding: 0 5px;
+        min-height: 40px;
       }
     }
 
