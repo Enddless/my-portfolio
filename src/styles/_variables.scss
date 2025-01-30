@@ -75,6 +75,9 @@
 
   //neon-cursor
   --cl-neon-cursor: #a6a6da;
+
+  // card for react
+  --cl-bg-card-react: rgba(118, 120, 237, 0.1);
 }
 :root[data-color-scheme='light'] {
   --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
@@ -138,4 +141,7 @@
   --cl-switcher-background: #f8f9fa;
   --cl-switcher-icon-background: #fff;
   --cl-switcher-icon-background-alt: #fff;
+
+  // card for react
+  --cl-bg-card-react: rgba(0, 119, 182, 0.1);
 }
