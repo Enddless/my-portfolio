@@ -1,7 +1,6 @@
 import Title from '../title/index.jsx';
 import { useContext, useEffect, useRef, useState } from 'react';
 import Spinner from '../spinner/index.jsx';
-import useGsapOptions from '../../hooks/useGsapOptions.jsx';
 import Card from '../project-card/index.jsx';
 import Gallery from '../gallery/index.jsx';
 import { IdProjectContext } from '../../context/id-project-click.jsx';
@@ -27,8 +26,6 @@ const ProjectsList = ({ projectsList, id }) => {
   const refs = useRef([]);
   refs.current = [];
 
-  // useGsapOptions({ refs, dataLoaded, options: projects.length, isOpen });
-
   const addtoRefs = (el) => {
     if (el && !refs.current.includes(el)) {
       refs.current.push(el);
@@ -47,11 +44,11 @@ const ProjectsList = ({ projectsList, id }) => {
       setListCount(window.innerWidth < 767 ? 2 : 3);
     };
 
-    handleResize(); // Устанавливаем начальное значение
-    window.addEventListener('resize', handleResize); // Добавляем обработчик события
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize); // Удаляем обработчик
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -137,7 +134,7 @@ const ProjectsList = ({ projectsList, id }) => {
                       expandedProjectId={expandedProjectId}
                       setExpandedProjectId={setExpandedProjectId}
                       isProjectsList={isProjectsList}
-                      openModal={openModal}
+                      openModal={project.id !== 'pr11' ? openModal : undefined}
                     />
                   </li>
                 ))}

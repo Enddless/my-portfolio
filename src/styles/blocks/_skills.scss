@@ -1,6 +1,12 @@
 .skills {
   &__title {
     margin-bottom: 40px;
+
+    & .title {
+      @include hover {
+        color: inherit;
+      }
+    }
   }
 
   &__vector {

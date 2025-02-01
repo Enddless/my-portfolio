@@ -18,15 +18,14 @@ function useGetAllLayouts() {
           const layouts = snapshot.docs.map((doc) => ({
             id: doc.data().id,
             images: doc.data().images,
-            mainPhoto: doc.data().mainPhoto,
+
             alt: doc.data().alt,
             deploy: doc.data().deploy,
             github: doc.data().github,
             name: doc.data().name,
             stack: doc.data().stack,
             text: doc.data().text,
-            path: doc.data().path,
-            comments: doc.data().comments,
+
             sources: doc.data().sources,
             preview: doc.data().preview
           }));

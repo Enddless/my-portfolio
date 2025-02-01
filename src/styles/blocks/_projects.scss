@@ -107,6 +107,10 @@
             transform: rotate(360deg) scale(1.1);
           }
         }
+
+        @include mobile {
+          height: 60px;
+        }
       }
 
       &-view-image {
@@ -114,9 +118,6 @@
         transition: transform var(--transition-duration) ease;
       }
 
-      &-see-text {
-        display: none;
-      }
       &-links {
         display: flex;
         flex-direction: row;
@@ -191,7 +192,7 @@
   }
 }
 #pr10,
-#pr7 {
+#pr11 {
   grid-column: span 8;
 
   @include mobile {

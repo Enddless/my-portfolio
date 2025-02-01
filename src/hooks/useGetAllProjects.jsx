@@ -18,14 +18,13 @@ function useGetAllProjects() {
           const projects = snapshot.docs.map((doc) => ({
             id: doc.data().id,
             images: doc.data().images,
-            mainPhoto: doc.data().mainPhoto,
+
             deploy: doc.data().deploy,
             github: doc.data().github,
             name: doc.data().name,
             stack: doc.data().stack,
             text: doc.data().text,
-            path: doc.data().path,
-            comments: doc.data().comments,
+
             video: doc.data().video,
             sources: doc.data().sources,
             alt: doc.data().alt,
