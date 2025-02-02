@@ -11,7 +11,7 @@
   position: relative;
 
   &__title {
-    @include fluid-text(50, 24);
+    @include fluid-text(50, 20);
 
     line-height: 1;
     letter-spacing: 5px;
