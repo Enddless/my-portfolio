@@ -81,7 +81,6 @@
       &-name {
         @include fluid-text(30, 16);
 
-        cursor: pointer;
         font-family: var(--font-family-secondary);
         position: absolute;
         top: 0;
@@ -100,13 +99,6 @@
           margin-bottom: 0;
         }
 
-        @include hover {
-          color: var(--cl-accent);
-          & svg {
-            transform: rotate(360deg) scale(1.1);
-          }
-        }
-
         @include mobile {
           height: 60px;
         }
@@ -122,10 +114,18 @@
         flex-direction: row;
         gap: 20px;
         justify-content: center;
+        align-items: center;
         width: 100%;
         padding: 0 5px;
 
         & .link {
+          transition: transform var(--transition-duration) ease;
+          @include hover {
+            transform: rotate(360deg);
+          }
+        }
+        & span svg.link {
+          cursor: pointer;
           transition: transform var(--transition-duration) ease;
           @include hover {
             transform: rotate(360deg);
