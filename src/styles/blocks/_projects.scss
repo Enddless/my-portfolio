@@ -64,7 +64,7 @@
     box-shadow: var(--shadow);
     border-radius: var(--border-radius-large);
     background-color: var(--cl-body);
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 
     &-content {
       border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
@@ -144,6 +144,15 @@
         flex-wrap: wrap;
         padding: 0 5px;
         min-height: 40px;
+      }
+
+      &-type {
+        font-size: 12px;
+        color: var(--cl-accent);
+        position: absolute;
+        bottom: 11px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 

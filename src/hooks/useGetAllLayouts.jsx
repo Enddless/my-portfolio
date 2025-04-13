@@ -25,7 +25,7 @@ function useGetAllLayouts() {
             name: doc.data().name,
             stack: doc.data().stack,
             text: doc.data().text,
-
+            type: doc.data().type,
             sources: doc.data().sources,
             preview: doc.data().preview
           }));

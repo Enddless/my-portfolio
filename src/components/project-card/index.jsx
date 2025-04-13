@@ -109,13 +109,16 @@ function Card({
           </div>
           {!isProjectsList && (
             <Button
-              text={expandedProjectId.includes(project.id) ? 'Свернуть' : 'Развернуть'}
+              text={expandedProjectId.includes(project.id) ? 'Hide' : 'Show'}
               onClick={() => toggleExpand(project.id)}
               cls={expandedProjectId.includes(project.id) ? 'button-expanded' : ''}
             />
           )}
         </>
       )}
+      <div className='projects__item-content-type'>
+        <p>{project.type}</p>
+      </div>
     </>
   );
 }
