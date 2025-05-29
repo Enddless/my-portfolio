@@ -50,3 +50,8 @@ h1 {
   background: var(--cl-body-scroll-thumb);
   cursor: grab;
 }
+.main__content-show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
