@@ -112,7 +112,7 @@ const ProjectsList = ({ projectsList, id }) => {
             ) : !isProjectsList ? (
               <div className='projects__wrapper'>
                 {projectGroups.map((group, index) => (
-                  <ul className='projects__list' key={index}>
+                  <ul className='projects__list' key={`${group}-${index}`}>
                     {group.map((project) => {
                       return (
                         <li
