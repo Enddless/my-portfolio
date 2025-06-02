@@ -1,13 +1,5 @@
 .gallery-page {
   & img {
-    width: 600px;
-
-    @include mobile {
-      width: 300px;
-    }
-
-    @include mobile-s {
-      width: 220px;
-    }
+    width: 80%;
   }
 }

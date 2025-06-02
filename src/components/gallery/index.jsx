@@ -1,7 +1,7 @@
 import { useContext, useRef } from 'react';
 import { IdProjectContext } from '../../context/id-project-click';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import Spinner from '../spinner';
 
 function Gallery({ projectsList, closeModal }) {
@@ -28,9 +28,8 @@ function Gallery({ projectsList, closeModal }) {
       {findProject && (
         <Swiper
           ref={swiperRef}
-          effect={'cards'}
           grabCursor={true}
-          modules={[EffectCards, Pagination]}
+          modules={[Pagination]}
           pagination={{
             clickable: true
           }}
