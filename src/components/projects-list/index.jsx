@@ -18,14 +18,10 @@ const ProjectsList = ({ projectsList, id }) => {
 
   useEffect(() => {
     if (projectsList.length) {
-      // Проверяем и сортируем проекты по полю sort
-      const sortedProjects = [...projectsList].sort((a, b) => {
-        const sortA = Number(a.sort) || 0; // Преобразуем в число, если не число - 0
-        const sortB = Number(b.sort) || 0; // Преобразуем в число, если не число - 0
-        return sortA - sortB; // Сортируем по возрастанию
-      });
-      setProjects(sortedProjects);
-      setDataLoaded(true);
+      setTimeout(() => {
+        setProjects(projectsList);
+        setDataLoaded(true);
+      }, 1000);
     }
   }, [projectsList]);
 
