@@ -23,7 +23,7 @@ function Info() {
         </div>
 
         <div className='info__text'>
-          <span className='info__text-item'>html - верстальщик</span>
+          <span className='info__text-item'>html - developer</span>
           <span className='info__text-item'>frontend - developer</span>
         </div>
 
