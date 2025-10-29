@@ -63,7 +63,7 @@ function Card({
         <>
           <div
             className={`projects__item-content-links ${isProjectsList && 'react__item-content-links'}`}>
-            <span
+            {/* <span
               onClick={() => {
                 if (project.id !== 'pr11') {
                   openModal();
@@ -96,7 +96,7 @@ function Card({
                   />
                 </svg>
               )}
-            </span>
+            </span> */}
 
             {project.deploy !== '' && <LinkButton id='Deploy' href={project.deploy} />}
             {project.github !== '' && <LinkButton id='Github' href={project.github} />}

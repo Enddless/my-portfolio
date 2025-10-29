@@ -14,34 +14,31 @@ function LinkButton({ href, id }) {
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
             className='link'>
-            <path
-              d='M14.5647 8.83061C15.4244 10.4766 15.8599 12.3109 15.8321 14.1676C15.8042 16.0243 15.3138 17.8447 14.4051 19.4641'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-            />
-            <path
-              d='M16.9166 6.41663C13.6539 10.7669 5.322 13.5964 4.20728 13.9601C4.1633 13.9745 4.16067 14.0341 4.20293 14.0529C5.30013 14.541 13.6496 18.3163 16.9166 21.5833'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-              strokeLinecap='round'
-            />
-            <path
-              d='M15.4463 16.9869C15.0352 17.0254 14.6207 16.9786 14.2286 16.8495C13.8364 16.7205 13.4752 16.5118 13.1674 16.2367C12.8596 15.9616 12.6119 15.6259 12.4398 15.2506C12.2677 14.8754 12.1749 14.4686 12.1672 14.0559C12.1595 13.6431 12.2371 13.2332 12.3951 12.8518C12.5531 12.4704 12.7881 12.1257 13.0854 11.8393C13.3828 11.5529 13.736 11.331 14.1231 11.1874C14.5101 11.0438 14.9226 10.9816 15.3348 11.0047'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-            />
-            <path
-              d='M16.5 12H20.5'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-              strokeLinecap='round'
-            />
-            <path
-              d='M16.5 9.5L20.5 8'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-              strokeLinecap='round'
-            />
-            <path
-              d='M16.5 14.5L20.5 16'
-              style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
-              strokeLinecap='round'
-            />
+            <g clipPath='url(#clip0_1222_31002)'>
+              <path
+                d='M14 27C21.1798 27 27 21.1798 27 14C27 6.8203 21.1798 1 14 1C6.8203 1 1 6.8203 1 14C1 21.1798 6.8203 27 14 27Z'
+                style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              />
+              <path
+                d='M1 14H27'
+                style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              />
+              <path
+                d='M19 14C18.7544 18.754 17.0034 23.3066 14 27C10.9966 23.3066 9.2456 18.754 9 14C9.2456 9.24602 10.9966 4.6933 14 1C17.0034 4.6933 18.7544 9.24602 19 14Z'
+                style={{ stroke: isDarkTheme === 'dark' ? 'white' : '#191717' }}
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              />
+            </g>
+            <defs>
+              <clipPath id='clip0_1222_31002'>
+                <rect width='28' height='28' fill='white' />
+              </clipPath>
+            </defs>
           </svg>
         </>
       ) : (

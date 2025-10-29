@@ -13,7 +13,7 @@ function MainPage() {
   const { projects } = useGetAllProjects();
 
   // Количество показываемых карточек
-  const [layoutsToShow, setLayoutsToShow] = useState(6);
+  const [layoutsToShow, setLayoutsToShow] = useState(12);
 
   // Общее количество данных
   const totalLayouts = layouts.length;
@@ -26,7 +26,7 @@ function MainPage() {
 
   // Обработчики для кнопок "Показать еще"
   const handleShowMoreLayouts = () => {
-    setLayoutsToShow((prev) => Math.min(prev + 6, totalLayouts));
+    setLayoutsToShow((prev) => Math.min(prev + 4, totalLayouts));
   };
 
   return (

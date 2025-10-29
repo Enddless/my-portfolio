@@ -2,7 +2,7 @@ export const mock = {
   layouts: [
     {
       alt: 'изображение проекта Emsow',
-      deploy: 'https://display-emsow-wp.netlify.app/',
+      deploy: 'https://emsow.com/',
       github: '',
       id: '1',
       images: [
@@ -43,10 +43,40 @@ export const mock = {
       type: 'commerce project'
     },
     {
+      alt: 'изображение проекта Emsow Teleradiology',
+      deploy: 'https://teleradiology.emsow.com/',
+      github: '',
+      id: '20',
+      name: 'Emsow Teleradiology',
+      preview:
+        'https://www.dropbox.com/scl/fi/8wtmktfakziasj4pbnx3n/teleradiology_11zon.webp?rlkey=4bi3orwj3p1x5m5lcqi6lf4up&st=ohm9y4jh&dl=1',
+
+      images: [
+        'https://www.dropbox.com/scl/fi/kaaj6l9uerm0itgr3vo2x/ly19-1.jpg?rlkey=znyodmcgxm57p01xb45k8w4pn&st=2csh7pjr&dl=1',
+        'https://www.dropbox.com/scl/fi/7gp0xlcaxxybmvkkx8uod/ly19-2.jpg?rlkey=1g4waerdzbb226nt1ghhc3opx&st=ltevgclb&dl=1',
+        'https://www.dropbox.com/scl/fi/qlo9a3fxq98fcpy9cba0s/ly19-3.jpg?rlkey=ak59xjwc67vxbseeh4o8zg19x&st=epgetq9n&dl=1',
+        'https://www.dropbox.com/scl/fi/gv80v6wl9mt4zo70ffvfs/ly19-4.jpg?rlkey=b80j2n48icjoitaely8umdzg2&st=24qp538v&dl=1',
+        'https://www.dropbox.com/scl/fi/i6venwc1n7z371x9b7euj/ly19-5.jpg?rlkey=y4z2aa1n9sdtk3mpxa4gxjn0l&st=l3yim1sd&dl=1',
+        'https://www.dropbox.com/scl/fi/wakn7ykn0y5ynk45kr0wv/ly19-6.jpg?rlkey=uv4b6phk3dd521w15qi5yixqa&st=nfcu4sf4&dl=1',
+        'https://www.dropbox.com/scl/fi/h44cxv35pfnvapadxlem0/ly19-7.jpg?rlkey=j4i40hewxngd7dfp2c9luhwgy&st=nuabcpjv&dl=1'
+      ],
+      sources: [
+        'https://www.dropbox.com/scl/fi/qg2mk0n5f0xjqz7s64ktx/ly19-1_11zon.webp?rlkey=m6yarbrg67d8lra2shigtl8uw&st=c3u72ddn&dl=1',
+        'https://www.dropbox.com/scl/fi/yhkz4h8fa3porh0y0tbaq/ly19-2_11zon.webp?rlkey=uh7m9kfz8cs3qfbls78t7ls5r&st=os1nu35g&dl=1',
+        'https://www.dropbox.com/scl/fi/gsj3pqy9zmhgs1w28hsw5/ly19-3_11zon.webp?rlkey=8g8ls4cbsrzz0v0971bjxy5p7&st=gvu29fv7&dl=1',
+        'https://www.dropbox.com/scl/fi/wdw08edhym5iubzrbzdf2/ly19-4_11zon.webp?rlkey=es5d02jfojt4gq80x4u52emh7&st=cha4ga2v&dl=1',
+        'https://www.dropbox.com/scl/fi/05kekl3ctcyxqild6pnt6/ly19-5_11zon.webp?rlkey=xqng7t94po86gu726ctcug5dn&st=ziuze850&dl=1',
+        'https://www.dropbox.com/scl/fi/l8xhwqrmg3403pfz1fjhe/ly19-6_11zon.webp?rlkey=9m6gpdu84wl3frdt0a1igj5f3&st=obw26zgo&dl=1',
+        'https://www.dropbox.com/scl/fi/m5hi7bn8d9wsm5zak8ten/ly19-7_11zon.webp?rlkey=wnd9mht3edbecpnx62uxx4xcn&st=klrhm185&dl=1'
+      ],
+      stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS, PHP',
+      type: 'commerce project'
+    },
+    {
       alt: 'изображение проекта Emsow Radiology',
       deploy: 'https://radiology.emsow.com/',
       github: '',
-      id: '2',
+      id: '3',
       name: 'Emsow Radiology',
       preview:
         'https://www.dropbox.com/scl/fi/j1wra113kza8a1cd57206/Radiology-emsow-min_11zon.webp?rlkey=ycss0k1zs8bpi7wodn0izzy1o&st=vnxl8z79&dl=1',
@@ -78,7 +108,7 @@ export const mock = {
       alt: 'изображение проекта Emsow Billing',
       deploy: 'https://billing.emsow.com/',
       github: '',
-      id: '3',
+      id: '4',
       name: 'Emsow Billing',
       preview:
         'https://www.dropbox.com/scl/fi/rm90vun00axu0mqs19k1v/Billing-emsow-min_11zon.webp?rlkey=pd2ud8itce0lfvv0r909sdl65&st=x1e2m1d5&dl=1',
@@ -102,27 +132,104 @@ export const mock = {
       type: 'commerce project'
     },
     {
-      alt: 'изображение проекта UK Marta',
-      deploy: 'https://ukmarta.ru/',
-      github: 'https://github.com/Enddless/uk-marta',
-      id: '4',
-      name: 'UK Marta',
+      alt: 'изображение проекта It Holding T1',
+      deploy: 'https://www.superjob.ru/clients/it-holding-t1-3001379.html',
+      github: '',
+      id: '21',
+      name: 'It Holding T1',
       preview:
-        'https://www.dropbox.com/scl/fi/u37xbag6srkt8y0pans09/Marta-min_11zon.webp?rlkey=aciww8j29uosys19o0aygyh9h&st=ppkb17nd&dl=1',
+        'https://www.dropbox.com/scl/fi/a6juypbkuhxaar04tk8fv/t1_11zon.webp?rlkey=h5vpestk4jool3raab0wo6cm2&st=lqptnidl&dl=1',
+
+      images: [],
+      sources: [],
+      stack: 'HTML, SCSS, JAVASCRIPT, REACT',
+      type: 'commerce project'
+    },
+    {
+      alt: 'изображение проекта Bank VTB',
+      deploy: 'https://www.superjob.ru/clients/bank-vtb-235578.html',
+      github: '',
+      id: '12',
+      images: [
+        'https://www.dropbox.com/scl/fi/u970kux66l1brfcqbuixu/ly9-1.jpg?rlkey=ocnzs0nt98q2ik3ksnkhw54kh&st=b0u7mbky&dl=1',
+        'https://www.dropbox.com/scl/fi/cfy7dj0d1vvet7x1n8x7s/ly9-2.jpg?rlkey=ezwwwfh1op9gkgl5le48831pa&st=rt0g84h4&dl=1',
+        'https://www.dropbox.com/scl/fi/7zj0thfw3nwev7uip141f/ly9-3.jpg?rlkey=im8md8mhjtcf23xzcs96qcdda&st=4q5cgwpu&dl=1',
+        'https://www.dropbox.com/scl/fi/947beczvmdy8tds5kh7m7/ly9-4.jpg?rlkey=ictjqh339k50n9gbxyb7y84dt&st=0jwlv0wv&dl=1',
+        'https://www.dropbox.com/scl/fi/t5trirlwh0lkxumm5rv67/ly9-5.jpg?rlkey=2smzab42dh13j3kn6s06c7vi6&st=uy3m0bi1&dl=1',
+        'https://www.dropbox.com/scl/fi/cz1b0p29ytik3gm02emxk/ly9-6.jpg?rlkey=cdom2kdh7gu8kkwzn5dtnngsh&st=plr4edfy&dl=1',
+        'https://www.dropbox.com/scl/fi/glk2kkka7jgjhnthy1n5g/ly9-7.jpg?rlkey=i3h9zybktmyqo7e1l4yjo5ela&st=rum3hcx4&dl=1',
+        'https://www.dropbox.com/scl/fi/r2bctr2gyw9yjl955w2fz/ly9-8.jpg?rlkey=64qo8x7cwe30swwnbrnifkacx&st=2hicx133&dl=1',
+        'https://www.dropbox.com/scl/fi/j5qxsa3h5p2xbnm8rgjdf/ly9-9.jpg?rlkey=yvdvslvjkhint4yw7i4ybttch&st=s4y6luzi&dl=1',
+        'https://www.dropbox.com/scl/fi/few9zkg2l2wvgkht3rwe3/ly9-10.jpg?rlkey=maxaan8ftlzvfaxjraftzu3lv&st=oc27hn63&dl=1'
+      ],
+      name: 'Bank VTB',
+      preview:
+        'https://www.dropbox.com/scl/fi/pgdhb88x9nv3eidoy7wuj/VTB-min.jpg?rlkey=yunawb7zwrjlmb0f1hvvtfgdz&st=vulda8rt&dl=1',
+
+      sources: [
+        'https://www.dropbox.com/scl/fi/c9mfgryc9wgxml6fc3vhl/ly9-1.webp?rlkey=mdpwucnhwgqfzp5kgr3bpzkgt&st=7k0n0e47&dl=1',
+        'https://www.dropbox.com/scl/fi/nb526qa6pj7s0n20itxlq/ly9-2.webp?rlkey=otmm74bbq2637ava33ibzv5xv&st=s1j4vuqb&dl=1',
+        'https://www.dropbox.com/scl/fi/zpfaj668vd5tnj9huk8ra/ly9-3.webp?rlkey=wwmwd566h0imy28th6qrtpumz&st=afnnzxc6&dl=1',
+        'https://www.dropbox.com/scl/fi/kbe2yyxk5ceyfl1wum89f/ly9-4.webp?rlkey=7zlwju5ergbikdcnvy2zyw3br&st=egs8v3hh&dl=1',
+        'https://www.dropbox.com/scl/fi/873zv0c39svi05fhy6xx7/ly9-5.webp?rlkey=q48gcsf140j6sx0rr09rj6b75&st=1gdwmeqw&dl=1',
+        'https://www.dropbox.com/scl/fi/6ajbq3bmzo2acdvfx0ia4/ly9-6.webp?rlkey=ur21dh0me6yt645wsaemnjg0x&st=c3vf09f6&dl=1',
+        'https://www.dropbox.com/scl/fi/4s4lmhkxz93gwsugwt4n7/ly9-7.webp?rlkey=vb4fka6bg59s5i5mtitwxo105&st=6pjr2op9&dl=1',
+        'https://www.dropbox.com/scl/fi/gzri87tec6rac9x3ptyrv/ly9-8.webp?rlkey=uxcd1yiek8nkqyku6e6mjgyef&st=9j5tkyba&dl=1',
+        'https://www.dropbox.com/scl/fi/3751i1dygno5kfujsmu0k/ly9-9.webp?rlkey=dvizcynvu3zzgis8jc5t8cp26&st=hbprdjg9&dl=1',
+        'https://www.dropbox.com/scl/fi/4cffrs2u9r6ufvlo05ltj/ly9-10.webp?rlkey=ucz4kdqods0kvojxs750m6rja&st=l5gy02sz&dl=1'
+      ],
+      stack: 'HTML, SCSS, JAVASCRIPT, БЭМ, SWIPER',
+      type: 'commerce project'
+    },
+
+    {
+      alt: 'изображение проекта UK Ricom',
+      deploy: 'https://ukricom.ru/',
+      github: '',
+      id: '7',
+      name: 'UK Ricom',
+      preview:
+        'https://www.dropbox.com/scl/fi/7pvdkm2ujlsb99iooo328/Ricom-min.jpg?rlkey=j0v2xxtvdfgy9aqv8h9nwo8ma&st=c3gdwz9z&dl=1',
 
       images: [
-        'https://www.dropbox.com/scl/fi/64zno1c0wym2j7rmxa7vm/ly15-1.jpg?rlkey=im72szw51w0mdop99d0iq59im&st=a1rc7j1r&dl=1',
-        'https://www.dropbox.com/scl/fi/h7bris16k7wqi6wnnzky8/ly15-2.jpg?rlkey=tf72jqai5wf0rtkgnf8qb1toa&st=etere6r5&dl=1',
-        'https://www.dropbox.com/scl/fi/o7986bvgvikngmhy7arbl/ly15-3.jpg?rlkey=bak48b5aumwgmmcbfaq8jla8i&st=aym67h38&dl=1',
-        'https://www.dropbox.com/scl/fi/e2gvbpizxjypgifx4u0k9/ly15-4.jpg?rlkey=4vpos08dssahnryauzt069tiz&st=qksh31kn&dl=1',
-        'https://www.dropbox.com/scl/fi/236rfky081hmo9mf8t6nt/ly15-5.jpg?rlkey=iaob5qg21k9d6z67vnn5hzmuq&st=14q70eaw&dl=1'
+        'https://www.dropbox.com/scl/fi/c16fkkmwbpjb2iw1kjgt4/ly14-1.jpg?rlkey=wlyab6uba8qoni34bp5kfvz2o&st=4cblpzxl&dl=1',
+        'https://www.dropbox.com/scl/fi/zqx4hk9ep8105xjm1ek7h/ly14-2.jpg?rlkey=a62b8gu9x4vnfx5eahf29bu6u&st=phjf4xo0&dl=1',
+        'https://www.dropbox.com/scl/fi/509wjm9sthke9gopyn725/ly14-3.jpg?rlkey=prsuvptscwhdvqj1d9qz7cm0z&st=fcripf57&dl=1',
+        'https://www.dropbox.com/scl/fi/lhe6g5j1wnb1w8tsq87sn/ly14-4.jpg?rlkey=a307n7bqh665c3upge2k6960o&st=yzgz3vbt&dl=1'
       ],
       sources: [
-        'https://www.dropbox.com/scl/fi/t9p14vv98p1fz3rmnmnwo/ly15-1.webp?rlkey=dmxjdhkl4nlkkbkdeslscvmsp&st=jk7e3s4y&dl=1',
-        'https://www.dropbox.com/scl/fi/nkuylubn5n3fh01olybcm/ly15-2.webp?rlkey=19o0ngn5y7jv4w82ou4hwdhy9&st=5unarhst&dl=1',
-        'https://www.dropbox.com/scl/fi/396rf0ud8owc8zqc8fn9p/ly15-3.webp?rlkey=64i9tjd50bu17xr28dnvgcgng&st=9mv04zzn&dl=1',
-        'https://www.dropbox.com/scl/fi/5p1g6crsghy02jkgm2r7z/ly15-4.webp?rlkey=3vatv2rjt068c39fqtmgi93oy&st=ayywxgp5&dl=1',
-        'https://www.dropbox.com/scl/fi/jft5hbx59n4vm25gr3t0i/ly15-5.webp?rlkey=kvp5vwo48nfctssxe7e0keivc&st=wdpx5nwb&dl=1'
+        'https://www.dropbox.com/scl/fi/368vxm8a4q89gie0pi5gj/ly14-1_11zon.webp?rlkey=2qrk5jrjk9rjc88o3l8x3uiuq&st=wmtm8fsi&dl=1',
+        'https://www.dropbox.com/scl/fi/h3j3n6mmcjlqvc2qz7oj0/ly14-2_11zon.webp?rlkey=szzwyv4zit0i6zqn4orp1pio7&st=8ecocgau&dl=1',
+        'https://www.dropbox.com/scl/fi/j2xtrk5ugy0j806hywf1d/ly14-3_11zon.webp?rlkey=u2ekhntfmxjiepm3ejpxtlz0t&st=tcv4s1ub&dl=1',
+        'https://www.dropbox.com/scl/fi/a6r080zn1wr1eg1yxggrm/ly14-4_11zon.webp?rlkey=472hpuk2gqshxc3exfffd9psv&st=zmxb9816&dl=1'
+      ],
+      stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
+      type: 'commerce project'
+    },
+    {
+      alt: 'изображение проекта Zpif Hodinskij',
+      deploy: 'https://zpifhp.ru/',
+      github: '',
+      id: '8',
+      name: 'Zpif Hodinskij',
+      preview:
+        'https://www.dropbox.com/scl/fi/hp5syzacqjabwetuqopkm/Zpif-Xodynskij-min.jpg?rlkey=q51mpsxu46fy3xni5jbhbg3ni&st=16e3y6ii&dl=1',
+
+      images: [
+        'https://www.dropbox.com/scl/fi/r2wnfk2z3dpiugznyng5l/ly13-1.jpg?rlkey=ilxk335915danrnzo8a2kxfl0&st=78ht4toy&dl=1',
+        'https://www.dropbox.com/scl/fi/cqfnbjsj5igxlc2e6kjob/ly13-2.jpg?rlkey=rjufe74w3wc5ta57ks1r29he2&st=7ke7sr96&dl=1',
+        'https://www.dropbox.com/scl/fi/47zzol3u9l1yjk896fea4/ly13-3.jpg?rlkey=on65odc835obu3xli9fd3g4ww&st=ucn5ys7n&dl=1',
+        'https://www.dropbox.com/scl/fi/00dnkj0l5kipjbmo7z5uw/ly13-4.jpg?rlkey=hrvviy5r3ci2vrg80q314o2b7&st=ovnvok8j&dl=1',
+        'https://www.dropbox.com/scl/fi/1j4ns9z102fhj6e6vh1mn/ly13-5.jpg?rlkey=34ingpudgaqplm9ymo23c7l5l&st=zoq79siz&dl=1',
+        'https://www.dropbox.com/scl/fi/161hfwp7mn0sjwvr0j551/ly13-6.jpg?rlkey=z4kbo03ja46kr6pr24f4ble7u&st=j8acz2hu&dl=1'
+      ],
+      sources: [
+        'https://www.dropbox.com/scl/fi/zbu8w9m7elzprv74oytx6/ly13-1_11zon.webp?rlkey=apxxpz7lxrncpyawgev11xwpg&st=n9lc29gy&dl=1',
+        'https://www.dropbox.com/scl/fi/sbl93gya2d7qwbaqy6fn6/ly13-2_11zon.webp?rlkey=qrljo7cga65fdhieuxuqogo1m&st=oafs18x8&dl=1',
+        'https://www.dropbox.com/scl/fi/yloyqns145ambnhkpyfxg/ly13-3_11zon.webp?rlkey=x7sfrd56bb6jq67g5kj2da63m&st=gyv8dme0&dl=1',
+        'https://www.dropbox.com/scl/fi/2mi70zu4el34t4s6odb0z/ly13-4_11zon.webp?rlkey=sagyq2ctqdytf0pj151onwz2g&st=p1wufeey&dl=1',
+        'https://www.dropbox.com/scl/fi/bkqo4lwebgmw2wib7l9va/ly13-5_11zon.webp?rlkey=a2rpu5st455x4rxm6u22iuxfe&st=ajh3b6sd&dl=1',
+        'https://www.dropbox.com/scl/fi/wbxpsmfnhix7ea7wl9w8i/ly13-6_11zon.webp?rlkey=zs80jc3yzxrt183lxe9h663zj&st=15uvyiy4&dl=1'
       ],
       stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
       type: 'commerce project'
@@ -131,7 +238,7 @@ export const mock = {
       alt: 'изображение проекта Renntek',
       deploy: 'https://renntek.ru/',
       github: '',
-      id: '5',
+      id: '6',
       name: 'Renntek',
       preview:
         'https://www.dropbox.com/scl/fi/0oh66hxk5sk1bu4ynmhkz/Renntek-min_11zon.webp?rlkey=sr46wux48nc7ak3e4rtnvshbg&st=tob2nqon&dl=1',
@@ -166,53 +273,27 @@ export const mock = {
       type: 'commerce project'
     },
     {
-      alt: 'изображение проекта UK Ricom',
-      deploy: 'https://ukricom.ru/',
-      github: '',
-      id: '6',
-      name: 'UK Ricom',
+      alt: 'изображение проекта UK Marta',
+      deploy: 'https://ukmarta.ru/',
+      github: 'https://github.com/Enddless/uk-marta',
+      id: '5',
+      name: 'UK Marta',
       preview:
-        'https://www.dropbox.com/scl/fi/7pvdkm2ujlsb99iooo328/Ricom-min.jpg?rlkey=j0v2xxtvdfgy9aqv8h9nwo8ma&st=c3gdwz9z&dl=1',
+        'https://www.dropbox.com/scl/fi/u37xbag6srkt8y0pans09/Marta-min_11zon.webp?rlkey=aciww8j29uosys19o0aygyh9h&st=ppkb17nd&dl=1',
 
       images: [
-        'https://www.dropbox.com/scl/fi/c16fkkmwbpjb2iw1kjgt4/ly14-1.jpg?rlkey=wlyab6uba8qoni34bp5kfvz2o&st=4cblpzxl&dl=1',
-        'https://www.dropbox.com/scl/fi/zqx4hk9ep8105xjm1ek7h/ly14-2.jpg?rlkey=a62b8gu9x4vnfx5eahf29bu6u&st=phjf4xo0&dl=1',
-        'https://www.dropbox.com/scl/fi/509wjm9sthke9gopyn725/ly14-3.jpg?rlkey=prsuvptscwhdvqj1d9qz7cm0z&st=fcripf57&dl=1',
-        'https://www.dropbox.com/scl/fi/lhe6g5j1wnb1w8tsq87sn/ly14-4.jpg?rlkey=a307n7bqh665c3upge2k6960o&st=yzgz3vbt&dl=1'
+        'https://www.dropbox.com/scl/fi/64zno1c0wym2j7rmxa7vm/ly15-1.jpg?rlkey=im72szw51w0mdop99d0iq59im&st=a1rc7j1r&dl=1',
+        'https://www.dropbox.com/scl/fi/h7bris16k7wqi6wnnzky8/ly15-2.jpg?rlkey=tf72jqai5wf0rtkgnf8qb1toa&st=etere6r5&dl=1',
+        'https://www.dropbox.com/scl/fi/o7986bvgvikngmhy7arbl/ly15-3.jpg?rlkey=bak48b5aumwgmmcbfaq8jla8i&st=aym67h38&dl=1',
+        'https://www.dropbox.com/scl/fi/e2gvbpizxjypgifx4u0k9/ly15-4.jpg?rlkey=4vpos08dssahnryauzt069tiz&st=qksh31kn&dl=1',
+        'https://www.dropbox.com/scl/fi/236rfky081hmo9mf8t6nt/ly15-5.jpg?rlkey=iaob5qg21k9d6z67vnn5hzmuq&st=14q70eaw&dl=1'
       ],
       sources: [
-        'https://www.dropbox.com/scl/fi/368vxm8a4q89gie0pi5gj/ly14-1_11zon.webp?rlkey=2qrk5jrjk9rjc88o3l8x3uiuq&st=wmtm8fsi&dl=1',
-        'https://www.dropbox.com/scl/fi/h3j3n6mmcjlqvc2qz7oj0/ly14-2_11zon.webp?rlkey=szzwyv4zit0i6zqn4orp1pio7&st=8ecocgau&dl=1',
-        'https://www.dropbox.com/scl/fi/j2xtrk5ugy0j806hywf1d/ly14-3_11zon.webp?rlkey=u2ekhntfmxjiepm3ejpxtlz0t&st=tcv4s1ub&dl=1',
-        'https://www.dropbox.com/scl/fi/a6r080zn1wr1eg1yxggrm/ly14-4_11zon.webp?rlkey=472hpuk2gqshxc3exfffd9psv&st=zmxb9816&dl=1'
-      ],
-      stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
-      type: 'commerce project'
-    },
-    {
-      alt: 'изображение проекта Zpif Hodinskij',
-      deploy: 'https://zpifhp.ru/',
-      github: '',
-      id: '7',
-      name: 'Zpif Hodinskij',
-      preview:
-        'https://www.dropbox.com/scl/fi/hp5syzacqjabwetuqopkm/Zpif-Xodynskij-min.jpg?rlkey=q51mpsxu46fy3xni5jbhbg3ni&st=16e3y6ii&dl=1',
-
-      images: [
-        'https://www.dropbox.com/scl/fi/r2wnfk2z3dpiugznyng5l/ly13-1.jpg?rlkey=ilxk335915danrnzo8a2kxfl0&st=78ht4toy&dl=1',
-        'https://www.dropbox.com/scl/fi/cqfnbjsj5igxlc2e6kjob/ly13-2.jpg?rlkey=rjufe74w3wc5ta57ks1r29he2&st=7ke7sr96&dl=1',
-        'https://www.dropbox.com/scl/fi/47zzol3u9l1yjk896fea4/ly13-3.jpg?rlkey=on65odc835obu3xli9fd3g4ww&st=ucn5ys7n&dl=1',
-        'https://www.dropbox.com/scl/fi/00dnkj0l5kipjbmo7z5uw/ly13-4.jpg?rlkey=hrvviy5r3ci2vrg80q314o2b7&st=ovnvok8j&dl=1',
-        'https://www.dropbox.com/scl/fi/1j4ns9z102fhj6e6vh1mn/ly13-5.jpg?rlkey=34ingpudgaqplm9ymo23c7l5l&st=zoq79siz&dl=1',
-        'https://www.dropbox.com/scl/fi/161hfwp7mn0sjwvr0j551/ly13-6.jpg?rlkey=z4kbo03ja46kr6pr24f4ble7u&st=j8acz2hu&dl=1'
-      ],
-      sources: [
-        'https://www.dropbox.com/scl/fi/zbu8w9m7elzprv74oytx6/ly13-1_11zon.webp?rlkey=apxxpz7lxrncpyawgev11xwpg&st=n9lc29gy&dl=1',
-        'https://www.dropbox.com/scl/fi/sbl93gya2d7qwbaqy6fn6/ly13-2_11zon.webp?rlkey=qrljo7cga65fdhieuxuqogo1m&st=oafs18x8&dl=1',
-        'https://www.dropbox.com/scl/fi/yloyqns145ambnhkpyfxg/ly13-3_11zon.webp?rlkey=x7sfrd56bb6jq67g5kj2da63m&st=gyv8dme0&dl=1',
-        'https://www.dropbox.com/scl/fi/2mi70zu4el34t4s6odb0z/ly13-4_11zon.webp?rlkey=sagyq2ctqdytf0pj151onwz2g&st=p1wufeey&dl=1',
-        'https://www.dropbox.com/scl/fi/bkqo4lwebgmw2wib7l9va/ly13-5_11zon.webp?rlkey=a2rpu5st455x4rxm6u22iuxfe&st=ajh3b6sd&dl=1',
-        'https://www.dropbox.com/scl/fi/wbxpsmfnhix7ea7wl9w8i/ly13-6_11zon.webp?rlkey=zs80jc3yzxrt183lxe9h663zj&st=15uvyiy4&dl=1'
+        'https://www.dropbox.com/scl/fi/t9p14vv98p1fz3rmnmnwo/ly15-1.webp?rlkey=dmxjdhkl4nlkkbkdeslscvmsp&st=jk7e3s4y&dl=1',
+        'https://www.dropbox.com/scl/fi/nkuylubn5n3fh01olybcm/ly15-2.webp?rlkey=19o0ngn5y7jv4w82ou4hwdhy9&st=5unarhst&dl=1',
+        'https://www.dropbox.com/scl/fi/396rf0ud8owc8zqc8fn9p/ly15-3.webp?rlkey=64i9tjd50bu17xr28dnvgcgng&st=9mv04zzn&dl=1',
+        'https://www.dropbox.com/scl/fi/5p1g6crsghy02jkgm2r7z/ly15-4.webp?rlkey=3vatv2rjt068c39fqtmgi93oy&st=ayywxgp5&dl=1',
+        'https://www.dropbox.com/scl/fi/jft5hbx59n4vm25gr3t0i/ly15-5.webp?rlkey=kvp5vwo48nfctssxe7e0keivc&st=wdpx5nwb&dl=1'
       ],
       stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
       type: 'commerce project'
@@ -222,7 +303,7 @@ export const mock = {
       deploy:
         'https://russia.superjob.ru/clients/samokat-oficialnyj-partnjor-servisa-ooo-lider-konsalt-4063471.html',
       github: '',
-      id: '8',
+      id: '9',
       name: 'Samokat',
       preview:
         'https://www.dropbox.com/scl/fi/5mg79e0slwi1c54137m93/Samokat-min.jpg?rlkey=7rnd53f2r1wud18y4zniyvlz5&st=y98cu02n&dl=1',
@@ -250,7 +331,7 @@ export const mock = {
       alt: 'изображение проекта GKU CODD',
       deploy: 'https://www.superjob.ru/clients/gku-codd-4884805.html',
       github: '',
-      id: '9',
+      id: '10',
       name: 'GKU CODD',
       preview:
         'https://www.dropbox.com/scl/fi/mzobp38lros5rprq7o1hb/CODD-min.jpg?rlkey=f43yz7k7txgqwavuruf01o0i4&st=58eld18d&dl=1',
@@ -277,7 +358,7 @@ export const mock = {
       deploy:
         'https://www.superjob.ru/clients/gbou-dpo-moskovskij-oblastnoj-uchebnyj-centr-4879392.html',
       github: '',
-      id: '10',
+      id: '11',
       images: [
         'https://www.dropbox.com/scl/fi/bfssspwdb8i0rbf70vs59/ly7-1.jpg?rlkey=67i6ajomqdpn7pdt9b7xm1gyd&st=t15oiiip&dl=1',
         'https://www.dropbox.com/scl/fi/nvfulm5xvt8w26eax09nb/ly7-2.jpg?rlkey=q8oytd9idgwn29875jy5v8pt9&st=w923yxg1&dl=1',
@@ -303,47 +384,12 @@ export const mock = {
       stack: 'HTML, SCSS, JAVASCRIPT, БЭМ, SWIPER',
       type: 'commerce project'
     },
-    {
-      alt: 'изображение проекта Bank VTB',
-      deploy: 'https://www.superjob.ru/clients/bank-vtb-235578.html',
-      github: '',
-      id: '11',
-      images: [
-        'https://www.dropbox.com/scl/fi/u970kux66l1brfcqbuixu/ly9-1.jpg?rlkey=ocnzs0nt98q2ik3ksnkhw54kh&st=b0u7mbky&dl=1',
-        'https://www.dropbox.com/scl/fi/cfy7dj0d1vvet7x1n8x7s/ly9-2.jpg?rlkey=ezwwwfh1op9gkgl5le48831pa&st=rt0g84h4&dl=1',
-        'https://www.dropbox.com/scl/fi/7zj0thfw3nwev7uip141f/ly9-3.jpg?rlkey=im8md8mhjtcf23xzcs96qcdda&st=4q5cgwpu&dl=1',
-        'https://www.dropbox.com/scl/fi/947beczvmdy8tds5kh7m7/ly9-4.jpg?rlkey=ictjqh339k50n9gbxyb7y84dt&st=0jwlv0wv&dl=1',
-        'https://www.dropbox.com/scl/fi/t5trirlwh0lkxumm5rv67/ly9-5.jpg?rlkey=2smzab42dh13j3kn6s06c7vi6&st=uy3m0bi1&dl=1',
-        'https://www.dropbox.com/scl/fi/cz1b0p29ytik3gm02emxk/ly9-6.jpg?rlkey=cdom2kdh7gu8kkwzn5dtnngsh&st=plr4edfy&dl=1',
-        'https://www.dropbox.com/scl/fi/glk2kkka7jgjhnthy1n5g/ly9-7.jpg?rlkey=i3h9zybktmyqo7e1l4yjo5ela&st=rum3hcx4&dl=1',
-        'https://www.dropbox.com/scl/fi/r2bctr2gyw9yjl955w2fz/ly9-8.jpg?rlkey=64qo8x7cwe30swwnbrnifkacx&st=2hicx133&dl=1',
-        'https://www.dropbox.com/scl/fi/j5qxsa3h5p2xbnm8rgjdf/ly9-9.jpg?rlkey=yvdvslvjkhint4yw7i4ybttch&st=s4y6luzi&dl=1',
-        'https://www.dropbox.com/scl/fi/few9zkg2l2wvgkht3rwe3/ly9-10.jpg?rlkey=maxaan8ftlzvfaxjraftzu3lv&st=oc27hn63&dl=1'
-      ],
-      name: 'Bank VTB',
-      preview:
-        'https://www.dropbox.com/scl/fi/pgdhb88x9nv3eidoy7wuj/VTB-min.jpg?rlkey=yunawb7zwrjlmb0f1hvvtfgdz&st=vulda8rt&dl=1',
 
-      sources: [
-        'https://www.dropbox.com/scl/fi/c9mfgryc9wgxml6fc3vhl/ly9-1.webp?rlkey=mdpwucnhwgqfzp5kgr3bpzkgt&st=7k0n0e47&dl=1',
-        'https://www.dropbox.com/scl/fi/nb526qa6pj7s0n20itxlq/ly9-2.webp?rlkey=otmm74bbq2637ava33ibzv5xv&st=s1j4vuqb&dl=1',
-        'https://www.dropbox.com/scl/fi/zpfaj668vd5tnj9huk8ra/ly9-3.webp?rlkey=wwmwd566h0imy28th6qrtpumz&st=afnnzxc6&dl=1',
-        'https://www.dropbox.com/scl/fi/kbe2yyxk5ceyfl1wum89f/ly9-4.webp?rlkey=7zlwju5ergbikdcnvy2zyw3br&st=egs8v3hh&dl=1',
-        'https://www.dropbox.com/scl/fi/873zv0c39svi05fhy6xx7/ly9-5.webp?rlkey=q48gcsf140j6sx0rr09rj6b75&st=1gdwmeqw&dl=1',
-        'https://www.dropbox.com/scl/fi/6ajbq3bmzo2acdvfx0ia4/ly9-6.webp?rlkey=ur21dh0me6yt645wsaemnjg0x&st=c3vf09f6&dl=1',
-        'https://www.dropbox.com/scl/fi/4s4lmhkxz93gwsugwt4n7/ly9-7.webp?rlkey=vb4fka6bg59s5i5mtitwxo105&st=6pjr2op9&dl=1',
-        'https://www.dropbox.com/scl/fi/gzri87tec6rac9x3ptyrv/ly9-8.webp?rlkey=uxcd1yiek8nkqyku6e6mjgyef&st=9j5tkyba&dl=1',
-        'https://www.dropbox.com/scl/fi/3751i1dygno5kfujsmu0k/ly9-9.webp?rlkey=dvizcynvu3zzgis8jc5t8cp26&st=hbprdjg9&dl=1',
-        'https://www.dropbox.com/scl/fi/4cffrs2u9r6ufvlo05ltj/ly9-10.webp?rlkey=ucz4kdqods0kvojxs750m6rja&st=l5gy02sz&dl=1'
-      ],
-      stack: 'HTML, SCSS, JAVASCRIPT, БЭМ, SWIPER',
-      type: 'commerce project'
-    },
     {
       alt: 'изображение проекта Лемана Про',
       deploy: 'https://www.superjob.ru/clients/lemana-pro-lerua-merlen-190447.html',
       github: '',
-      id: '12',
+      id: '13',
       images: [
         'https://www.dropbox.com/scl/fi/ubyqmvbmg7q66lh2v2bqf/ly8-1.jpg?rlkey=r1ojkrxvzqgljichm8ujmm4qq&st=hghdhk2k&dl=1',
         'https://www.dropbox.com/scl/fi/lkhgwfchzcxxvan8oz3x7/ly8-2.jpg?rlkey=rou14p8twne31ceaqt21jrgaj&st=uzl40xi9&dl=1',
@@ -373,7 +419,7 @@ export const mock = {
       alt: 'изображение проекта Elite fire',
       deploy: 'https://enddless.github.io/elite-fire/',
       github: 'https://github.com/Enddless/elite-fire',
-      id: '13',
+      id: '14',
       images: [
         'https://www.dropbox.com/scl/fi/pvc514khsj77i9m92fyds/layout4-1.jpg?rlkey=0tvv9htkp1074qlyywaq47v3x&st=6gknvvua&dl=1',
         'https://www.dropbox.com/scl/fi/q4norps4pw85xr9g421dl/layout4-2.jpg?rlkey=1lwqdav3zbvq3lyu9ccjpanrw&st=pmh0ymmi&dl=1',
@@ -402,7 +448,7 @@ export const mock = {
       alt: 'изображение проекта Aeg service',
       deploy: 'https://enddless.github.io/aeg-service/',
       github: 'https://github.com/Enddless/aeg-service',
-      id: '14',
+      id: '15',
       images: [
         'https://www.dropbox.com/scl/fi/0wurxpkqscwist5b8bbtp/layout5-1.jpg?rlkey=zhqumr1fvuc4zixlr66torlm1&st=klx2igcj&dl=1',
         'https://www.dropbox.com/scl/fi/2734czg0cgez0ooxc081p/layout5-2.jpg?rlkey=1ikrywzq0j0l33ufcrr4z52ns&st=gqn6ek1j&dl=1',
@@ -427,7 +473,7 @@ export const mock = {
       alt: 'изображение проекта Dream house',
       deploy: 'https://enddless.github.io/dream_house/',
       github: 'https://github.com/Enddless/dream_house',
-      id: '15',
+      id: '16',
       images: [
         'https://www.dropbox.com/scl/fi/m1q6o77o2o1zbtzc9yz9c/layout2-1.jpg?rlkey=j2nq2gksa31azxumk7nxa2foa&st=24wzqk70&dl=1',
         'https://www.dropbox.com/scl/fi/21xprrr0c3edzcjpeddtl/layout2-2.jpg?rlkey=80iqrq3l62pramrw347jul6nw&st=8n7y7pmr&dl=1',
@@ -456,7 +502,7 @@ export const mock = {
       alt: 'изображение проекта Tourist',
       deploy: 'https://enddless.github.io/tourist/',
       github: 'https://github.com/Enddless/tourist',
-      id: '16',
+      id: '17',
       images: [
         'https://www.dropbox.com/scl/fi/oith0g8v9ludz85iz3q1c/layout3-1.jpg?rlkey=kqt6l2pznqqqyb4h6c9cs5qf5&st=my4uhd6u&dl=1',
         'https://www.dropbox.com/scl/fi/oe4iz6m9177to801qk25d/layout3-2.jpg?rlkey=njzc3yaqkrvbd727a8mq9daua&st=fvjsbre6&dl=1',
@@ -478,22 +524,21 @@ export const mock = {
       stack: 'HTML, SCSS, REACT, GSAP',
       text: 'Вёрстка сайта Tourist по макету Figma. На странице осуществлена плавная анимация появления карточек с фотографиями. Для анимации использовалась библиотека gsap',
       type: 'pet project'
-    },
-
-    {
-      alt: 'изображение проекта Data light',
-      deploy: 'https://enddless.github.io/data-light/',
-      github: 'https://github.com/Enddless/data-light',
-      id: '17',
-      images: [''],
-      name: 'Data light',
-      preview:
-        'https://www.dropbox.com/scl/fi/k7dovl82fuo3egcxm85ph/Data-light-min.jpg?rlkey=xt7eyzk8mqe3so4j4vk6ra22o&st=rfiqx2fg&dl=1',
-
-      sources: [''],
-      stack: 'HTML, SCSS, БЭМ',
-      type: 'pet project'
     }
+    // {
+    //   alt: 'изображение проекта Data light',
+    //   deploy: 'https://enddless.github.io/data-light/',
+    //   github: 'https://github.com/Enddless/data-light',
+    //   id: '18',
+    //   images: [''],
+    //   name: 'Data light',
+    //   preview:
+    //     'https://www.dropbox.com/scl/fi/k7dovl82fuo3egcxm85ph/Data-light-min.jpg?rlkey=xt7eyzk8mqe3so4j4vk6ra22o&st=rfiqx2fg&dl=1',
+
+    //   sources: [''],
+    //   stack: 'HTML, SCSS, БЭМ',
+    //   type: 'pet project'
+    // }
   ],
   projects: [
     {

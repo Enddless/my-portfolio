@@ -11,8 +11,8 @@ const ProjectsList = ({ projectsList, id }) => {
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(isLayoutsList || isProjectsList);
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [listCount, setListCount] = useState(3); // По умолчанию 3 списка
-  const [expandedProjectId, setExpandedProjectId] = useState([]); // Для отслеживания развернутого проекта
+  const [listCount, setListCount] = useState(4); // По умолчанию 3 списка
+  const [expandedProjectId, setExpandedProjectId] = useState([]);
   const { setIdProject } = useContext(IdProjectContext);
   const refModal = useRef();
 
@@ -47,9 +47,9 @@ const ProjectsList = ({ projectsList, id }) => {
         setListCount(1);
       } else if (window.innerWidth < 1023 && window.innerWidth > 767) {
         setListCount(2);
-      } else {
+      } else if (window.innerWidth < 1280 && window.innerWidth > 1023) {
         setListCount(3);
-      }
+      } else setListCount(4);
     };
 
     handleResize();

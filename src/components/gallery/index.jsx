@@ -13,7 +13,7 @@ function Gallery({ projectsList, closeModal }) {
   if (!findProject) {
     return <Spinner />;
   }
-
+  console.log(findProject);
   return (
     <>
       <form className='mobile-overlay__close-button-wrapper' method='dialog'>
