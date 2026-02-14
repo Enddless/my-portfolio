@@ -182,30 +182,30 @@ export const mock = {
       type: 'commerce project'
     },
 
-    {
-      alt: 'изображение проекта UK Ricom',
-      deploy: 'https://ukricom.ru/',
-      github: '',
-      id: '7',
-      name: 'UK Ricom',
-      preview:
-        'https://www.dropbox.com/scl/fi/7pvdkm2ujlsb99iooo328/Ricom-min.jpg?rlkey=j0v2xxtvdfgy9aqv8h9nwo8ma&st=c3gdwz9z&dl=1',
+    // {
+    //   alt: 'изображение проекта UK Ricom',
+    //   deploy: 'https://ukricom.ru/',
+    //   github: '',
+    //   id: '7',
+    //   name: 'UK Ricom',
+    //   preview:
+    //     'https://www.dropbox.com/scl/fi/7pvdkm2ujlsb99iooo328/Ricom-min.jpg?rlkey=j0v2xxtvdfgy9aqv8h9nwo8ma&st=c3gdwz9z&dl=1',
 
-      images: [
-        'https://www.dropbox.com/scl/fi/c16fkkmwbpjb2iw1kjgt4/ly14-1.jpg?rlkey=wlyab6uba8qoni34bp5kfvz2o&st=4cblpzxl&dl=1',
-        'https://www.dropbox.com/scl/fi/zqx4hk9ep8105xjm1ek7h/ly14-2.jpg?rlkey=a62b8gu9x4vnfx5eahf29bu6u&st=phjf4xo0&dl=1',
-        'https://www.dropbox.com/scl/fi/509wjm9sthke9gopyn725/ly14-3.jpg?rlkey=prsuvptscwhdvqj1d9qz7cm0z&st=fcripf57&dl=1',
-        'https://www.dropbox.com/scl/fi/lhe6g5j1wnb1w8tsq87sn/ly14-4.jpg?rlkey=a307n7bqh665c3upge2k6960o&st=yzgz3vbt&dl=1'
-      ],
-      sources: [
-        'https://www.dropbox.com/scl/fi/368vxm8a4q89gie0pi5gj/ly14-1_11zon.webp?rlkey=2qrk5jrjk9rjc88o3l8x3uiuq&st=wmtm8fsi&dl=1',
-        'https://www.dropbox.com/scl/fi/h3j3n6mmcjlqvc2qz7oj0/ly14-2_11zon.webp?rlkey=szzwyv4zit0i6zqn4orp1pio7&st=8ecocgau&dl=1',
-        'https://www.dropbox.com/scl/fi/j2xtrk5ugy0j806hywf1d/ly14-3_11zon.webp?rlkey=u2ekhntfmxjiepm3ejpxtlz0t&st=tcv4s1ub&dl=1',
-        'https://www.dropbox.com/scl/fi/a6r080zn1wr1eg1yxggrm/ly14-4_11zon.webp?rlkey=472hpuk2gqshxc3exfffd9psv&st=zmxb9816&dl=1'
-      ],
-      stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
-      type: 'commerce project'
-    },
+    //   images: [
+    //     'https://www.dropbox.com/scl/fi/c16fkkmwbpjb2iw1kjgt4/ly14-1.jpg?rlkey=wlyab6uba8qoni34bp5kfvz2o&st=4cblpzxl&dl=1',
+    //     'https://www.dropbox.com/scl/fi/zqx4hk9ep8105xjm1ek7h/ly14-2.jpg?rlkey=a62b8gu9x4vnfx5eahf29bu6u&st=phjf4xo0&dl=1',
+    //     'https://www.dropbox.com/scl/fi/509wjm9sthke9gopyn725/ly14-3.jpg?rlkey=prsuvptscwhdvqj1d9qz7cm0z&st=fcripf57&dl=1',
+    //     'https://www.dropbox.com/scl/fi/lhe6g5j1wnb1w8tsq87sn/ly14-4.jpg?rlkey=a307n7bqh665c3upge2k6960o&st=yzgz3vbt&dl=1'
+    //   ],
+    //   sources: [
+    //     'https://www.dropbox.com/scl/fi/368vxm8a4q89gie0pi5gj/ly14-1_11zon.webp?rlkey=2qrk5jrjk9rjc88o3l8x3uiuq&st=wmtm8fsi&dl=1',
+    //     'https://www.dropbox.com/scl/fi/h3j3n6mmcjlqvc2qz7oj0/ly14-2_11zon.webp?rlkey=szzwyv4zit0i6zqn4orp1pio7&st=8ecocgau&dl=1',
+    //     'https://www.dropbox.com/scl/fi/j2xtrk5ugy0j806hywf1d/ly14-3_11zon.webp?rlkey=u2ekhntfmxjiepm3ejpxtlz0t&st=tcv4s1ub&dl=1',
+    //     'https://www.dropbox.com/scl/fi/a6r080zn1wr1eg1yxggrm/ly14-4_11zon.webp?rlkey=472hpuk2gqshxc3exfffd9psv&st=zmxb9816&dl=1'
+    //   ],
+    //   stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
+    //   type: 'commerce project'
+    // },
     {
       alt: 'изображение проекта Zpif Hodinskij',
       deploy: 'https://zpifhp.ru/',
@@ -272,32 +272,32 @@ export const mock = {
       stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
       type: 'commerce project'
     },
-    {
-      alt: 'изображение проекта UK Marta',
-      deploy: 'https://ukmarta.ru/',
-      github: 'https://github.com/Enddless/uk-marta',
-      id: '5',
-      name: 'UK Marta',
-      preview:
-        'https://www.dropbox.com/scl/fi/u37xbag6srkt8y0pans09/Marta-min_11zon.webp?rlkey=aciww8j29uosys19o0aygyh9h&st=ppkb17nd&dl=1',
+    // {
+    //   alt: 'изображение проекта UK Marta',
+    //   deploy: 'https://ukmarta.ru/',
+    //   github: 'https://github.com/Enddless/uk-marta',
+    //   id: '5',
+    //   name: 'UK Marta',
+    //   preview:
+    //     'https://www.dropbox.com/scl/fi/u37xbag6srkt8y0pans09/Marta-min_11zon.webp?rlkey=aciww8j29uosys19o0aygyh9h&st=ppkb17nd&dl=1',
 
-      images: [
-        'https://www.dropbox.com/scl/fi/64zno1c0wym2j7rmxa7vm/ly15-1.jpg?rlkey=im72szw51w0mdop99d0iq59im&st=a1rc7j1r&dl=1',
-        'https://www.dropbox.com/scl/fi/h7bris16k7wqi6wnnzky8/ly15-2.jpg?rlkey=tf72jqai5wf0rtkgnf8qb1toa&st=etere6r5&dl=1',
-        'https://www.dropbox.com/scl/fi/o7986bvgvikngmhy7arbl/ly15-3.jpg?rlkey=bak48b5aumwgmmcbfaq8jla8i&st=aym67h38&dl=1',
-        'https://www.dropbox.com/scl/fi/e2gvbpizxjypgifx4u0k9/ly15-4.jpg?rlkey=4vpos08dssahnryauzt069tiz&st=qksh31kn&dl=1',
-        'https://www.dropbox.com/scl/fi/236rfky081hmo9mf8t6nt/ly15-5.jpg?rlkey=iaob5qg21k9d6z67vnn5hzmuq&st=14q70eaw&dl=1'
-      ],
-      sources: [
-        'https://www.dropbox.com/scl/fi/t9p14vv98p1fz3rmnmnwo/ly15-1.webp?rlkey=dmxjdhkl4nlkkbkdeslscvmsp&st=jk7e3s4y&dl=1',
-        'https://www.dropbox.com/scl/fi/nkuylubn5n3fh01olybcm/ly15-2.webp?rlkey=19o0ngn5y7jv4w82ou4hwdhy9&st=5unarhst&dl=1',
-        'https://www.dropbox.com/scl/fi/396rf0ud8owc8zqc8fn9p/ly15-3.webp?rlkey=64i9tjd50bu17xr28dnvgcgng&st=9mv04zzn&dl=1',
-        'https://www.dropbox.com/scl/fi/5p1g6crsghy02jkgm2r7z/ly15-4.webp?rlkey=3vatv2rjt068c39fqtmgi93oy&st=ayywxgp5&dl=1',
-        'https://www.dropbox.com/scl/fi/jft5hbx59n4vm25gr3t0i/ly15-5.webp?rlkey=kvp5vwo48nfctssxe7e0keivc&st=wdpx5nwb&dl=1'
-      ],
-      stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
-      type: 'commerce project'
-    },
+    //   images: [
+    //     'https://www.dropbox.com/scl/fi/64zno1c0wym2j7rmxa7vm/ly15-1.jpg?rlkey=im72szw51w0mdop99d0iq59im&st=a1rc7j1r&dl=1',
+    //     'https://www.dropbox.com/scl/fi/h7bris16k7wqi6wnnzky8/ly15-2.jpg?rlkey=tf72jqai5wf0rtkgnf8qb1toa&st=etere6r5&dl=1',
+    //     'https://www.dropbox.com/scl/fi/o7986bvgvikngmhy7arbl/ly15-3.jpg?rlkey=bak48b5aumwgmmcbfaq8jla8i&st=aym67h38&dl=1',
+    //     'https://www.dropbox.com/scl/fi/e2gvbpizxjypgifx4u0k9/ly15-4.jpg?rlkey=4vpos08dssahnryauzt069tiz&st=qksh31kn&dl=1',
+    //     'https://www.dropbox.com/scl/fi/236rfky081hmo9mf8t6nt/ly15-5.jpg?rlkey=iaob5qg21k9d6z67vnn5hzmuq&st=14q70eaw&dl=1'
+    //   ],
+    //   sources: [
+    //     'https://www.dropbox.com/scl/fi/t9p14vv98p1fz3rmnmnwo/ly15-1.webp?rlkey=dmxjdhkl4nlkkbkdeslscvmsp&st=jk7e3s4y&dl=1',
+    //     'https://www.dropbox.com/scl/fi/nkuylubn5n3fh01olybcm/ly15-2.webp?rlkey=19o0ngn5y7jv4w82ou4hwdhy9&st=5unarhst&dl=1',
+    //     'https://www.dropbox.com/scl/fi/396rf0ud8owc8zqc8fn9p/ly15-3.webp?rlkey=64i9tjd50bu17xr28dnvgcgng&st=9mv04zzn&dl=1',
+    //     'https://www.dropbox.com/scl/fi/5p1g6crsghy02jkgm2r7z/ly15-4.webp?rlkey=3vatv2rjt068c39fqtmgi93oy&st=ayywxgp5&dl=1',
+    //     'https://www.dropbox.com/scl/fi/jft5hbx59n4vm25gr3t0i/ly15-5.webp?rlkey=kvp5vwo48nfctssxe7e0keivc&st=wdpx5nwb&dl=1'
+    //   ],
+    //   stack: 'HTML, SCSS, JAVASCRIPT, CMS WORDPRESS',
+    //   type: 'commerce project'
+    // },
     {
       alt: 'изображение проекта Samokat',
       deploy:
