@@ -1,0 +1,88 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.projects {
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    & .title {
+      @include hover {
+        color: var(--cl-title);
+      }
+    }
+  }
+
+  // слайдер скрыт, пока свайпер не посчитал ширины слайдов:
+  // иначе на первой отрисовке виден один слайд на всю ширину
+  &__list {
+    opacity: 0;
+    translate: 0 24px;
+    pointer-events: none;
+    transition:
+      opacity 0.6s ease,
+      translate 0.6s ease;
+
+    &--ready {
+      opacity: 1;
+      translate: 0 0;
+      pointer-events: auto;
+    }
+  }
+
+  &__slider-wrap {
+    position: relative;
+    padding-bottom: var(--slider-bottom-gap);
+  }
+
+  &__slider {
+    overflow: visible;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      opacity: 0;
+      animation: project-card-appear 0.55s ease forwards;
+    }
+  }
+
+}
+
+@keyframes project-card-appear {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.projects__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+
+  .swiper-pagination-bullet {
+    background: var(--cl-body-text);
+    opacity: 0.5;
+
+    &-active {
+      background: var(--cl-accent);
+      opacity: 1;
+    }
+  }
+}

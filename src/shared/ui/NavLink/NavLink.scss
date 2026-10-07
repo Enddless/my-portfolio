@@ -1,0 +1,57 @@
+@import '../../../shared/styles/media';
+@import '../../../shared/styles/mixins';
+
+.nav-link {
+  @include reset-button;
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    position: absolute;
+    transition: all var(--transition-duration) ease;
+  }
+
+  &:before {
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background-color: var(--cl-accent);
+  }
+
+  &:after {
+    top: 10px;
+    left: 10px;
+
+    position: absolute;
+    content: attr(data-hover);
+    color: var(--cl-accent);
+    white-space: nowrap;
+    max-width: 0%;
+    overflow: hidden;
+  }
+
+  @include hover {
+    color: transparent;
+
+    &:before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    &:after {
+      max-width: 100%;
+    }
+  }
+}

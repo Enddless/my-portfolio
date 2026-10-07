@@ -1,0 +1,60 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.theme-switcher {
+  --switcher-icon-size: 20px;
+  --switcher-icon-box: 40px;
+
+  display: flex;
+  background-color: var(--cl-switcher-background);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-duration);
+  cursor: pointer;
+
+  @include hover {
+    border-color: var(--cl-accent);
+    transition: 1s;
+  }
+
+  &__label {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__body {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    position: relative;
+  }
+
+  &__icon-wrapper {
+    align-items: center;
+    display: flex;
+    height: var(--switcher-icon-box);
+    justify-content: center;
+    position: relative;
+    width: var(--switcher-icon-box);
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--cl-accent) 10%, transparent);
+    z-index: 1;
+
+    .icon {
+      width: var(--switcher-icon-size);
+      height: var(--switcher-icon-size);
+      color: var(--cl-accent);
+    }
+
+    &--active {
+      background-color: var(--cl-accent);
+      transition: background-color 1s ease;
+
+      .icon {
+        color: var(--cl-switcher-icon-background-alt);
+      }
+    }
+  }
+}

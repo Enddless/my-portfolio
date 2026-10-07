@@ -1,0 +1,71 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-large);
+  background-color: var(--cl-body);
+  padding: var(--card-padding);
+  cursor: pointer;
+  height: 100%;
+
+  &__preview {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: var(--preview-height);
+    border-radius: var(--border-radius-media);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    top: var(--card-padding);
+    right: var(--card-padding);
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  &__name {
+    @include fluid-text(18, 16);
+
+    width: 100%;
+    padding: 0 var(--card-padding);
+    font-family: var(--font-family-secondary);
+    line-height: 120%;
+    color: var(--cl-card-text);
+  }
+
+  &__description {
+    @include fluid-text(16, 12);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    // резервируем место под 2 строки, чтобы карточки не разъезжались по высоте
+    min-height: calc(2 * 1.45em);
+    color: var(--cl-card-text-alt);
+  }
+
+  &__type {
+    margin-top: auto;
+    font-size: 12px;
+    color: var(--cl-accent);
+  }
+}
+

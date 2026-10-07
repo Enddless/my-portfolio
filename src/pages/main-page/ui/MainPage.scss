@@ -1,0 +1,19 @@
+.lead__overlay {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100svh;
+  position: relative;
+  overflow-x: hidden;
+}

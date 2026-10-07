@@ -1,0 +1,156 @@
+:root {
+  --border-radius-small: 5px;
+  --border-radius-large: 30px;
+  --border-radius-media: 12px;
+  --radius-pill: 60px;
+
+  --font-family-base: 'Unbounded', system-ui, sans-serif;
+  --font-family-secondary: 'Unbounded', system-ui, sans-serif;
+  --container-width: 1400px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 70px;
+  --button-height: 40px;
+
+  --transition-duration: 0.4s;
+  --reflect: below 1px linear-gradient(transparent, #0005);
+
+  --cl-light-gray: #a8a8a8;
+
+  /* размеры и отступы компонентов */
+  --card-padding: 12px;
+  --preview-height: 200px;
+  --link-icon-size: 32px;
+  --contact-icon-size: 40px;
+  --lead-photo-size: clamp(200px, 24vw, 340px);
+  --lead-photo-brightness: 75%;
+  --slider-bottom-gap: 50px;
+  --slider-nav-size: 50px;
+  --slider-nav-gutter-mobile: 20px;
+  --slider-nav-gutter-tablet: 58px;
+  --slider-nav-gutter-desktop: 70px;
+  --scroll-offset: 50px;
+  --logo-size: 34px;
+}
+:root[data-color-scheme='dark'] {
+  --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
+  --cl-body-text: #fff;
+  --cl-body: #232323;
+
+  --cl-svg-fill: #232323;
+  --cl-svg-fill-base: #fff;
+
+  --cl-body-scroll: #181717;
+  --cl-body-scroll-thumb: #575757;
+
+  // header
+  --cl-header-text: #fff;
+  --bg-header-scroll: rgba(21, 21, 21, 0.9);
+
+  //title
+  --cl-title: #fff;
+
+  //dialog
+  --cl-burger: #fff;
+  --cl-burger-text: #fff;
+  --cl-dialog-background: #232323;
+
+  // footer
+  --cl-footer-text: #fff;
+
+  // buttons
+  --cl-button-text: #fff;
+  --cl-button-text-alt: #181717;
+  --cl-button-background: #232323;
+  --cl-button-border: #898989;
+  --cl-button-text-alt: #181717;
+  --cl-button-background-alt: #fff;
+
+  // cards
+  --cl-card-text: #d3d3d3;
+  --cl-card-text-alt: #898989;
+  --cl-card-stack: #aeafe4;
+
+  // switcher
+  --cl-switcher-background: #232323;
+  --cl-switcher-icon-background: #fff;
+  --cl-switcher-icon-background-alt: #232323;
+
+  --cl-accent: #7678ed; // #6c38cc; // #ff9e00; // #7678ed; // #06d6a0; #b9ff47;
+  --cl-lead-overlay-gradient: linear-gradient(
+    180deg,
+    rgb(39, 39, 39) 8%,
+    rgb(24, 23, 23) 54%
+  );
+
+  //blob
+  --cl-0: #4415b3;
+  --cl-25: #5633b8;
+  --cl-65: #494cca;
+  --cl-90: #5337b8;
+
+  // card for react
+  --cl-bg-card-react: rgba(118, 120, 237, 0.1);
+}
+:root[data-color-scheme='light'] {
+  --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
+
+  --cl-body: #ffffff;
+  --cl-body-text: #232323;
+
+  --cl-svg-fill: #232323;
+  --cl-svg-fill-base: #fff;
+
+  --cl-body-scroll: #e8e8e8;
+  --cl-body-scroll-thumb: #b0b0b0;
+
+  --cl-accent: #0077b6; //ff6700 #006d77 #ff7b00
+
+  --cl-lead-overlay-gradient: linear-gradient(
+    180deg,
+    rgb(239, 239, 239),
+    rgb(254, 254, 254),
+    rgb(252, 252, 252)
+  );
+  //blot
+  --cl-0: #1994d6;
+  --cl-25: #0a8dd3;
+  --cl-65: #0e8fd4;
+  --cl-90: #2585d3;
+
+  // header
+  --cl-header-text: #232323;
+  --bg-header-scroll: rgba(224, 224, 224, 0.9);
+
+  //title
+  --cl-title: #181717;
+
+  //dialog
+  --cl-burger: #232323;
+  --cl-burger-text: #232323;
+  --cl-dialog-background: #cfcfcf;
+
+  // footer
+  --cl-footer-text: #fff;
+
+  // buttons
+  --cl-button-text: #fff;
+  --cl-button-text-alt: #181717;
+  --cl-button-background: #232323;
+  --cl-button-border: #898989;
+  --cl-button-text-alt: #fff;
+  --cl-button-background-alt: #181717;
+
+  // cards
+  --cl-card-text: #232323;
+  --cl-card-text-alt: #898989;
+  --cl-card-stack: #428bb3;
+
+  // switcher
+  --cl-switcher-background: #f8f9fa;
+  --cl-switcher-icon-background: #fff;
+  --cl-switcher-icon-background-alt: #fff;
+
+  // card for react
+  --cl-bg-card-react: rgba(0, 119, 182, 0.1);
+}
