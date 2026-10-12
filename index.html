@@ -1,64 +1,93 @@
 <!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/my-portfolio/logo.svg" />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/DelaGothicOne-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="" />
+    <meta
+      name="keywords"
+      content="портфолио, веб-разработка, frontend, react, typescript, проекты"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Портфолио веб-разработчика Иващенко Дианы &mdash; проекты, технологии, контакты"
+    />
 
-  <meta name="keywords" content="портфолио, веб-разработка, проекты">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Портфолио Иващенко Дианы">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Портфолио Иващенко Дианы" />
+    <meta
+      property="og:description"
+      content="Проекты, технологии и контакты веб-разработчика"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Enddless/my-portfolio/main/main.jpg"
+    />
+    <meta property="og:url" content="https://enddless.github.io/my-portfolio/" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Портфолио Иващенко Дианы">
-  <meta property="og:description" content="Портфолио Иващенко Дианы">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Enddless/my-portfolio/main/main.jpg">
-  <meta property="og:url" content="https://enddless.github.io/my-portfolio/">
-  <meta property="og:type" content="website">
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Портфолио Иващенко Дианы" />
+    <meta
+      name="twitter:description"
+      content="Проекты, технологии и контакты веб-разработчика"
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/Enddless/my-portfolio/main/main.jpg"
+    />
 
-  <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Портфолио Иващенко Дианы">
-  <meta name="twitter:description" content="Портфолио Иващенко Дианы">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/Enddless/my-portfolio/main/main.jpg">
+    <!-- Мета-теги для других платформ -->
+    <meta name="application-name" content="Портфолио Иващенко Дианы" />
+    <meta name="author" content="Иващенко Диана" />
+    <title>Портфолио Иващенко Дианы &mdash; веб-разработка</title>
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <script type="module" crossorigin src="/my-portfolio/assets/index-D2EUp_9I.js"></script>
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-Cvg_wBWx.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/scheduler-8y5VlOXR.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-dom-CY2INnf7.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/use-sync-external-store-1xxDtJ64.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-redux-tPP5jgyE.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/@remix-run-yBSJl1bv.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-router-Dhdrxgag.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-router-dom-iQwc7hEL.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/web-vitals-DGe-Oue9.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/swiper-DWTiKRAd.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/redux-DITMfSWq.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/immer-gBkVrsED.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/redux-thunk-ClJT1hhx.js">
+    <link rel="modulepreload" crossorigin href="/my-portfolio/assets/@reduxjs-GPPI2amR.js">
+    <link rel="stylesheet" crossorigin href="/my-portfolio/assets/swiper-CCK7RXJZ.css">
+    <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-B4Mosx9Z.css">
+  </head>
 
-  <!-- Мета-теги для других платформ -->
-  <meta name="application-name" content="Портфолио Иващенко Дианы">
-  <meta name="author" content="Иващенко Диана">
-  <title>Portfolio</title>
-  <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
-  <script type="module" crossorigin src="/my-portfolio/assets/index-JR5QScwO.js"></script>
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-Cvg_wBWx.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/scheduler-8y5VlOXR.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-dom-CY2INnf7.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/use-sync-external-store-BXRuXKwd.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-redux-Da34Rtmz.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/redux-DITMfSWq.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/immer-BWU1mfoO.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/reselect-BeKUwQU7.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/redux-thunk-ClJT1hhx.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/@reduxjs-DVdFRU_h.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/web-vitals-DGe-Oue9.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/@remix-run-yBSJl1bv.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-router-Dhdrxgag.js">
-  <link rel="modulepreload" crossorigin href="/my-portfolio/assets/react-router-dom-iQwc7hEL.js">
-  <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-BeY_iUK5.css">
-</head>
-
-
-<body>
-  <div id="root"></div>
-</body>
-
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
