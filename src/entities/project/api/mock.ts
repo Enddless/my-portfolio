@@ -78,7 +78,7 @@ export const projectsMock: Project[] = [
     id: '21',
     name: 'It Holding T1',
     description:
-      'Корпоративный сайт IT-компании на React: кейсы, вакансии и блог в единой дизайн-системе.',
+      'Корпоративный сайт IT-компании на React: кейсы, вакансии и блог в единой дизайн-системе',
     preview: 't1-11zon-1200.webp',
     previewSmall: 't1-11zon-600.webp',
     stack: 'HTML, SCSS, JAVASCRIPT, REACT',
@@ -190,7 +190,7 @@ export const projectsMock: Project[] = [
     description: 'Разработка сайта-портфолио',
     preview: 'portfolio-1200.webp',
     previewSmall: 'portfolio-600.webp',
-    stack: 'HTML, SCSS, REACT, JAVASCRIPT, SWIPER JS, FSD, REDUX, OPENCODE ',
+    stack: 'HTML, SCSS, REACT, JAVASCRIPT, SWIPER JS, FSD, REDUX, OPENCODE',
     type: 'pet project',
     isVisible: true
   },
@@ -281,7 +281,7 @@ export const projectsMock: Project[] = [
     github: 'https://github.com/Enddless/tourist',
     id: '17',
     name: 'Tourist',
-    description: 'Разработка тревел-сайта ',
+    description: 'Разработка тревел-сайта',
     preview: 'tourism-1200.webp',
     previewSmall: 'tourism-600.webp',
     stack: 'HTML, SCSS, REACT, GSAP',

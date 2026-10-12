@@ -10,30 +10,30 @@ interface Advantage {
   title: string;
   description: string;
 }
-const nbsp = '&nbsp;';
+const nbsp = '\u00A0';
 const advantages: Advantage[] = [
   {
     icon: 'gauge',
-    title: '3+ года в веб-разработке',
+    title: `3+${nbsp}года в веб-разработке`,
     description: `Коммерческие проекты для медицины, финтеха и${nbsp}e-commerce: от${nbsp}прототипа и${nbsp}вёрстки до${nbsp}продакшена`
   },
   {
     icon: 'code',
     title: 'React и TypeScript',
     description:
-      'Компонентный подход, строгая типизация, состояние в Redux Toolkit — предсказуемый код без магии'
+      `Компонентный подход, строгая типизация, состояние в Redux Toolkit${nbsp}—${nbsp}предсказуемый код без магии`
   },
   {
     icon: 'layers',
     title: 'Чистая архитектура',
     description:
-      'Feature-Sliced Design (FSD): слои, публичные API слайсов и изолированные сегменты — проект легко масштабировать'
+      `Feature-Sliced Design (FSD): слои, публичные API слайсов и изолированные сегменты${nbsp}—${nbsp}проект легко масштабировать`
   },
   {
     icon: 'shield',
     title: 'Продукт и качество',
     description:
-      'Адаптив от 320px, доступность, Core Web Vitals и ленивая загрузка — с акцентом на производительность и стабильность'
+      `Адаптив от${nbsp}320${nbsp}px, доступность, Core Web Vitals и ленивая загрузка${nbsp}—${nbsp}с${nbsp}акцентом на производительность и стабильность`
   }
 ];
 
@@ -60,7 +60,7 @@ function Advantages() {
 
         <p className='advantages__note'>
           Готова обсудить вашу задачу и&nbsp;предложить план работ с&nbsp;оценкой
-          сроков&nbsp;&mdash; напишите, и&nbsp;я&nbsp;отвечу в&nbsp;течение дня
+          сроков&nbsp;&mdash;&nbsp;напишите, и&nbsp;я&nbsp;отвечу в&nbsp;течение дня
         </p>
       </div>
     </section>

@@ -71,18 +71,14 @@ function Header() {
 
           <ThemeSwitcher />
 
-          <button
-            aria-label='Открыть меню навигации'
-            className='burger-button visible-mobile'
-            onClick={openModal}
-            type='button'>
-            <span className='visually-hidden'>Open navigation menu</span>
+          <button className='burger-button visible-mobile' onClick={openModal} type='button'>
+            <span className='visually-hidden'>Открыть меню навигации</span>
           </button>
 
           <dialog className='mobile-overlay visible-mobile' id='mobileOverlay' ref={dialogRef}>
             <form className='mobile-overlay__close-button-wrapper' method='dialog'>
               <button className='mobile-overlay__close-button cross-button' type='submit'>
-                <span className='visually-hidden'>Close navigation menu</span>
+                <span className='visually-hidden'>Закрыть меню навигации</span>
               </button>
             </form>
 

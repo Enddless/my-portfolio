@@ -4,10 +4,10 @@ export const contactsMock: Contact[] = [
   {
     id: 'phone',
     label: 'Телефон',
-    value: '+7 985 258-55-24',
+    value: '+7\u00A0985\u00A0258-55-24',
     href: 'tel:+79852585524',
     icon: 'phone',
-    ariaLabel: 'Позвонить по номеру +7 985 258-55-24',
+    ariaLabel: 'Позвонить по номеру +7\u00A0985\u00A0258-55-24',
     external: false
   },
   {

@@ -46,6 +46,7 @@
     padding: 0 var(--card-padding);
     font-family: var(--font-family-secondary);
     line-height: 120%;
+    text-align: center;
     color: var(--cl-card-text);
   }
 
@@ -54,9 +55,9 @@
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     overflow: hidden;
-    min-height: calc(2 * 1.45em);
+    min-height: calc(3 * 1.45em);
     color: var(--cl-card-text-alt);
   }
 

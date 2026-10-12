@@ -11,7 +11,7 @@ function Lead() {
         <div className='lead__content'>
           <span className='lead__eyebrow'>html · frontend developer</span>
 
-          <h1 className='lead__name'>Диана Иващенко</h1>
+          <h1 className='lead__name'>Диана&nbsp;Иващенко</h1>
 
           <p className='lead__description'>
             Три года в веб-разработке: превращаю идеи в готовые, стабильно работающие
