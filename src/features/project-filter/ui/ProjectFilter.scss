@@ -1,0 +1,42 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  &__button {
+    @include reset-button;
+    @include fluid-text(16, 14);
+
+    padding: 10px 20px;
+    border: 1px solid color-mix(in srgb, var(--cl-accent) 40%, transparent);
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in srgb, var(--cl-accent) 8%, transparent);
+    color: var(--cl-card-text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition:
+      background-color var(--transition-duration) ease,
+      color var(--transition-duration) ease,
+      border-color var(--transition-duration) ease;
+
+    @include hover {
+      border-color: var(--cl-accent);
+      color: var(--cl-accent);
+    }
+
+    &--active {
+      background-color: var(--cl-accent);
+      border-color: var(--cl-accent);
+      color: var(--cl-button-text);
+
+      @include hover {
+        color: var(--cl-button-text);
+      }
+    }
+  }
+}

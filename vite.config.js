@@ -1,21 +1,24 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 
-// Получаем текущий путь к директории
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/my-portfolio',
   plugins: [react()],
   resolve: {
     alias: {
-      public: resolve(__dirname, 'public'),
       '@': resolve(__dirname, 'src'),
-      '@pages': resolve(__dirname, 'src/pages')
+      '@app': resolve(__dirname, 'src/app'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@widgets': resolve(__dirname, 'src/widgets'),
+      '@features': resolve(__dirname, 'src/features'),
+      '@entities': resolve(__dirname, 'src/entities'),
+      '@shared': resolve(__dirname, 'src/shared')
     }
   },
   build: {
@@ -23,7 +26,7 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString(); // Разделяет модули по пакетам
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
           }
         }
       }

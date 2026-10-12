@@ -1,0 +1,25 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.link-button {
+  @include square(var(--link-icon-size));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--cl-button-text);
+  background-color: var(--cl-button-background);
+  border: 1px solid var(--cl-button-border);
+  cursor: pointer;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease,
+    filter var(--transition-duration) ease;
+
+  @include hover {
+    color: var(--cl-button-text);
+    filter: brightness(1.15);
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.advantages {
+  &__title {
+    margin-bottom: 40px;
+
+    & .title {
+      @include hover {
+        color: var(--cl-title);
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include desktop-above {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    height: 100%;
+    padding: 25px;
+    border: 1px solid color-mix(in srgb, var(--cl-accent) 25%, transparent);
+    border-radius: var(--border-radius-large);
+    background-color: var(--cl-body);
+    box-shadow: var(--shadow);
+    transition: border-color var(--transition-duration) ease;
+
+    @include hover {
+      border-color: var(--cl-accent);
+    }
+
+    &-title {
+      @include fluid-text(20, 17);
+
+      color: var(--cl-card-text);
+    }
+
+    &-description {
+      @include fluid-text(15, 14);
+
+      color: var(--cl-card-text-alt);
+      line-height: 1.45;
+    }
+  }
+
+  &__icon {
+    @include square(52px);
+
+    padding: 12px;
+    border-radius: 50%;
+    color: var(--cl-accent);
+    background-color: color-mix(in srgb, var(--cl-accent) 12%, transparent);
+  }
+
+  &__note {
+    @include fluid-text(17, 15);
+
+    max-width: 760px;
+    margin-top: 30px;
+    color: var(--cl-card-text);
+    line-height: 1.4;
+  }
+}

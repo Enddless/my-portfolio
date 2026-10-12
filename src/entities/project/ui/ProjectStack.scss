@@ -1,0 +1,22 @@
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 8px 6px;
+  min-height: 56px;
+  width: 100%;
+
+  &__badge {
+    padding: 5px 12px;
+    border: 1px solid var(--cl-card-stack);
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in srgb, var(--cl-accent) 10%, transparent);
+    color: var(--cl-card-text);
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

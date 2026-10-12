@@ -1,0 +1,33 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  width: 100%;
+
+  &__icon {
+    @include square(var(--contact-icon-size));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: var(--cl-svg-fill-base);
+    box-shadow: var(--shadow);
+    color: var(--cl-svg-fill);
+    transform: scale(0.92);
+    transition:
+      color var(--transition-duration) ease,
+      transform var(--transition-duration) ease;
+
+    @include hover {
+      color: var(--cl-accent);
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+:root {
+  --border-radius-small: 5px;
+  --border-radius-large: 30px;
+  --border-radius-media: 12px;
+  --radius-pill: 60px;
+
+  --font-family-base: 'Unbounded', system-ui, sans-serif;
+  --font-family-secondary: 'Unbounded', system-ui, sans-serif;
+  --container-width: 1400px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 70px;
+  --button-height: 40px;
+
+  --transition-duration: 0.4s;
+
+  --cl-light-gray: #a8a8a8;
+
+  --card-padding: 12px;
+  --preview-height: 200px;
+  --link-icon-size: 32px;
+  --contact-icon-size: 40px;
+  --lead-photo-size: clamp(200px, 24vw, 340px);
+  --lead-photo-brightness: 75%;
+  --slider-bottom-gap: 50px;
+  --scroll-offset: 50px;
+  --logo-size: 34px;
+}
+
+:root[data-color-scheme='dark'] {
+  --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
+
+  --cl-body: #131a16;
+  --cl-body-text: #e3e8e5;
+
+  --cl-svg-fill: #131a16;
+  --cl-svg-fill-base: #e3e8e5;
+
+  --cl-body-scroll: #0e1310;
+  --cl-body-scroll-thumb: #2d3d33;
+
+  --cl-accent: #8daa96;
+
+  --cl-lead-overlay-gradient: linear-gradient(180deg, #1a241f 0%, #131a16 60%);
+
+  --cl-0: #1b3524;
+  --cl-25: #132a1c;
+  --cl-65: #1c3f2b;
+  --cl-90: #224d34;
+
+  --cl-header-text: #e3e8e5;
+  --bg-header-scroll: rgba(19, 26, 22, 0.85);
+
+  --cl-title: #ffffff;
+
+  --cl-burger: #e3e8e5;
+  --cl-burger-text: #e3e8e5;
+  --cl-dialog-background: #1c2621;
+
+  --cl-footer-text: #e3e8e5;
+
+  --cl-button-text: #131a16;
+  --cl-button-background: #8daa96;
+  --cl-button-border: #8daa96;
+
+  --cl-card-text: #c1c9c4;
+  --cl-card-text-alt: #6b7c72;
+  --cl-card-stack: #8daa96;
+
+  --cl-switcher-background: #1c2621;
+  --cl-switcher-icon-background: #e3e8e5;
+  --cl-switcher-icon-background-alt: #131a16;
+}
+
+:root[data-color-scheme='light'] {
+  --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
+
+  --cl-body: #f7f6f3;
+  --cl-body-text: #212523;
+
+  --cl-svg-fill: #212523;
+  --cl-svg-fill-base: #f7f6f3;
+
+  --cl-body-scroll: #ebeae6;
+  --cl-body-scroll-thumb: #c7c6c1;
+
+  --cl-accent: #3a4f41;
+
+  --cl-lead-overlay-gradient: linear-gradient(180deg, #efefea 0%, #f7f6f3 70%);
+
+  --cl-0: #d2d9d4;
+  --cl-25: #c3cdc7;
+  --cl-65: #a3b2a7;
+  --cl-90: #889c8f;
+
+  --cl-header-text: #212523;
+  --bg-header-scroll: rgba(247, 246, 243, 0.85);
+
+  --cl-title: #161a18;
+
+  --cl-burger: #212523;
+  --cl-burger-text: #212523;
+  --cl-dialog-background: #ebeae6;
+
+  --cl-footer-text: #f7f6f3;
+
+  --cl-button-text: #f7f6f3;
+  --cl-button-background: #3a4f41;
+  --cl-button-border: #3a4f41;
+
+  --cl-card-text: #212523;
+  --cl-card-text-alt: #6b736e;
+  --cl-card-stack: #3a4f41;
+
+  --cl-switcher-background: #ebeae6;
+  --cl-switcher-icon-background: #f7f6f3;
+  --cl-switcher-icon-background-alt: #212523;
+}

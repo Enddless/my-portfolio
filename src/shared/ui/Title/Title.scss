@@ -1,0 +1,18 @@
+@import '../../../shared/styles/mixins';
+@import '../../../shared/styles/media';
+
+.title {
+  @include fluid-text(40, 18);
+
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--font-family-secondary);
+  letter-spacing: 0.1rem;
+  color: var(--cl-title);
+
+  @include hover {
+    color: var(--cl-accent);
+    transition: color var(--transition-duration) ease;
+  }
+}
