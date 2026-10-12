@@ -31,8 +31,12 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 
-    @media (max-width: $tablet) {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 
@@ -92,8 +96,10 @@
   }
 
   &__item--last-odd {
-    @media (max-width: $tablet) {
-      grid-column: 1 / -1;
+    @include tablet {
+      @include mobile-above {
+        grid-column: 1 / -1;
+      }
     }
   }
 }

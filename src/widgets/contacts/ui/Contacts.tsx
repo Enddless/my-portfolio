@@ -13,8 +13,8 @@ function Contacts() {
 
         <div className='contacts__content'>
           <p className='contacts__lead'>
-            Открыта к новым проектам и интересным задачам. Напишите мне удобным способом&nbsp;&mdash;&nbsp;отвечаю
-            быстро и всегда на связи.
+            Открыта к новым проектам и интересным задачам. Напишите мне удобным
+            способом&nbsp;&mdash;&nbsp;отвечаю быстро и всегда на связи
           </p>
 
           <ul className='contacts__list'>
@@ -47,3 +47,4 @@ function Contacts() {
 }
 
 export default Contacts;
+
