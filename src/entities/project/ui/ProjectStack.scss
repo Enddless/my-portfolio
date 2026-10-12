@@ -4,14 +4,12 @@
   align-content: center;
   justify-content: center;
   gap: 8px 6px;
-  // резервируем место под 2 строки бейджей, чтобы высота карточки
-  // не зависела от того, сколько бейджей успело отрисоваться
   min-height: 56px;
   width: 100%;
 
   &__badge {
     padding: 5px 12px;
-    border: 1px solid color-mix(in srgb, var(--cl-accent) 40%, transparent);
+    border: 1px solid var(--cl-card-stack);
     border-radius: var(--radius-pill);
     background-color: color-mix(in srgb, var(--cl-accent) 10%, transparent);
     color: var(--cl-card-text);

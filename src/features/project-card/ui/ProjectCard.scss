@@ -12,7 +12,6 @@
   border-radius: var(--border-radius-large);
   background-color: var(--cl-body);
   padding: var(--card-padding);
-  cursor: pointer;
   height: 100%;
 
   &__preview {
@@ -57,7 +56,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-    // резервируем место под 2 строки, чтобы карточки не разъезжались по высоте
     min-height: calc(2 * 1.45em);
     color: var(--cl-card-text-alt);
   }

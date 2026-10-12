@@ -44,7 +44,7 @@
     flex-wrap: wrap;
     gap: 20px;
 
-    @include mobile {
+    @include tablet {
       text-align: right;
       justify-content: flex-end;
     }

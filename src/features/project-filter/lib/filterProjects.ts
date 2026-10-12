@@ -7,7 +7,8 @@ export function filterProjects(
   projects: Project[],
   filter: ProjectFilterValue
 ): Project[] {
-  if (filter === 'all') return projects;
+  const visible = projects.filter((project) => project.isVisible);
+  if (filter === 'all') return visible;
 
-  return projects.filter((project) => project.type === filter);
+  return visible.filter((project) => project.type === filter);
 }

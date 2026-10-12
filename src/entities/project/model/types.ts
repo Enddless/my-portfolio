@@ -16,4 +16,5 @@ export interface Project {
   github: string;
   stack: string;
   type: ProjectType;
+  isVisible: boolean;
 }

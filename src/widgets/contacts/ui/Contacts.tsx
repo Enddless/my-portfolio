@@ -18,8 +18,10 @@ function Contacts() {
           </p>
 
           <ul className='contacts__list'>
-            {contactsMock.map((contact) => (
-              <li className='contacts__item' key={contact.id}>
+            {contactsMock.map((contact, index) => (
+              <li
+                className={`contacts__item${contactsMock.length % 2 === 1 && index === contactsMock.length - 1 ? ' contacts__item--last-odd' : ''}`}
+                key={contact.id}>
                 <a
                   aria-label={contact.ariaLabel}
                   className='contacts__link'

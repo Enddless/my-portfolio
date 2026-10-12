@@ -48,7 +48,7 @@ function ProjectsSection({ projectsList = [] }: ProjectsSectionProps) {
         {isLoading ? (
           <Spinner />
         ) : (
-          <ul className={isSliderReady ? 'projects__list projects__list--ready' : 'projects__list'}>
+          <div className={isSliderReady ? 'projects__list projects__list--ready' : 'projects__list'}>
             <div className='projects__slider-wrap'>
               <Swiper
                 breakpoints={BREAKPOINTS}
@@ -67,7 +67,7 @@ function ProjectsSection({ projectsList = [] }: ProjectsSectionProps) {
               </Swiper>
               <div className='projects__pagination' />
             </div>
-          </ul>
+          </div>
         )}
       </div>
     </section>

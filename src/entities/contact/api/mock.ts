@@ -14,7 +14,7 @@ export const contactsMock: Contact[] = [
     id: 'telegram',
     label: 'Telegram',
     value: '@endless_moonlight_on_monday',
-    href: 'https://t.me/endless_moonlight_on_monday',
+    href: 'https://telegram.me/endless_moonlight_on_monday',
     icon: 'telegram',
     ariaLabel: 'Написать в Telegram endless_moonlight_on_monday',
     external: true

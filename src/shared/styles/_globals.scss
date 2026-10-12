@@ -5,6 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-offset);
 }
 
 body {

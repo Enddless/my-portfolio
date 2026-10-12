@@ -13,11 +13,9 @@
   --button-height: 40px;
 
   --transition-duration: 0.4s;
-  --reflect: below 1px linear-gradient(transparent, #0005);
 
   --cl-light-gray: #a8a8a8;
 
-  /* размеры и отступы компонентов */
   --card-padding: 12px;
   --preview-height: 200px;
   --link-icon-size: 32px;
@@ -25,132 +23,96 @@
   --lead-photo-size: clamp(200px, 24vw, 340px);
   --lead-photo-brightness: 75%;
   --slider-bottom-gap: 50px;
-  --slider-nav-size: 50px;
-  --slider-nav-gutter-mobile: 20px;
-  --slider-nav-gutter-tablet: 58px;
-  --slider-nav-gutter-desktop: 70px;
   --scroll-offset: 50px;
   --logo-size: 34px;
 }
+
 :root[data-color-scheme='dark'] {
   --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
-  --cl-body-text: #fff;
-  --cl-body: #232323;
 
-  --cl-svg-fill: #232323;
-  --cl-svg-fill-base: #fff;
+  --cl-body: #131a16;
+  --cl-body-text: #e3e8e5;
 
-  --cl-body-scroll: #181717;
-  --cl-body-scroll-thumb: #575757;
+  --cl-svg-fill: #131a16;
+  --cl-svg-fill-base: #e3e8e5;
 
-  // header
-  --cl-header-text: #fff;
-  --bg-header-scroll: rgba(21, 21, 21, 0.9);
+  --cl-body-scroll: #0e1310;
+  --cl-body-scroll-thumb: #2d3d33;
 
-  //title
-  --cl-title: #fff;
+  --cl-accent: #8daa96;
 
-  //dialog
-  --cl-burger: #fff;
-  --cl-burger-text: #fff;
-  --cl-dialog-background: #232323;
+  --cl-lead-overlay-gradient: linear-gradient(180deg, #1a241f 0%, #131a16 60%);
 
-  // footer
-  --cl-footer-text: #fff;
+  --cl-0: #1b3524;
+  --cl-25: #132a1c;
+  --cl-65: #1c3f2b;
+  --cl-90: #224d34;
 
-  // buttons
-  --cl-button-text: #fff;
-  --cl-button-text-alt: #181717;
-  --cl-button-background: #232323;
-  --cl-button-border: #898989;
-  --cl-button-text-alt: #181717;
-  --cl-button-background-alt: #fff;
+  --cl-header-text: #e3e8e5;
+  --bg-header-scroll: rgba(19, 26, 22, 0.85);
 
-  // cards
-  --cl-card-text: #d3d3d3;
-  --cl-card-text-alt: #898989;
-  --cl-card-stack: #aeafe4;
+  --cl-title: #ffffff;
 
-  // switcher
-  --cl-switcher-background: #232323;
-  --cl-switcher-icon-background: #fff;
-  --cl-switcher-icon-background-alt: #232323;
+  --cl-burger: #e3e8e5;
+  --cl-burger-text: #e3e8e5;
+  --cl-dialog-background: #1c2621;
 
-  --cl-accent: #7678ed; // #6c38cc; // #ff9e00; // #7678ed; // #06d6a0; #b9ff47;
-  --cl-lead-overlay-gradient: linear-gradient(
-    180deg,
-    rgb(39, 39, 39) 8%,
-    rgb(24, 23, 23) 54%
-  );
+  --cl-footer-text: #e3e8e5;
 
-  //blob
-  --cl-0: #4415b3;
-  --cl-25: #5633b8;
-  --cl-65: #494cca;
-  --cl-90: #5337b8;
+  --cl-button-text: #131a16;
+  --cl-button-background: #8daa96;
+  --cl-button-border: #8daa96;
 
-  // card for react
-  --cl-bg-card-react: rgba(118, 120, 237, 0.1);
+  --cl-card-text: #c1c9c4;
+  --cl-card-text-alt: #6b7c72;
+  --cl-card-stack: #8daa96;
+
+  --cl-switcher-background: #1c2621;
+  --cl-switcher-icon-background: #e3e8e5;
+  --cl-switcher-icon-background-alt: #131a16;
 }
+
 :root[data-color-scheme='light'] {
   --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
 
-  --cl-body: #ffffff;
-  --cl-body-text: #232323;
+  --cl-body: #f7f6f3;
+  --cl-body-text: #212523;
 
-  --cl-svg-fill: #232323;
-  --cl-svg-fill-base: #fff;
+  --cl-svg-fill: #212523;
+  --cl-svg-fill-base: #f7f6f3;
 
-  --cl-body-scroll: #e8e8e8;
-  --cl-body-scroll-thumb: #b0b0b0;
+  --cl-body-scroll: #ebeae6;
+  --cl-body-scroll-thumb: #c7c6c1;
 
-  --cl-accent: #0077b6; //ff6700 #006d77 #ff7b00
+  --cl-accent: #3a4f41;
 
-  --cl-lead-overlay-gradient: linear-gradient(
-    180deg,
-    rgb(239, 239, 239),
-    rgb(254, 254, 254),
-    rgb(252, 252, 252)
-  );
-  //blot
-  --cl-0: #1994d6;
-  --cl-25: #0a8dd3;
-  --cl-65: #0e8fd4;
-  --cl-90: #2585d3;
+  --cl-lead-overlay-gradient: linear-gradient(180deg, #efefea 0%, #f7f6f3 70%);
 
-  // header
-  --cl-header-text: #232323;
-  --bg-header-scroll: rgba(224, 224, 224, 0.9);
+  --cl-0: #d2d9d4;
+  --cl-25: #c3cdc7;
+  --cl-65: #a3b2a7;
+  --cl-90: #889c8f;
 
-  //title
-  --cl-title: #181717;
+  --cl-header-text: #212523;
+  --bg-header-scroll: rgba(247, 246, 243, 0.85);
 
-  //dialog
-  --cl-burger: #232323;
-  --cl-burger-text: #232323;
-  --cl-dialog-background: #cfcfcf;
+  --cl-title: #161a18;
 
-  // footer
-  --cl-footer-text: #fff;
+  --cl-burger: #212523;
+  --cl-burger-text: #212523;
+  --cl-dialog-background: #ebeae6;
 
-  // buttons
-  --cl-button-text: #fff;
-  --cl-button-text-alt: #181717;
-  --cl-button-background: #232323;
-  --cl-button-border: #898989;
-  --cl-button-text-alt: #fff;
-  --cl-button-background-alt: #181717;
+  --cl-footer-text: #f7f6f3;
 
-  // cards
-  --cl-card-text: #232323;
-  --cl-card-text-alt: #898989;
-  --cl-card-stack: #428bb3;
+  --cl-button-text: #f7f6f3;
+  --cl-button-background: #3a4f41;
+  --cl-button-border: #3a4f41;
 
-  // switcher
-  --cl-switcher-background: #f8f9fa;
-  --cl-switcher-icon-background: #fff;
-  --cl-switcher-icon-background-alt: #fff;
+  --cl-card-text: #212523;
+  --cl-card-text-alt: #6b736e;
+  --cl-card-stack: #3a4f41;
 
-  // card for react
-  --cl-bg-card-react: rgba(0, 119, 182, 0.1);
+  --cl-switcher-background: #ebeae6;
+  --cl-switcher-icon-background: #f7f6f3;
+  --cl-switcher-icon-background-alt: #212523;
 }

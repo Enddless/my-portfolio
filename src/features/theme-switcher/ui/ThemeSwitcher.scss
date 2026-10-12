@@ -49,7 +49,7 @@
     }
 
     &--active {
-      background-color: var(--cl-accent);
+      background-color: var(--cl-switcher-icon-background);
       transition: background-color 1s ease;
 
       .icon {

@@ -14,11 +14,9 @@ const anchors: AnchorItem[] = [
   { title: 'Обо мне', anchor: 'Обо мне' },
   { title: 'Проекты', anchor: 'Проекты' },
   { title: 'Почему я', anchor: 'Почему я' },
-  { title: 'Инструменты', anchor: 'Инструменты' },
+  { title: 'Навыки', anchor: 'Навыки' },
   { title: 'Контакты', anchor: 'Контакты' }
 ];
-
-const SCROLL_OFFSET = 50;
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,12 +35,7 @@ function Header() {
 
     if (!element) return;
 
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-
-    window.scrollTo({
-      top: elementPosition - SCROLL_OFFSET,
-      behavior: 'smooth'
-    });
+    element.scrollIntoView();
   };
 
   useEffect(() => {

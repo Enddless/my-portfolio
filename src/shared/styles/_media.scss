@@ -50,13 +50,11 @@ $mobile-s: 380px;
 
 @mixin hover {
   @media (hover: hover) {
-    // сработает на экранах с классическим наведением
     &:hover {
       @content;
     }
   }
   @media (hover: none) {
-    // сработает на экранах-тачпадах
     &:active {
       @content;
     }

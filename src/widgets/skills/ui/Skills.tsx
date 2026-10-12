@@ -1,6 +1,6 @@
 import { useEffect, useRef, type CSSProperties } from 'react';
 
-
+import angularIcon from '@shared/assets/skills/angular.svg';
 import cssIcon from '@shared/assets/skills/css.svg';
 import figmaIcon from '@shared/assets/skills/figma.svg';
 import fsdIcon from '@shared/assets/skills/fsd.svg';
@@ -29,6 +29,7 @@ interface Skill {
 
 const skills: Skill[] = [
   { name: 'HTML', color: '#E34F26', icon: htmlIcon },
+  { name: 'Angular', color: '#DD0031', icon: angularIcon },
   { name: 'JavaScript', color: '#F7DF1E', icon: javascriptIcon },
   { name: 'SCSS', color: '#CC6699', icon: sassIcon },
   { name: 'CSS', color: '#1572B6', icon: cssIcon },
@@ -68,7 +69,8 @@ const Skills = () => {
           const index = cards.indexOf(entry.target as HTMLElement);
           const delay = (total - index) * STAGGER;
 
-          (entry.target as HTMLElement).style.transitionDelay = `${delay}ms, ${delay}ms, 0s, 0s`;
+          (entry.target as HTMLElement).style.transitionDelay =
+            `${delay}ms, ${delay}ms, 0s, 0s`;
           entry.target.classList.add('skills__card--visible');
 
           const card = entry.target as HTMLElement;
@@ -88,10 +90,10 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className='section skills' id='Инструменты'>
+    <section className='section skills' id='Навыки'>
       <div className='skills__inner container'>
         <div className='skills__title'>
-          <Title text='Инструменты' />
+          <Title text='Навыки' />
         </div>
 
         <ul className='skills__grid' ref={refGrid}>
@@ -113,3 +115,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
