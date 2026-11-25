@@ -1,3 +1,4 @@
+export { default as CursorFollower } from './CursorFollower';
 export { default as Icon } from './Icon';
 export type { IconName } from './Icon';
 export { default as LinkButton } from './LinkButton';

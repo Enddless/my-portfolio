@@ -37,26 +37,11 @@ h1 {
   font-weight: 600;
 }
 
-:root[data-color-scheme='dark'] {
-  ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: var(--cl-body-scroll);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--cl-body-scroll-thumb);
-    cursor: grab;
-  }
-}
-
+:root[data-color-scheme='dark'],
 :root[data-color-scheme='light'] {
   ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -65,7 +50,12 @@ h1 {
 
   ::-webkit-scrollbar-thumb {
     background: var(--cl-body-scroll-thumb);
+    border-radius: var(--radius-pill);
     cursor: grab;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--cl-body-scroll-thumb) 80%, var(--cl-body-text));
   }
 }
 

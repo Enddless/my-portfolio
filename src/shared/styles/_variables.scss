@@ -12,7 +12,7 @@
   --section-padding-y: 70px;
   --button-height: 40px;
 
-  --transition-duration: 0.4s;
+  --transition-duration: 0.8s;
 
   --cl-light-gray: #a8a8a8;
 
@@ -22,13 +22,12 @@
   --contact-icon-size: 40px;
   --lead-photo-size: clamp(200px, 24vw, 340px);
   --lead-photo-brightness: 75%;
-  --slider-bottom-gap: 50px;
   --scroll-offset: 50px;
   --logo-size: 34px;
 }
 
 :root[data-color-scheme='dark'] {
-  --shadow: 10px 11px 20px 0 rgba(0, 0, 0, 0.45);
+  --shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.3);
 
   --cl-body: #131a16;
   --cl-body-text: #e3e8e5;
@@ -40,6 +39,7 @@
   --cl-body-scroll-thumb: #2d3d33;
 
   --cl-accent: #8daa96;
+  --cl-accent-deep: #8daa96;
 
   --cl-lead-overlay-gradient: linear-gradient(180deg, #1a241f 0%, #131a16 60%);
 
@@ -73,7 +73,7 @@
 }
 
 :root[data-color-scheme='light'] {
-  --shadow: 10px 11px 20px 0 rgba(91, 104, 105, 0.3);
+  --shadow: 0 12px 28px -12px rgba(91, 104, 105, 0.2);
 
   --cl-body: #f7f6f3;
   --cl-body-text: #212523;
@@ -84,14 +84,15 @@
   --cl-body-scroll: #ebeae6;
   --cl-body-scroll-thumb: #c7c6c1;
 
-  --cl-accent: #3a4f41;
+  --cl-accent: #5a9070;
+  --cl-accent-deep: #45795a;
 
   --cl-lead-overlay-gradient: linear-gradient(180deg, #efefea 0%, #f7f6f3 70%);
 
-  --cl-0: #d2d9d4;
-  --cl-25: #c3cdc7;
-  --cl-65: #a3b2a7;
-  --cl-90: #889c8f;
+  --cl-0: #c6d1c9;
+  --cl-25: #b4c2b9;
+  --cl-65: #96aa9d;
+  --cl-90: #7d9487;
 
   --cl-header-text: #212523;
   --bg-header-scroll: rgba(247, 246, 243, 0.85);
@@ -105,12 +106,12 @@
   --cl-footer-text: #f7f6f3;
 
   --cl-button-text: #f7f6f3;
-  --cl-button-background: #3a4f41;
-  --cl-button-border: #3a4f41;
+  --cl-button-background: #45795a;
+  --cl-button-border: #45795a;
 
   --cl-card-text: #212523;
   --cl-card-text-alt: #6b736e;
-  --cl-card-stack: #3a4f41;
+  --cl-card-stack: #5a9070;
 
   --cl-switcher-background: #ebeae6;
   --cl-switcher-icon-background: #f7f6f3;

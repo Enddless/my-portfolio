@@ -1,64 +1,87 @@
 .blob {
-  animation: blob-float 40s linear infinite;
-  will-change: transform;
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
   height: 80vw;
-  width: 120%;
   z-index: -10;
-  filter: blur(5em);
+
+  &__drop {
+    position: absolute;
+    will-change: transform;
+    animation: lava-drift 30s ease-in-out infinite alternate;
+
+    &--1 {
+      top: 0;
+      left: -5%;
+      width: 55vw;
+      height: 55vw;
+      animation-duration: 28s;
+
+      .blob__drop-shape {
+        background: radial-gradient(circle, var(--cl-65) 0%, transparent 70%);
+      }
+    }
+
+    &--2 {
+      top: 18%;
+      left: 35%;
+      width: 45vw;
+      height: 45vw;
+      animation-duration: 36s;
+      animation-delay: -9s;
+
+      .blob__drop-shape {
+        background: radial-gradient(circle, var(--cl-25) 0%, transparent 70%);
+      }
+    }
+
+    &--3 {
+      top: -8%;
+      left: 58%;
+      width: 50vw;
+      height: 50vw;
+      animation-duration: 32s;
+      animation-delay: -17s;
+
+      .blob__drop-shape {
+        background: radial-gradient(circle, var(--cl-90) 0%, transparent 70%);
+      }
+    }
+
+    &--4 {
+      top: 40%;
+      left: 12%;
+      width: 40vw;
+      height: 40vw;
+      animation-duration: 40s;
+      animation-delay: -24s;
+
+      .blob__drop-shape {
+        background: radial-gradient(circle, var(--cl-0) 0%, transparent 70%);
+      }
+    }
+  }
+
+  &__drop-shape {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.9;
+  }
 }
 
-@keyframes blob-float {
+@keyframes lava-drift {
   0% {
-    transform: rotate(0deg) scale(120%);
+    transform: translate(0, 0) scale(1);
   }
-  12% {
-    transform: rotate(45deg) scale(120%);
-  }
-  25% {
-    transform: rotate(90deg) scale(130%);
-  }
-  37% {
-    transform: rotate(135deg) scale(110%);
-  }
+
   50% {
-    transform: rotate(180deg) scale(80%);
+    transform: translate(6vw, -4vw) scale(1.15);
   }
-  62% {
-    transform: rotate(225deg) scale(90%);
-  }
-  75% {
-    transform: rotate(270deg) scale(100%);
-  }
-  87% {
-    transform: rotate(315deg) scale(70%);
-  }
-  100% {
-    transform: rotate(1turn) scale(120%);
-  }
-}
 
-.blob__shape {
-  animation: blob-color-change 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transition-duration: 0.15s;
-  -webkit-animation: blob-color-change 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes blob-color-change {
-  0% {
-    fill: var(--cl-0);
-  }
-  25% {
-    fill: var(--cl-25);
-  }
-  65% {
-    fill: var(--cl-65);
-  }
-  90% {
-    fill: var(--cl-90);
-  }
   100% {
-    fill: var(--cl-0);
+    transform: translate(-4vw, 5vw) scale(0.9);
   }
 }

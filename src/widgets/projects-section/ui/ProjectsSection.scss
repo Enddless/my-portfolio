@@ -1,6 +1,9 @@
 @import '../../../shared/styles/mixins';
 @import '../../../shared/styles/media';
 
+$tile-spans-desktop: 2, 2, 2, 3, 3;
+$tile-spans-tablet: 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2;
+
 .projects {
   &__inner {
     position: relative;
@@ -20,77 +23,84 @@
     }
   }
 
-&__list {
-    opacity: 0;
-    translate: 0 24px;
-    pointer-events: none;
-    transition:
-      opacity 0.6s ease,
-      translate 0.6s ease;
-
-    &--ready {
-      opacity: 1;
-      translate: 0 0;
-      pointer-events: auto;
-    }
-  }
-
   &__slider-wrap {
-    position: relative;
-    padding-bottom: var(--slider-bottom-gap);
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 
-  &__slider {
-    overflow: visible;
-
-    .swiper-wrapper {
-      align-items: stretch;
+    @include mobile-above {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
-    .swiper-slide {
-      height: auto;
-      opacity: 0;
-      animation: project-card-appear 0.55s ease forwards;
+    @include tablet-above {
+      grid-template-columns: repeat(4, 1fr);
+
+      @for $i from 1 through length($tile-spans-tablet) {
+        .projects__tile:nth-child(#{length($tile-spans-tablet)}n + #{$i}) {
+          grid-column: span nth($tile-spans-tablet, $i);
+        }
+      }
+    }
+
+    @include desktop-above {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+
+      @for $i from 1 through length($tile-spans-desktop) {
+        .projects__tile:nth-child(#{length($tile-spans-desktop)}n + #{$i}) {
+          grid-column: span nth($tile-spans-desktop, $i);
+        }
+      }
     }
   }
 
+  &__tile {
+    opacity: 0;
+    animation: project-card-appear var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+
+    &-btn {
+      @include fluid-text(16, 14);
+
+      padding: 12px 34px;
+      border: 1px solid var(--cl-accent);
+      border-radius: var(--radius-pill);
+      background-color: transparent;
+      color: var(--cl-body-text);
+      font-family: var(--font-family-secondary);
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition:
+        background-color var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        color var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        translate var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
+
+      @include hover {
+        background-color: var(--cl-button-background);
+        color: var(--cl-button-text);
+        translate: 0 -2px;
+        box-shadow: 0 12px 22px -14px color-mix(in srgb, var(--cl-accent) 70%, transparent);
+      }
+    }
+  }
 }
 
 @keyframes project-card-appear {
   from {
     opacity: 0;
-    translate: 0 18px;
+    translate: 0 28px;
   }
 
   to {
     opacity: 1;
     translate: 0 0;
-  }
-}
-
-.projects__pagination {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  row-gap: 10px;
-  margin-top: 24px;
-
-  .swiper-pagination-bullet {
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--cl-light-gray);
-    opacity: 0.3;
-    transition:
-      opacity var(--transition-duration) ease,
-      background-color var(--transition-duration) ease,
-      box-shadow var(--transition-duration) ease;
-
-    &-active {
-      background: var(--cl-accent);
-      opacity: 1;
-      box-shadow: 0 0 10px color-mix(in srgb, var(--cl-accent) 65%, transparent);
-    }
   }
 }

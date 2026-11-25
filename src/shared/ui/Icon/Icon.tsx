@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 export type IconName =
   | 'arrow-left'
   | 'arrow-right'
+  | 'arrow-up'
   | 'code'
   | 'deploy'
   | 'email'
@@ -38,6 +39,18 @@ const icons: Record<IconName, IconDefinition> = {
     content: (
       <path
         d='M9 4.5 16.5 12 9 19.5'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    )
+  },
+  'arrow-up': {
+    viewBox: '0 0 24 24',
+    content: (
+      <path
+        d='M4.5 15 12 7.5l7.5 7.5'
         stroke='currentColor'
         strokeWidth='2'
         strokeLinecap='round'

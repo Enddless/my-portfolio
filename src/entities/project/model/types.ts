@@ -14,6 +14,7 @@ export interface Project {
   previewSmall: string;
   deploy: string;
   github: string;
+  role: string;
   stack: string;
   type: ProjectType;
   isVisible: boolean;
