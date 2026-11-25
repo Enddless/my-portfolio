@@ -14,7 +14,7 @@
 
   @include hover {
     border-color: var(--cl-accent);
-    transition: 1s;
+    transition: var(--transition-duration);
   }
 
   &__label {
@@ -50,7 +50,7 @@
 
     &--active {
       background-color: var(--cl-switcher-icon-background);
-      transition: background-color 1s ease;
+      transition: background-color var(--transition-duration) ease;
 
       .icon {
         color: var(--cl-switcher-icon-background-alt);

@@ -30,8 +30,8 @@
     }
 
     &--active {
-      background-color: var(--cl-accent);
-      border-color: var(--cl-accent);
+      background-color: var(--cl-accent-deep);
+      border-color: var(--cl-accent-deep);
       color: var(--cl-button-text);
 
       @include hover {

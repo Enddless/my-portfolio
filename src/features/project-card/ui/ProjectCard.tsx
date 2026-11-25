@@ -3,10 +3,13 @@ import { LinkButton } from '@/shared/ui';
 
 import './ProjectCard.scss';
 
-const assetModules = import.meta.glob<string>('/src/shared/assets/projects/*.{webp,jpg}', {
-  eager: true,
-  import: 'default'
-});
+const assetModules = import.meta.glob<string>(
+  '/src/shared/assets/projects/*.{webp,jpg}',
+  {
+    eager: true,
+    import: 'default'
+  }
+);
 
 const getAssetUrl = (fileName: string): string =>
   assetModules[`/src/shared/assets/projects/${fileName}`] ?? '';
@@ -16,8 +19,7 @@ const getPreviewUrl = (fileName: string): string => getAssetUrl(fileName);
 const getPreviewUrlJpg = (fileName: string): string =>
   getAssetUrl(fileName.replace('.webp', '.jpg'));
 
-const SIZES =
-  '(max-width: 767px) 100vw, (max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 33vw';
+const SIZES = '(max-width: 767px) 100vw, (max-width: 1280px) 50vw, 66vw';
 
 interface ProjectCardProps {
   project: Project;
@@ -73,9 +75,12 @@ function ProjectCard({ project }: ProjectCardProps) {
 
       <p className='project-card__description'>{project.description}</p>
 
+      <span className='project-card__role'>Роль: {project.role}</span>
+
       <ProjectStack items={stackItems} />
     </div>
   );
 }
 
 export default ProjectCard;
+

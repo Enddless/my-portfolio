@@ -35,7 +35,7 @@
     padding: 25px;
     border: 1px solid color-mix(in srgb, var(--cl-accent) 25%, transparent);
     border-radius: var(--border-radius-large);
-    background-color: var(--cl-body);
+    @include glass-surface;
     box-shadow: var(--shadow);
     transition: border-color var(--transition-duration) ease;
 

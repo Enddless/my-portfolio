@@ -22,3 +22,9 @@
   height: $size;
   aspect-ratio: 1;
 }
+
+@mixin glass-surface {
+  background-color: color-mix(in srgb, var(--cl-body) 60%, transparent);
+  backdrop-filter: blur(12px) saturate(1.15);
+  -webkit-backdrop-filter: blur(12px) saturate(1.15);
+}

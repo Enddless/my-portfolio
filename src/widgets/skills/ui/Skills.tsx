@@ -103,7 +103,7 @@ const Skills = () => {
               key={name}
               style={{ '--accent-color': color } as CSSProperties}>
               <span className='skills__icon'>
-                <img alt='' height='38' loading='lazy' src={icon} width='38' />
+                <img alt='' height='26' loading='lazy' src={icon} width='26' />
               </span>
               <span className='skills__name'>{name}</span>
             </li>
